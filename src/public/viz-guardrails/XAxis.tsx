@@ -51,9 +51,8 @@ export function XAxis({
               <Tooltip withinPortal label={value}>
                 <Text
                   px={2}
-                  size={10}
                   style={{
-                    textAlign: 'center', textOverflow: 'ellipsis', overflow: 'hidden', whiteSpace: 'nowrap',
+                    textAlign: 'center', textOverflow: 'ellipsis', overflow: 'hidden', whiteSpace: 'nowrap', fontSize: '10px',
                   }}
                 >
                   {+value === 0 ? 0 : format(isDate ? new Date(value) : value)}

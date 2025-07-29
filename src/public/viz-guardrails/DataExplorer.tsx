@@ -52,7 +52,6 @@ export function DataExplorer({ parameters, setAnswer }: StimulusParams<ChartPara
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [numQuantiles, setNumQuantiles] = useState<number>(parameters.num_Quantiles ?? 6); // number of regions for percentiles guardrail
 
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   useEffect(() => {
     d3.csv(`./data/${dataname}.csv`)
       .then((data) => {
