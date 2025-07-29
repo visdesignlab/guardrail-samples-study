@@ -1,0 +1,222 @@
+{
+  "$schema": "https://raw.githubusercontent.com/revisit-studies/study/dev/src/parser/StudyConfigSchema.json",
+  "studyMetadata": {
+    "title": "Stage 1 (COVID-19)",
+    "version": "pilot",
+    "authors": ["VDL"],
+    "date": "2024-01-11",
+    "description": "A study challenging participants to review linecharts.",
+    "organizations": ["University of Utah"]
+  },
+  "uiConfig": {
+    "contactEmail": "abrar.nadib@utah.edu",
+    "logoPath": "assets/revisitLogoSquare.svg",
+    "withProgressBar": true,
+    "autoDownloadStudy": false,
+    "withSidebar": false,
+    "urlParticipantIdParam": "PROLIFIC_PID",
+    "studyEndMsg": "**Thank you for completing the study. You may click this link and return to Prolific**: [Add your link](Add your link)"
+  },
+  "baseComponents": {
+    "covid-a" : {
+            "instruction": "<br><br><br><br>A public health official claimed in 2021 that this country’s COVID-19 response was one of the most effective globally. The visualization below shows how the country's COVID-19 situation developed over the year. Please review the visualization and answer the following questions.",
+            "instructionLocation": "aboveStimulus",
+            "type": "react-component",
+            "path": "viz-guardrails/DataExplorer.tsx",
+            "parameters": {
+                "dataset": "clean_data",
+                "start_date": "2020-03-01",
+                "end_date": "2021-03-31",
+                "initial_selection": ["United States"],
+                "allow_time_slider": false,
+                "allow_guardrail_selector": false,
+                "allow_selection": false,
+                "allow_help": false,
+                "guardrail": "super_summ",
+                "caption": "",
+                "x_var": "date",
+                "y_var": "value",
+                "cat_var": "name",
+                "group_var": "region"
+            },
+            "nextButtonLocation": "belowStimulus",
+            "response": [
+                {
+                  "id": "policy-hiring-likelihood",
+                  "type": "likert",
+                  "location": "belowStimulus",
+                  "prompt": "Imagine your government has tasked you with inviting a public health policy maker from any country to advise on COVID-19 response. Based on the visualization above, how likely are you to choose a policymaker from this country for the invitation?",
+                  "numItems": 7,
+                  "rightLabel": "Extremely likely",
+                  "leftLabel": "Not at all likely",
+                  "required": true
+                },
+                {
+                    "id": "accuracy",
+                    "type": "slider",
+                    "location": "belowStimulus",
+                    "prompt": "How well do you think this country managed COVID-19 compared to all other countries in the world for 2021? Please use the slider below to show your answer, where 1 means 'worst' and 99 means 'best.'",
+                    "options": [
+                        {
+                            "value": 1,
+                            "label": "1"
+                        },
+                        {
+                            "value": 25,
+                            "label": "25"
+                        },
+                        {
+                            "value": 50,
+                            "label": "50"
+                        },
+                        {
+                            "value": 75,
+                            "label": "75"
+                        },
+                        {
+                            "value": 99,
+                            "label": "99"
+                        }
+                    ],
+                    "required": true
+
+                },
+                {
+                    "id": "completeness",
+                    "type": "likert",
+                    "location": "belowStimulus",
+                    "prompt": "If you were considering adopting this country’s COVID-19 response policy for your own government, do you feel that you were provided with appropriate context to make an informed decision?",
+                    "numItems": 7,
+                    "leftLabel": "Not at all",
+                    "rightLabel": "Definitely",
+                    "required": true
+                }
+            ]
+        }
+  },
+  "components": {
+    "covid-a-control": {
+      "baseComponent": "covid-a",
+      "parameters": {
+        "guardrail": "none"
+      }
+    },
+    "covid-a-random": {
+      "baseComponent": "covid-a",
+      "parameters": {
+        "guardrail": "super_data"
+      }
+    },
+    "covid-a-stats": {
+      "baseComponent": "covid-a",
+      "parameters": {
+        "guardrail": "percentiles"
+      }
+    },
+    "covid-a-percentileClosest": {
+      "baseComponent": "covid-a",
+      "parameters": {
+        "guardrail": "percentileClosest"
+      }
+    },
+    "covid-a-cluster": {
+      "baseComponent": "covid-a",
+      "parameters": {
+        "guardrail": "cluster"
+      }
+    },
+    "introduction": {
+      "type": "markdown",
+      "path": "stage-1/introduction.md",
+      "response": [
+        {
+          "id": "prolificId",
+          "prompt": "Please enter your Prolific ID",
+          "required": true,
+          "location": "belowStimulus",
+          "type": "shortText",
+          "placeholder": "Prolific ID",
+          "paramCapture": "PROLIFIC_PID"
+        }
+      ]
+    },
+    "consent": {
+      "type": "markdown",
+      "path": "stage-1/consent_stage1.md",
+      "nextButtonText": "Agree",
+      "response": [
+        {
+          "id": "accept",
+          "prompt": "Do you consent to the study and wish to continue?",
+          "required": true,
+          "requiredValue": "yes",
+          "location": "belowStimulus",
+          "type": "radio",
+          "options": [
+            {
+              "label": "Decline",
+              "value": "no"
+            },
+            {
+              "label": "Accept",
+              "value": "yes"
+            }
+          ]
+        }
+      ]
+    },
+    "post-study-quant": {
+      "type": "questionnaire",
+      "response": [
+        {
+          "id": "covid-familiarity",
+          "type": "likert",
+          "location": "belowStimulus",
+          "prompt": "How familiar are you with COVID-19 pandemic response, policies, and their impacts?",
+          "required": true,
+          "leftLabel": "Not at all familiar",
+          "rightLabel": "Extremely familiar",
+          "numItems": 7
+        },
+        {
+          "id": "comfortable-numbers",
+          "type": "likert",
+          "location": "belowStimulus",
+          "prompt": "How comfortable do you feel interpreting numbers, percentages, and basic statistics?",
+          "required": true,
+          "leftLabel": "Not at all comfortable",
+          "rightLabel": "Extremely comfortable",
+          "numItems": 7
+        },
+        {
+          "id": "confident-visuals",
+          "type": "likert",
+          "location": "belowStimulus",
+          "prompt": "How confident are you in your ability to accurately interpret charts, graphs, and other visualizations?",
+          "required": true,
+          "leftLabel": "Not at all confident",
+          "rightLabel": "Extremely confident",
+          "numItems": 7
+        }
+      ]
+    }
+  },
+  "sequence": {
+    "order": "fixed",
+    "components": [
+      "introduction",
+      "consent",
+      {
+        "order": "random",
+        "components": [
+          "covid-a-control",
+          "covid-a-random",
+          "covid-a-stats",
+          "covid-a-percentileClosest",
+          "covid-a-cluster"
+        ]
+      },
+      "post-study-quant"
+    ]
+  }
+}
