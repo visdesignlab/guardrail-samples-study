@@ -1,5 +1,5 @@
 {
-  "$schema": "https://raw.githubusercontent.com/visdesignlab/guardrail-samples-study/refs/heads/main/src/parser/StudyConfigSchema.json",
+  "$schema": "https://raw.githubusercontent.com/revisit-studies/study/dev/src/parser/StudyConfigSchema.json",
   "studyMetadata": {
     "title": "Stage 1",
     "version": "pilot",
@@ -13,7 +13,7 @@
     "logoPath": "assets/revisitLogoSquare.svg",
     "withProgressBar": true,
     "autoDownloadStudy": false,
-    "sidebar": false,
+    "withSidebar": false,
     "urlParticipantIdParam": "PROLIFIC_PID",
     "studyEndMsg": "**Thank you for completing the study. You may click this link and return to Prolific**: [Add your link](Add your link)"
   },
