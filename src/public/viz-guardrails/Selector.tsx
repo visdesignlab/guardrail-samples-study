@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 import {
   NumberInput, Select, SegmentedControl, Switch, Text,
 } from '@mantine/core';

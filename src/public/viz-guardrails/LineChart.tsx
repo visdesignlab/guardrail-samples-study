@@ -32,6 +32,7 @@ export function LineChart({
   guardrail,
   metadataFiltered,
   numRandomSamples,
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   numQuantiles,
 }: {
   parameters: ChartParams,
@@ -59,7 +60,7 @@ export function LineChart({
   });
 
   // Handle hovering for SVG tooltip
-  const [hoveredLabelIdx, setHoveredLabelIdx] = useState<number | null>(null);
+  // const [hoveredLabelIdx, setHoveredLabelIdx] = useState<number | null>(null);
 
   // ---------------------------- Compute controls ----------------------------
 
@@ -843,45 +844,45 @@ export function LineChart({
   };
 
   // Function to place labels s.t. they don't overlap
-  const labelPos = useMemo(() => {
-    const min_dist = 10;
-    let labels = null;
-    switch (guardrail) {
-      case 'super_data':
-        labels = selection?.concat(superimposeDatapoints?.map((val) => val.country));
-        break;
-      case 'super_summ':
-        labels = selection?.concat([averageLabel]);
-        break;
-      default:
-        labels = selection;
-        break;
-    }
+  // const labelPos = useMemo(() => {
+  //   const min_dist = 10;
+  //   let labels = null;
+  //   switch (guardrail) {
+  //     case 'super_data':
+  //       labels = selection?.concat(superimposeDatapoints?.map((val) => val.country));
+  //       break;
+  //     case 'super_summ':
+  //       labels = selection?.concat([averageLabel]);
+  //       break;
+  //     default:
+  //       labels = selection;
+  //       break;
+  //   }
 
-    const pos = labels?.map((x) => ({
-      country: x as string,
-      country_policy: (dataname === 'clean_data' ? (`${x} (${getPolicyLabel(x)})`) : x) as string,
-      label_pos: (x === averageLabel
-        ? (superimposeSummary?.data.slice(-1).map((val) => yScale(val.mean))[0]) as number
-        : (data.filter((val) => val[parameters.cat_var] === x).slice(-1).map((val) => yScale(val[parameters.y_var]))[0]) as number),
-    })).sort((a, b) => (a.label_pos < b.label_pos ? 1 : -1));
+  //   const pos = labels?.map((x) => ({
+  //     country: x as string,
+  //     country_policy: (dataname === 'clean_data' ? (`${x} (${getPolicyLabel(x)})`) : x) as string,
+  //     label_pos: (x === averageLabel
+  //       ? (superimposeSummary?.data.slice(-1).map((val) => yScale(val.mean))[0]) as number
+  //       : (data.filter((val) => val[parameters.cat_var] === x).slice(-1).map((val) => yScale(val[parameters.y_var]))[0]) as number),
+  //   })).sort((a, b) => (a.label_pos < b.label_pos ? 1 : -1));
 
-    if (!pos) {
-      return pos;
-    }
+  //   if (!pos) {
+  //     return pos;
+  //   }
 
-    for (let i = 0; i < pos?.length; i += 1) {
-      if (!pos[i - 1]) {
-        continue;
-      }
-      const diff = pos[i - 1].label_pos - pos[i].label_pos;
-      if (diff >= min_dist) {
-        continue;
-      }
-      pos[i].label_pos = pos[i].label_pos - min_dist + diff;
-    }
-    return pos;
-  }, [data, selection, yScale, guardrail, averageLabel, parameters, superimposeDatapoints, superimposeSummary, dataname]);
+  //   for (let i = 0; i < pos?.length; i += 1) {
+  //     if (!pos[i - 1]) {
+  //       continue;
+  //     }
+  //     const diff = pos[i - 1].label_pos - pos[i].label_pos;
+  //     if (diff >= min_dist) {
+  //       continue;
+  //     }
+  //     pos[i].label_pos = pos[i].label_pos - min_dist + diff;
+  //   }
+  //   return pos;
+  // }, [data, selection, yScale, guardrail, averageLabel, parameters, superimposeDatapoints, superimposeSummary, dataname]);
 
   const allLabelPositions = useMemo(() => {
     const min_dist = 10;
@@ -1023,17 +1024,17 @@ export function LineChart({
   const lastUpper = lastMedianIQR && lastMedianIQR.upper != null ? yScale(lastMedianIQR.upper) - 7 : 0;
   const lastLower = lastMedianIQR && lastMedianIQR.lower != null ? yScale(lastMedianIQR.lower) - 7 : 0;
 
-  const lastPercentile = percentileData && percentileData.length > 0
-    ? percentileData[percentileData.length - 1]
-    : null;
+  // const lastPercentile = percentileData && percentileData.length > 0
+  //   ? percentileData[percentileData.length - 1]
+  //   : null;
 
-  const lastUpperPercentile = lastPercentile && lastPercentile.upper != null
-    ? yScale(lastPercentile.upper) - 7
-    : 0;
+  // const lastUpperPercentile = lastPercentile && lastPercentile.upper != null
+  //   ? yScale(lastPercentile.upper) - 7
+  //   : 0;
 
-  const lastLowerPercentile = lastPercentile && lastPercentile.lower != null
-    ? yScale(lastPercentile.lower) - 7
-    : 0;
+  // const lastLowerPercentile = lastPercentile && lastPercentile.lower != null
+  //   ? yScale(lastPercentile.lower) - 7
+  //   : 0;
 
   // ---------------------------- Render ----------------------------
   const labelHtmlPositions = allLabelPositions.map((x, i) => {
@@ -1159,7 +1160,7 @@ export function LineChart({
           >
             <Text
               px={2}
-              size={10}
+              style={{ fontSize: '10px' }}
               color={darkGrayColor}
               onMouseOver={() => setHover(['Median Country'])}
               onMouseOut={() => setHover([])}
@@ -1235,7 +1236,7 @@ export function LineChart({
                 width={margin.right + 60}
                 height={20}
               >
-                <Text px={2} size={10} color={darkGrayColor}>
+                <Text px={2} style={{ fontSize: '10px' }} color={darkGrayColor}>
                   Median
                 </Text>
               </foreignObject>
@@ -1248,7 +1249,7 @@ export function LineChart({
                 width={margin.right + 60}
                 height={20}
               >
-                <Text px={2} size={10} color={darkGrayColor}>
+                <Text px={2} style={{ fontSize: '10px' }} color={darkGrayColor}>
                   Median + 1.5 IQR
                 </Text>
               </foreignObject>
@@ -1261,7 +1262,7 @@ export function LineChart({
                 width={margin.right + 60}
                 height={20}
               >
-                <Text px={2} size={10} color={darkGrayColor}>
+                <Text px={2} style={{ fontSize: '10px' }} color={darkGrayColor}>
                   Median - 1.5 IQR
                 </Text>
               </foreignObject>

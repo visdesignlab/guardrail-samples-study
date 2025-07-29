@@ -109,13 +109,13 @@ export function Sidebar({
     return paths;
   }, [parameters, guardrail, data, items, xScale, yScale]);
 
-  const displayVar = useMemo(() => {
-    if (parameters.allow_selection === false) {
-      return 'none';
-    }
+  // const displayVar = useMemo(() => {
+  //   if (parameters.allow_selection === false) {
+  //     return 'none';
+  //   }
 
-    return 'block';
-  }, [parameters]);
+  //   return 'block';
+  // }, [parameters]);
 
   // ---------------------------- Render ----------------------------
 
@@ -153,13 +153,10 @@ export function Sidebar({
         <Checkbox.Group
           key={`${dataname}_checkboxgroup`}
           value={selection as string[]}
-          orientation="vertical"
           onChange={(xs) => {
             setSelection(xs);
             trackSelection(xs);
           }}
-          spacing={0}
-          offset="sm"
           styles={parameters.allow_selection === false
             ? { root: { pointerEvents: 'none' } }
             : { root: { pointerEvents: 'auto' } }}
