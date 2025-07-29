@@ -823,25 +823,25 @@ export function LineChart({
     return paths;
   }, [percentileData, xScale, yScale, parameters, guardrail]);
 
-  const getPolicyLabel = (country: string) => {
-    if (country === 'Eldoril North') {
-      return 'Policy A';
-    }
+  // const getPolicyLabel = (country: string) => {
+  //   if (country === 'Eldoril North') {
+  //     return 'Policy A';
+  //   }
 
-    if (country.split(' ')[0] === 'Silvoria') {
-      return 'Policy C';
-    }
+  //   if (country.split(' ')[0] === 'Silvoria') {
+  //     return 'Policy C';
+  //   }
 
-    if (country.split(' ')[0] === 'Mystara') {
-      return 'Policy C';
-    }
+  //   if (country.split(' ')[0] === 'Mystara') {
+  //     return 'Policy C';
+  //   }
 
-    if (country === 'Average') {
-      return 'all policies';
-    }
+  //   if (country === 'Average') {
+  //     return 'all policies';
+  //   }
 
-    return 'Policy B';
-  };
+  //   return 'Policy B';
+  // };
 
   // Function to place labels s.t. they don't overlap
   // const labelPos = useMemo(() => {
@@ -894,7 +894,7 @@ export function LineChart({
           const item = items.find((it) => it.name === country);
           let label = country;
           if (dataname === 'clean_data') {
-            label = `${country} (${getPolicyLabel(country)})`;
+            label = `${country}`;
           } else if (guardrail === 'cluster' && item?.sector) {
             label = `${country} (${item.sector})`;
           }
@@ -910,7 +910,7 @@ export function LineChart({
     if (randomCountries && guardrail === 'super_data') {
       labels = labels.concat(
         randomCountries.map((country) => ({
-          label: dataname === 'clean_data' ? `${country} (${getPolicyLabel(country)})` : country,
+          label: dataname === 'clean_data' ? `${country}` : country,
           y: data.filter((val) => val[parameters.cat_var] === country).slice(-1).map((val) => yScale(val[parameters.y_var]))[0],
           color: darkGrayColor,
         })),
