@@ -66,7 +66,7 @@ export function DataExplorer({ parameters, setAnswer }: StimulusParams<ChartPara
       });
     // Reset range when dataset changes
     if (dataname === 'clean_data') {
-      setRange([new Date('2020-01-01'), new Date('2024-01-01')]);
+      setRange([new Date('2020-03-01'), new Date('2021-03-01')]);
     } else {
       setRange([new Date(parameters.start_date), new Date(parameters.end_date)]);
     }
@@ -184,7 +184,7 @@ export function DataExplorer({ parameters, setAnswer }: StimulusParams<ChartPara
               ) : null}
             </Flex>
           )}
-          <Group noWrap align="flex-start" style={{ alignItems: 'flex-start', height: '100%' }}>
+          <Group align="flex-start" style={{ alignItems: 'flex-start', height: '100%' }}>
             {(parameters.allow_selection === false && parameters.guardrail !== 'juxt_data') ? null : (
               <Group style={{
                 flex: '1', display: 'flex', flexDirection: 'column', height: '100%', alignContent: 'flex-start', ...(dataname === 'sp500_stocks' ? { width: '380px' } : {}),
@@ -205,8 +205,8 @@ export function DataExplorer({ parameters, setAnswer }: StimulusParams<ChartPara
             )}
             {(parameters.allow_selection === false && parameters.guardrail !== 'juxt_data') ? null : (<Divider orientation="vertical" size="xs" />)}
             <Stack>
-              <Group position="apart">
-                <Stack spacing={0} justify="flex-start">
+              <Group>
+                <Stack gap={0} justify="flex-start">
                   <Text fw={500}>
                     {(dataname === 'clean_stocks' || dataname === 'sp500_stocks') ? 'Percent change in stock price' : 'Infections per million people'}
                   </Text>
@@ -220,7 +220,7 @@ export function DataExplorer({ parameters, setAnswer }: StimulusParams<ChartPara
                 {parameters.allow_help ? <Help parameters={parameters} /> : null}
               </Group>
               <Stack>
-                <Group noWrap>
+                <Group>
                   {guardrail === 'juxt_summ' ? <StripPlot parameters={parameters} data={filteredData} selection={selection} dataname={dataname} /> : null}
                   <LineChart
                     parameters={parameters}
