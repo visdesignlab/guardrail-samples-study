@@ -1,0 +1,222 @@
+{
+  "$schema": "https://raw.githubusercontent.com/revisit-studies/study/dev/src/parser/StudyConfigSchema.json",
+  "studyMetadata": {
+    "title": "Stage 1",
+    "version": "pilot",
+    "authors": ["VDL"],
+    "date": "2024-01-11",
+    "description": "A study challenging participants to review linecharts.",
+    "organizations": ["University of Utah"]
+  },
+  "uiConfig": {
+    "contactEmail": "abrar.nadib@utah.edu",
+    "logoPath": "assets/revisitLogoSquare.svg",
+    "withProgressBar": true,
+    "autoDownloadStudy": false,
+    "withSidebar": false,
+    "urlParticipantIdParam": "PROLIFIC_PID",
+    "studyEndMsg": "**Thank you for completing the study. You may click this link and return to Prolific**: [Add your link](Add your link)"
+  },
+  "baseComponents": {
+    "stock-a" : {
+            "instruction": "<br><br><br><br>A financial advisor claims in 2024 that this stock was one of the best investment for that year. The visualization depicts how it pans out. Please review the visualization of stock performance below and answer the following questions.",
+            "instructionLocation": "aboveStimulus",
+            "type": "react-component",
+            "path": "viz-guardrails/DataExplorer.tsx",
+            "parameters": {
+                "dataset": "sp500_stocks",
+                "start_date": "2024-01-01",
+                "end_date": "2024-12-31",
+                "initial_selection": ["VZ"],
+                "allow_time_slider": false,
+                "allow_guardrail_selector": false,
+                "allow_selection": false,
+                "allow_help": false,
+                "guardrail": "super_summ",
+                "caption": "",
+                "x_var": "date",
+                "y_var": "value",
+                "cat_var": "name",
+                "group_var": "region"
+            },
+            "nextButtonLocation": "belowStimulus",
+            "response": [
+                {
+                  "id": "investment-likelihood",
+                  "type": "likert",
+                  "location": "belowStimulus",
+                  "prompt": "Imagine you've signed up for a stock market brokerage account, and they've provided you with $100 that you must invest in a single stock listed in the market. Based on the visualization shown above, how likely are you to choose this stock for your investment?",
+                  "numItems": 7,
+                  "rightLabel": "Extremely likely",
+                  "leftLabel": "Not at all likely",
+                  "required": true
+                },
+                {
+                    "id": "accuracy",
+                    "type": "slider",
+                    "location": "belowStimulus",
+                    "prompt": "How well do you think this stock performed compared to all other stocks in the market for 2024? Please use the slider below to show your answer, where 1 means 'worst' and 99 means 'best.'",
+                    "options": [
+                        {
+                            "value": 1,
+                            "label": "1"
+                        },
+                        {
+                            "value": 25,
+                            "label": "25"
+                        },
+                        {
+                            "value": 50,
+                            "label": "50"
+                        },
+                        {
+                            "value": 75,
+                            "label": "75"
+                        },
+                        {
+                            "value": 99,
+                            "label": "99"
+                        }
+                    ],
+                    "required": true
+
+                },
+                {
+                    "id": "completeness",
+                    "type": "likert",
+                    "location": "belowStimulus",
+                    "prompt": "If you were considering investing in this stock, do you feel that you were provided with appropriate context to make an informed decision?",
+                    "numItems": 7,
+                    "leftLabel": "Not at all",
+                    "rightLabel": "Definitely",
+                    "required": true
+                }
+            ]
+        }
+  },
+  "components": {
+    "stock-a-control": {
+      "baseComponent": "stock-a",
+      "parameters": {
+        "guardrail": "none"
+      }
+    },
+    "stock-a-random": {
+      "baseComponent": "stock-a",
+      "parameters": {
+        "guardrail": "super_data"
+      }
+    },
+    "stock-a-stats": {
+      "baseComponent": "stock-a",
+      "parameters": {
+        "guardrail": "percentiles"
+      }
+    },
+    "stock-a-percentileClosest": {
+      "baseComponent": "stock-a",
+      "parameters": {
+        "guardrail": "percentileClosest"
+      }
+    },
+    "stock-a-cluster": {
+      "baseComponent": "stock-a",
+      "parameters": {
+        "guardrail": "cluster"
+      }
+    },
+    "introduction": {
+      "type": "markdown",
+      "path": "stage-1/introduction.md",
+      "response": [
+        {
+          "id": "prolificId",
+          "prompt": "Please enter your Prolific ID",
+          "required": true,
+          "location": "belowStimulus",
+          "type": "shortText",
+          "placeholder": "Prolific ID",
+          "paramCapture": "PROLIFIC_PID"
+        }
+      ]
+    },
+    "consent": {
+      "type": "markdown",
+      "path": "stage-1/consent_stage1.md",
+      "nextButtonText": "Agree",
+      "response": [
+        {
+          "id": "accept",
+          "prompt": "Do you consent to the study and wish to continue?",
+          "required": true,
+          "requiredValue": "yes",
+          "location": "belowStimulus",
+          "type": "radio",
+          "options": [
+            {
+              "label": "Decline",
+              "value": "no"
+            },
+            {
+              "label": "Accept",
+              "value": "yes"
+            }
+          ]
+        }
+      ]
+    },
+    "post-study-quant": {
+      "type": "questionnaire",
+      "response": [
+        {
+          "id": "stocks-familiarity",
+          "type": "likert",
+          "location": "belowStimulus",
+          "prompt": "How familiar are you with stock market concepts and investing?",
+          "required": true,
+          "leftLabel": "Not at all familiar",
+          "rightLabel": "Extremely familiar",
+          "numItems": 7
+        },
+        {
+          "id": "comfortable-numbers",
+          "type": "likert",
+          "location": "belowStimulus",
+          "prompt": "How comfortable do you feel interpreting numbers, percentages, and basic statistics?",
+          "required": true,
+          "leftLabel": "Not at all comfortable",
+          "rightLabel": "Extremely comfortable",
+          "numItems": 7
+        },
+        {
+          "id": "confident-visuals",
+          "type": "likert",
+          "location": "belowStimulus",
+          "prompt": "How confident are you in your ability to accurately interpret charts, graphs, and other visualizations?",
+          "required": true,
+          "leftLabel": "Not at all confident",
+          "rightLabel": "Extremely confident",
+          "numItems": 7
+        }
+      ]
+    }
+  },
+  "sequence": {
+    "order": "fixed",
+    "components": [
+      "introduction",
+      "consent",
+      {
+        "order": "random",
+        "components": [
+          "stock-a-control",
+          "stock-a-random",
+          "stock-a-stats",
+          "stock-a-percentileClosest",
+          "stock-a-cluster"
+        ]
+      },
+      "post-study-quant"
+    ]
+  }
+}
