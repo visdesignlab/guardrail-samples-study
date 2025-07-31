@@ -1,6 +1,6 @@
 _PI: Khandaker Abrar Nadib (abrar.nadib@utah.edu), University of Utah_
 
-_Title of Research Study: Communicating With Interactive Data Visualizations_
+_Title of Research Study: Evaluating Guardrails in Line Chart Visualizations_
 
 # Consent and Authorization Document
 
