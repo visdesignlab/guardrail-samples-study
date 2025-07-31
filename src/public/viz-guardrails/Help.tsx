@@ -134,10 +134,10 @@ export function Help({
   );
 
   return (
-    <Group position="right">
+    <Group justify="flex-end">
       <HoverCard width={800} shadow="md">
         <HoverCard.Target>
-          <Button variant="light" color="gray" compact>Help</Button>
+          <Button variant="light" color="gray">Help</Button>
         </HoverCard.Target>
         <HoverCard.Dropdown>
           <Text size="sm">
