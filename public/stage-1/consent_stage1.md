@@ -9,16 +9,11 @@ ask questions, and take time to understand the study before you make any decisio
 
 #### Purpose of the Study
 
-Data exploration and visualization platforms are increasingly
-common online. The purpose of this study is to learn
-more about how people select data in visualizations and use them for communicating ideas.
+This study looks at how people understand line charts when they are shown extra reference lines for context, like averages or examples. We aim to identify the best ways of presenting visual context to help users make accurate judgments from data charts.
 
 #### Tasks
 
-It will take approximately 2 minutes to finish this test.
-You will be shown a data visualization.
-Your task is to answer a short question about the visualization.
-We suggest maximizing your browser window as some charts can be on the larger side.
+Your participation will take approximately 15–20 minutes. You will be randomly assigned to one of two scenarios (financial or health-related). You will see 5 line charts, each showing either stock performance or COVID-19 case trends. For each visualization, you'll be asked a few questions about your interpretation and decision-making. We recommend maximizing your browser window, as some charts may require extra space to view clearly.
 
 #### Risks to study participants
 
@@ -28,10 +23,7 @@ not be used to identify you.
 
 #### Benefits to research participants and others
 
-There may be no direct benefit to reserach participants.
-The possible benefits include exposure to interesting data
-visualization, along with helping inform the
-development of future data exploration platforms.
+There may be no direct benefit to research participants. The broader benefit to society is improving how visualizations are designed, potentially reducing misunderstandings.
 
 #### Record keeping and confidentiality
 
@@ -46,13 +38,13 @@ The data collected in this study is only being used for the present study and no
 
 #### Cost/Payment
 
-You will be compensated $1 for participating via Prolific.
+You will be compensated $5 for participating via Prolific.
 
 #### Contact
 
 For more information about this research or about the rights of
 research participants, or in case of research-related injury,
-contact: Abrar Nadib (abrar.nadib@utah.edu).
+contact: Khandaker Abrar Nadib (abrar.nadib@utah.edu).
 Contact the Institutional Review Board (IRB) if you have questions regarding your rights as a research participant. Also, contact the IRB if you have questions, complaints or concerns which you do not feel you can discuss with the investigator. The University of Utah IRB may be reached by phone at (801) 581-3655 or by e-mail at irb@hsc.utah.edu.
 You may also contact the Research Participant Advocate (RPA) by phone at (801) 581-3803 or by email at participant.advocate@hsc.utah.edu.
 
