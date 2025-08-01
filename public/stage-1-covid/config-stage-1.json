@@ -19,7 +19,7 @@
   },
   "baseComponents": {
     "covid-a" : {
-            "instruction": "<br><br><br><br>A public health official claimed in 2021 that this country’s COVID-19 response was one of the most effective globally. The visualization below shows how the country's COVID-19 situation developed over the year. Please review the visualization and answer the following questions.",
+            "instruction": "<br><br><br><br>A public health official claimed that this country’s COVID-19 response was one of the most effective globally. The visualization below shows how the country's COVID-19 situation developed over the year. Please review the visualization and answer the following questions.",
             "instructionLocation": "aboveStimulus",
             "type": "react-component",
             "path": "viz-guardrails/DataExplorer.tsx",
@@ -55,7 +55,7 @@
                     "id": "accuracy",
                     "type": "slider",
                     "location": "belowStimulus",
-                    "prompt": "How well do you think this country managed COVID-19 compared to all other countries in the world for 2021? Please use the slider below to show your answer, where 1 means 'worst' and 99 means 'best.'",
+                    "prompt": "How well do you think this country managed COVID-19 compared to all other countries in the world for 2021? Please use the slider below to show your answer, where 1 means 'worst' and 100 means 'best.'",
                     "options": [
                         {
                             "value": 1,
@@ -74,11 +74,12 @@
                             "label": "75"
                         },
                         {
-                            "value": 99,
-                            "label": "99"
+                            "value": 100,
+                            "label": "100"
                         }
                     ],
-                    "required": true
+                    "required": true,
+                    "step": 1
 
                 },
                 {
