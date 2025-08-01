@@ -15,7 +15,8 @@
     "autoDownloadStudy": false,
     "withSidebar": false,
     "urlParticipantIdParam": "PROLIFIC_PID",
-    "studyEndMsg": "**Thank you for completing the study. You may click this link and return to Prolific**: [Add your link](Add your link)"
+    "studyEndMsg": "**Thank you for completing the study. You may click this link and return to Prolific**: [Add your link](Add your link)",
+    "enumerateQuestions": true
   },
   "baseComponents": {
     "covid-a" : {
