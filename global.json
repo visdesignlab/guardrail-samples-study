@@ -1,12 +1,15 @@
 {
   "$schema": "https://raw.githubusercontent.com/revisit-studies/study/dev/src/parser/GlobalConfigSchema.json",
-  "configsList": ["sandbox", "stage-1"],
+  "configsList": ["sandbox", "stage-1", "stage-1-covid"],
   "configs": {
     "sandbox": {
       "path": "sandbox/config-sandbox.json"
     },
     "stage-1": {
       "path": "stage-1/config-stage-1.json"
+    },
+    "stage-1-covid": {
+      "path": "stage-1-covid/config-stage-1.json"
     }
   }
 }
