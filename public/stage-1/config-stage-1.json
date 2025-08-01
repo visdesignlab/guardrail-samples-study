@@ -75,11 +75,12 @@
                             "label": "75"
                         },
                         {
-                            "value": 99,
-                            "label": "99"
+                            "value": 100,
+                            "label": "100"
                         }
                     ],
-                    "required": true
+                    "required": true,
+                    "step": 1
 
                 },
                 {
