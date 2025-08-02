@@ -16,11 +16,12 @@
     "withSidebar": false,
     "urlParticipantIdParam": "PROLIFIC_PID",
     "studyEndMsg": "**Thank you for completing the study. You may click this link and return to Prolific**: [Add your link](Add your link)",
-    "enumerateQuestions": true
+    "enumerateQuestions": true,
+    "stylesheetPath": "stage-1/assets/form.css"
   },
   "baseComponents": {
     "covid-a" : {
-            "instruction": "<br><br><br><br>A public health official claimed that this country’s COVID-19 response was one of the most effective globally. The visualization below shows how the country's COVID-19 situation developed over the year. Please review the visualization and answer the following questions.",
+            "instruction": "A public health official claimed that this country’s COVID-19 response was one of the most effective globally. The visualization below shows how the country's COVID-19 situation developed over the year. Please review the visualization and answer the following questions.",
             "instructionLocation": "aboveStimulus",
             "type": "react-component",
             "path": "viz-guardrails/DataExplorer.tsx",
