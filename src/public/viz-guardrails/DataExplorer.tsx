@@ -174,7 +174,7 @@ export function DataExplorer({ parameters, setAnswer }: StimulusParams<ChartPara
         </Paper>
       ) : null}
       <Flex>
-        <Paper shadow="md" radius="md" p="md" withBorder style={{ marginBottom: '60px' }}>
+        <Paper shadow="md" radius="md" p="md" withBorder>
           {parameters.caption === '' ? null : (
             <Flex style={{ width: '800px' }}>
               {parameters.caption ? (
