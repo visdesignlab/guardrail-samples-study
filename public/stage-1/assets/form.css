@@ -12,29 +12,35 @@
   width: 100%;
 }
 
-.component-container {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  margin: 0 auto;
-}
-
-.responseBlock {
+.responseBlock:not(.responseBlock-aboveStimulus) {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 0;
   align-items: center;
-}
-
-.response {
-  width: 1000px;
   background-color: #ffffff;
   margin: 15px auto 0;
-  padding: 20px;
+  padding: 30px;
   box-sizing: border-box;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
   border: 2px solid #e3e8ed;
   border-radius: 14px;
+  width: 1000px;
+}
+
+.response {
+  width: 100%;
+  background: none;
+  margin: 0;
+  padding: 20px 10px;
+  box-sizing: border-box;
+  box-shadow: none;
+  border: none;
+  border-bottom: 1px solid #f0f0f0;
+  border-radius: 0;
+}
+
+.response:last-child {
+  border-bottom: none;
 }
 
 label {
