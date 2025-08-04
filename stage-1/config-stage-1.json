@@ -21,7 +21,7 @@
   },
   "baseComponents": {
     "stock-a" : {
-            "instruction": "A financial advisor claims in 2024 that this stock was one of the best investment for that year. The visualization depicts how it pans out. Please review the visualization of stock performance below and answer the following questions.",
+            "instruction": "On Jan 1, 2024, a financial advisor told you that the stock highlighted below is one of the best investments you can make. The visualization depicts how it panned out. Please review the chart and answer the questions below.",
             "instructionLocation": "aboveStimulus",
             "type": "react-component",
             "path": "viz-guardrails/DataExplorer.tsx",
@@ -47,7 +47,7 @@
                   "id": "investment-likelihood",
                   "type": "likert",
                   "location": "belowStimulus",
-                  "prompt": "Imagine you've signed up for a stock market brokerage account, and they've provided you with $100 that you must invest in a single stock listed in the market. Based on the visualization shown above, how likely are you to choose this stock for your investment?",
+                  "prompt": "Imagine the advisor gave you a free welcome bonus of $100 to invest. Based on the visualization shown above, how likely are you to choose the highlighted stock for your investment?",
                   "numItems": 7,
                   "rightLabel": "Extremely likely",
                   "leftLabel": "Not at all likely",
@@ -57,7 +57,7 @@
                     "id": "accuracy",
                     "type": "slider",
                     "location": "belowStimulus",
-                    "prompt": "How well do you think this stock performed compared to all other stocks in the market for 2024? Please use the slider below to show your answer, where 1 means 'worst' and 99 means 'best.'",
+                    "prompt": "How well did this stock perform compared to all other stocks in the market? Drag the slider to answer (1 means 'worst' and 100 means 'best ')",
                     "options": [
                         {
                             "value": 1,
@@ -88,7 +88,7 @@
                     "id": "completeness",
                     "type": "likert",
                     "location": "belowStimulus",
-                    "prompt": "If you were considering investing in this stock, do you feel that you were provided with appropriate context to make an informed decision?",
+                    "prompt": "Do you feel that the visualization provided appropriate context to make an informed decision about your investment?",
                     "numItems": 7,
                     "leftLabel": "Not at all",
                     "rightLabel": "Definitely",
