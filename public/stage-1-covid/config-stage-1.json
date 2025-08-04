@@ -21,7 +21,7 @@
   },
   "baseComponents": {
     "covid-a" : {
-            "instruction": "A public health official claimed that this country’s COVID-19 response was one of the most effective globally. The visualization below shows how the country's COVID-19 situation developed over the year. Please review the visualization and answer the following questions.",
+            "instruction": "Imagine you work for your country’s public health department. Your colleague claimed that the highlighted country’s COVID-19 response was one of the most effective. The visualization below depicts the total infections to date. Please review the chart and answer the questions below.",
             "instructionLocation": "aboveStimulus",
             "type": "react-component",
             "path": "viz-guardrails/DataExplorer.tsx",
@@ -47,7 +47,7 @@
                   "id": "policy-hiring-likelihood",
                   "type": "likert",
                   "location": "belowStimulus",
-                  "prompt": "Imagine your government has tasked you with inviting a public health policy maker from any country to advise on COVID-19 response. Based on the visualization above, how likely are you to choose a policymaker from this country for the invitation?",
+                  "prompt": "Imagine your job is to select a public health policymaker from another country to advise you on COVID-19 response. Based on the visualization above, how likely are you to choose a policymaker from the highlighted country?",
                   "numItems": 7,
                   "rightLabel": "Extremely likely",
                   "leftLabel": "Not at all likely",
@@ -57,7 +57,7 @@
                     "id": "accuracy",
                     "type": "slider",
                     "location": "belowStimulus",
-                    "prompt": "How well do you think this country managed COVID-19 compared to all other countries in the world for 2021? Please use the slider below to show your answer, where 1 means 'worst' and 100 means 'best.'",
+                    "prompt": "How well did the country manage COVID-19 compared to all other countries? Drag the slider to answer (1 means 'worst' and 100 means 'best.')",
                     "options": [
                         {
                             "value": 1,
@@ -88,7 +88,7 @@
                     "id": "completeness",
                     "type": "likert",
                     "location": "belowStimulus",
-                    "prompt": "If you were considering adopting this country’s COVID-19 response policy for your own government, do you feel that you were provided with appropriate context to make an informed decision?",
+                    "prompt": "Do you feel that the visualization provided appropriate context to make an informed decision about adopting a COVID-19 policy?",
                     "numItems": 7,
                     "leftLabel": "Not at all",
                     "rightLabel": "Definitely",
