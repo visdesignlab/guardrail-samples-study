@@ -20,7 +20,7 @@
     "stylesheetPath": "stage-1/assets/form.css"
   },
   "baseComponents": {
-    "stock-a" : {
+    "stock" : {
             "instruction": "On Jan 1, 2024, a financial advisor told you that the stock highlighted below is one of the best investments you can make. The visualization depicts how it panned out. Please review the chart and answer the questions below.",
             "instructionLocation": "aboveStimulus",
             "type": "react-component",
@@ -29,7 +29,6 @@
                 "dataset": "sp500_stocks",
                 "start_date": "2024-01-01",
                 "end_date": "2024-12-31",
-                "initial_selection": ["VZ"],
                 "allow_time_slider": false,
                 "allow_guardrail_selector": false,
                 "allow_selection": false,
@@ -99,33 +98,178 @@
   },
   "components": {
     "stock-a-control": {
-      "baseComponent": "stock-a",
+      "baseComponent": "stock",
       "parameters": {
-        "guardrail": "none"
+        "guardrail": "none",
+        "initial_selection": ["VZ"]
       }
     },
     "stock-a-random": {
-      "baseComponent": "stock-a",
+      "baseComponent": "stock",
       "parameters": {
-        "guardrail": "super_data"
+        "guardrail": "super_data",
+        "initial_selection": ["VZ"]
       }
     },
     "stock-a-stats": {
-      "baseComponent": "stock-a",
+      "baseComponent": "stock",
       "parameters": {
-        "guardrail": "percentiles"
+        "guardrail": "percentiles",
+        "initial_selection": ["VZ"]
       }
     },
     "stock-a-percentileClosest": {
-      "baseComponent": "stock-a",
+      "baseComponent": "stock",
       "parameters": {
-        "guardrail": "percentileClosest"
+        "guardrail": "percentileClosest",
+        "initial_selection": ["VZ"]
       }
     },
     "stock-a-cluster": {
-      "baseComponent": "stock-a",
+      "baseComponent": "stock",
       "parameters": {
-        "guardrail": "cluster"
+        "guardrail": "cluster",
+        "initial_selection": ["VZ"]
+      }
+    },
+    "stock-b-control": {
+      "baseComponent": "stock",
+      "parameters": {
+        "guardrail": "none",
+        "initial_selection": ["COR"]
+      }
+    },
+    "stock-b-random": {
+      "baseComponent": "stock",
+      "parameters": {
+        "guardrail": "super_data",
+        "initial_selection": ["COR"]
+      }
+    },
+    "stock-b-stats": {
+      "baseComponent": "stock",
+      "parameters": {
+        "guardrail": "percentiles",
+        "initial_selection": ["COR"]
+      }
+    },
+    "stock-b-percentileClosest": {
+      "baseComponent": "stock",
+      "parameters": {
+        "guardrail": "percentileClosest",
+        "initial_selection": ["COR"]
+      }
+    },
+    "stock-b-cluster": {
+      "baseComponent": "stock",
+      "parameters": {
+        "guardrail": "cluster",
+        "initial_selection": ["COR"]
+      }
+    },
+    "stock-c-control": {
+      "baseComponent": "stock",
+      "parameters": {
+        "guardrail": "none",
+        "initial_selection": ["CHD"]
+      }
+    },
+    "stock-c-random": {
+      "baseComponent": "stock",
+      "parameters": {
+        "guardrail": "super_data",
+        "initial_selection": ["CHD"]
+      }
+    },
+    "stock-c-stats": {
+      "baseComponent": "stock",
+      "parameters": {
+        "guardrail": "percentiles",
+        "initial_selection": ["CHD"]
+      }
+    },
+    "stock-c-percentileClosest": {
+      "baseComponent": "stock",
+      "parameters": {
+        "guardrail": "percentileClosest",
+        "initial_selection": ["CHD"]
+      }
+    },
+    "stock-c-cluster": {
+      "baseComponent": "stock",
+      "parameters": {
+        "guardrail": "cluster",
+        "initial_selection": ["CHD"]
+      }
+    },
+    "stock-d-control": {
+      "baseComponent": "stock",
+      "parameters": {
+        "guardrail": "none",
+        "initial_selection": ["TEL"]
+      }
+    },
+    "stock-d-random": {
+      "baseComponent": "stock",
+      "parameters": {
+        "guardrail": "super_data",
+        "initial_selection": ["TEL"]
+      }
+    },
+    "stock-d-stats": {
+      "baseComponent": "stock",
+      "parameters": {
+        "guardrail": "percentiles",
+        "initial_selection": ["TEL"]
+      }
+    },
+    "stock-d-percentileClosest": {
+      "baseComponent": "stock",
+      "parameters": {
+        "guardrail": "percentileClosest",
+        "initial_selection": ["TEL"]
+      }
+    },
+    "stock-d-cluster": {
+      "baseComponent": "stock",
+      "parameters": {
+        "guardrail": "cluster",
+        "initial_selection": ["TEL"]
+      }
+    },
+    "stock-e-control": {
+      "baseComponent": "stock",
+      "parameters": {
+        "guardrail": "none",
+        "initial_selection": ["JKHY"]
+      }
+    },
+    "stock-e-random": {
+      "baseComponent": "stock",
+      "parameters": {
+        "guardrail": "super_data",
+        "initial_selection": ["JKHY"]
+      }
+    },
+    "stock-e-stats": {
+      "baseComponent": "stock",
+      "parameters": {
+        "guardrail": "percentiles",
+        "initial_selection": ["JKHY"]
+      }
+    },
+    "stock-e-percentileClosest": {
+      "baseComponent": "stock",
+      "parameters": {
+        "guardrail": "percentileClosest",
+        "initial_selection": ["JKHY"]
+      }
+    },
+    "stock-e-cluster": {
+      "baseComponent": "stock",
+      "parameters": {
+        "guardrail": "cluster",
+        "initial_selection": ["JKHY"]
       }
     },
     "introduction": {
@@ -210,13 +354,29 @@
       "introduction",
       "consent",
       {
-        "order": "random",
+        "order": "latinSquare",
+        "numSamples": 1,
         "components": [
-          "stock-a-control",
-          "stock-a-random",
-          "stock-a-stats",
-          "stock-a-percentileClosest",
-          "stock-a-cluster"
+          {
+            "order": "random",
+            "components": ["stock-a-control", "stock-b-random", "stock-c-stats", "stock-d-percentileClosest", "stock-e-cluster"]
+          },
+          {
+            "order": "random",
+            "components": ["stock-b-control", "stock-c-random", "stock-d-stats", "stock-e-percentileClosest", "stock-a-cluster"]
+          },
+          {
+            "order": "random",
+            "components": ["stock-c-control", "stock-d-random", "stock-e-stats", "stock-a-percentileClosest", "stock-b-cluster"]
+          },
+          {
+            "order": "random",
+            "components": ["stock-d-control", "stock-e-random", "stock-a-stats", "stock-b-percentileClosest", "stock-c-cluster"]
+          },
+          {
+            "order": "random",
+            "components": ["stock-e-control", "stock-a-random", "stock-b-stats", "stock-c-percentileClosest", "stock-d-cluster"]
+          }
         ]
       },
       "post-study-quant"
