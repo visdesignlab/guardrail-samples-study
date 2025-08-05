@@ -20,7 +20,7 @@
     "stylesheetPath": "stage-1/assets/form.css"
   },
   "baseComponents": {
-    "covid-a" : {
+    "covid" : {
             "instruction": "Imagine you work for your country’s public health department. Your colleague claimed that the highlighted country’s COVID-19 response was one of the most effective. The visualization below depicts the total infections to date. Please review the chart and answer the questions below.",
             "instructionLocation": "aboveStimulus",
             "type": "react-component",
@@ -28,8 +28,7 @@
             "parameters": {
                 "dataset": "clean_data",
                 "start_date": "2020-03-01",
-                "end_date": "2021-03-31",
-                "initial_selection": ["United States"],
+                "end_date": "2021-08-28",
                 "allow_time_slider": false,
                 "allow_guardrail_selector": false,
                 "allow_selection": false,
@@ -99,33 +98,178 @@
   },
   "components": {
     "covid-a-control": {
-      "baseComponent": "covid-a",
+      "baseComponent": "covid",
       "parameters": {
-        "guardrail": "none"
+        "guardrail": "none",
+        "initial_selection": ["Bahrain"]
       }
     },
     "covid-a-random": {
-      "baseComponent": "covid-a",
+      "baseComponent": "covid",
       "parameters": {
-        "guardrail": "super_data"
+        "guardrail": "super_data",
+        "initial_selection": ["Bahrain"]
       }
     },
     "covid-a-stats": {
-      "baseComponent": "covid-a",
+      "baseComponent": "covid",
       "parameters": {
-        "guardrail": "percentiles"
+        "guardrail": "percentiles",
+        "initial_selection": ["Bahrain"]
       }
     },
     "covid-a-percentileClosest": {
-      "baseComponent": "covid-a",
+      "baseComponent": "covid",
       "parameters": {
-        "guardrail": "percentileClosest"
+        "guardrail": "percentileClosest",
+        "initial_selection": ["Bahrain"]
       }
     },
     "covid-a-cluster": {
-      "baseComponent": "covid-a",
+      "baseComponent": "covid",
       "parameters": {
-        "guardrail": "cluster"
+        "guardrail": "cluster",
+        "initial_selection": ["Bahrain"]
+      }
+    },
+    "covid-b-control": {
+      "baseComponent": "covid",
+      "parameters": {
+        "guardrail": "none",
+        "initial_selection": ["Czechia"]
+      }
+    },
+    "covid-b-random": {
+      "baseComponent": "covid",
+      "parameters": {
+        "guardrail": "super_data",
+        "initial_selection": ["Czechia"]
+      }
+    },
+    "covid-b-stats": {
+      "baseComponent": "covid",
+      "parameters": {
+        "guardrail": "percentiles",
+        "initial_selection": ["Czechia"]
+      }
+    },
+    "covid-b-percentileClosest": {
+      "baseComponent": "covid",
+      "parameters": {
+        "guardrail": "percentileClosest",
+        "initial_selection": ["Czechia"]
+      }
+    },
+    "covid-b-cluster": {
+      "baseComponent": "covid",
+      "parameters": {
+        "guardrail": "cluster",
+        "initial_selection": ["Czechia"]
+      }
+    },
+    "covid-c-control": {
+      "baseComponent": "covid",
+      "parameters": {
+        "guardrail": "none",
+        "initial_selection": ["Georgia"]
+      }
+    },
+    "covid-c-random": {
+      "baseComponent": "covid",
+      "parameters": {
+        "guardrail": "super_data",
+        "initial_selection": ["Georgia"]
+      }
+    },
+    "covid-c-stats": {
+      "baseComponent": "covid",
+      "parameters": {
+        "guardrail": "percentiles",
+        "initial_selection": ["Georgia"]
+      }
+    },
+    "covid-c-percentileClosest": {
+      "baseComponent": "covid",
+      "parameters": {
+        "guardrail": "percentileClosest",
+        "initial_selection": ["Georgia"]
+      }
+    },
+    "covid-c-cluster": {
+      "baseComponent": "covid",
+      "parameters": {
+        "guardrail": "cluster",
+        "initial_selection": ["Georgia"]
+      }
+    },
+    "covid-d-control": {
+      "baseComponent": "covid",
+      "parameters": {
+        "guardrail": "none",
+        "initial_selection": ["Slovenia"]
+      }
+    },
+    "covid-d-random": {
+      "baseComponent": "covid",
+      "parameters": {
+        "guardrail": "super_data",
+        "initial_selection": ["Slovenia"]
+      }
+    },
+    "covid-d-stats": {
+      "baseComponent": "covid",
+      "parameters": {
+        "guardrail": "percentiles",
+        "initial_selection": ["Slovenia"]
+      }
+    },
+    "covid-d-percentileClosest": {
+      "baseComponent": "covid",
+      "parameters": {
+        "guardrail": "percentileClosest",
+        "initial_selection": ["Slovenia"]
+      }
+    },
+    "covid-d-cluster": {
+      "baseComponent": "covid",
+      "parameters": {
+        "guardrail": "cluster",
+        "initial_selection": ["Slovenia"]
+      }
+    },
+    "covid-e-control": {
+      "baseComponent": "covid",
+      "parameters": {
+        "guardrail": "none",
+        "initial_selection": ["Cyprus"]
+      }
+    },
+    "covid-e-random": {
+      "baseComponent": "covid",
+      "parameters": {
+        "guardrail": "super_data",
+        "initial_selection": ["Cyprus"]
+      }
+    },
+    "covid-e-stats": {
+      "baseComponent": "covid",
+      "parameters": {
+        "guardrail": "percentiles",
+        "initial_selection": ["Cyprus"]
+      }
+    },
+    "covid-e-percentileClosest": {
+      "baseComponent": "covid",
+      "parameters": {
+        "guardrail": "percentileClosest",
+        "initial_selection": ["Cyprus"]
+      }
+    },
+    "covid-e-cluster": {
+      "baseComponent": "covid",
+      "parameters": {
+        "guardrail": "cluster",
+        "initial_selection": ["Cyprus"]
       }
     },
     "introduction": {
@@ -210,13 +354,29 @@
       "introduction",
       "consent",
       {
-        "order": "random",
+        "order": "latinSquare",
+        "numSamples": 1,
         "components": [
-          "covid-a-control",
-          "covid-a-random",
-          "covid-a-stats",
-          "covid-a-percentileClosest",
-          "covid-a-cluster"
+          {
+            "order": "random",
+            "components": ["covid-a-control", "covid-b-random", "covid-c-stats", "covid-d-percentileClosest", "covid-e-cluster"]
+          },
+          {
+            "order": "random",
+            "components": ["covid-b-control", "covid-c-random", "covid-d-stats", "covid-e-percentileClosest", "covid-a-cluster"]
+          },
+          {
+            "order": "random",
+            "components": ["covid-c-control", "covid-d-random", "covid-e-stats", "covid-a-percentileClosest", "covid-b-cluster"]
+          },
+          {
+            "order": "random",
+            "components": ["covid-d-control", "covid-e-random", "covid-a-stats", "covid-b-percentileClosest", "covid-c-cluster"]
+          },
+          {
+            "order": "random",
+            "components": ["covid-e-control", "covid-a-random", "covid-b-stats", "covid-c-percentileClosest", "covid-d-cluster"]
+          }
         ]
       },
       "post-study-quant"
