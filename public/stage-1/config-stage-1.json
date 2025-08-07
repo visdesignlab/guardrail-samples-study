@@ -359,24 +359,2884 @@
         "components": [
           {
             "order": "random",
-            "components": ["stock-a-control", "stock-b-random", "stock-c-stats", "stock-d-percentileClosest", "stock-e-cluster"]
+            "components": [
+              "stock-a-control",
+              "stock-b-random",
+              "stock-c-stats"
+            ]
           },
           {
             "order": "random",
-            "components": ["stock-b-control", "stock-c-random", "stock-d-stats", "stock-e-percentileClosest", "stock-a-cluster"]
+            "components": [
+              "stock-a-control",
+              "stock-b-stats",
+              "stock-c-random"
+            ]
           },
           {
             "order": "random",
-            "components": ["stock-c-control", "stock-d-random", "stock-e-stats", "stock-a-percentileClosest", "stock-b-cluster"]
+            "components": [
+              "stock-a-random",
+              "stock-b-control",
+              "stock-c-stats"
+            ]
           },
           {
             "order": "random",
-            "components": ["stock-d-control", "stock-e-random", "stock-a-stats", "stock-b-percentileClosest", "stock-c-cluster"]
+            "components": [
+              "stock-a-random",
+              "stock-b-stats",
+              "stock-c-control"
+            ]
           },
           {
             "order": "random",
-            "components": ["stock-e-control", "stock-a-random", "stock-b-stats", "stock-c-percentileClosest", "stock-d-cluster"]
-          }
+            "components": [
+              "stock-a-stats",
+              "stock-b-control",
+              "stock-c-random"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-a-stats",
+              "stock-b-random",
+              "stock-c-control"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-a-control",
+              "stock-b-random",
+              "stock-d-stats"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-a-control",
+              "stock-b-stats",
+              "stock-d-random"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-a-random",
+              "stock-b-control",
+              "stock-d-stats"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-a-random",
+              "stock-b-stats",
+              "stock-d-control"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-a-stats",
+              "stock-b-control",
+              "stock-d-random"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-a-stats",
+              "stock-b-random",
+              "stock-d-control"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-a-control",
+              "stock-b-random",
+              "stock-e-stats"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-a-control",
+              "stock-b-stats",
+              "stock-e-random"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-a-random",
+              "stock-b-control",
+              "stock-e-stats"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-a-random",
+              "stock-b-stats",
+              "stock-e-control"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-a-stats",
+              "stock-b-control",
+              "stock-e-random"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-a-stats",
+              "stock-b-random",
+              "stock-e-control"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-a-control",
+              "stock-c-random",
+              "stock-d-stats"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-a-control",
+              "stock-c-stats",
+              "stock-d-random"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-a-random",
+              "stock-c-control",
+              "stock-d-stats"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-a-random",
+              "stock-c-stats",
+              "stock-d-control"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-a-stats",
+              "stock-c-control",
+              "stock-d-random"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-a-stats",
+              "stock-c-random",
+              "stock-d-control"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-a-control",
+              "stock-c-random",
+              "stock-e-stats"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-a-control",
+              "stock-c-stats",
+              "stock-e-random"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-a-random",
+              "stock-c-control",
+              "stock-e-stats"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-a-random",
+              "stock-c-stats",
+              "stock-e-control"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-a-stats",
+              "stock-c-control",
+              "stock-e-random"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-a-stats",
+              "stock-c-random",
+              "stock-e-control"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-a-control",
+              "stock-d-random",
+              "stock-e-stats"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-a-control",
+              "stock-d-stats",
+              "stock-e-random"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-a-random",
+              "stock-d-control",
+              "stock-e-stats"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-a-random",
+              "stock-d-stats",
+              "stock-e-control"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-a-stats",
+              "stock-d-control",
+              "stock-e-random"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-a-stats",
+              "stock-d-random",
+              "stock-e-control"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-b-control",
+              "stock-c-random",
+              "stock-d-stats"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-b-control",
+              "stock-c-stats",
+              "stock-d-random"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-b-random",
+              "stock-c-control",
+              "stock-d-stats"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-b-random",
+              "stock-c-stats",
+              "stock-d-control"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-b-stats",
+              "stock-c-control",
+              "stock-d-random"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-b-stats",
+              "stock-c-random",
+              "stock-d-control"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-b-control",
+              "stock-c-random",
+              "stock-e-stats"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-b-control",
+              "stock-c-stats",
+              "stock-e-random"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-b-random",
+              "stock-c-control",
+              "stock-e-stats"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-b-random",
+              "stock-c-stats",
+              "stock-e-control"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-b-stats",
+              "stock-c-control",
+              "stock-e-random"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-b-stats",
+              "stock-c-random",
+              "stock-e-control"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-b-control",
+              "stock-d-random",
+              "stock-e-stats"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-b-control",
+              "stock-d-stats",
+              "stock-e-random"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-b-random",
+              "stock-d-control",
+              "stock-e-stats"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-b-random",
+              "stock-d-stats",
+              "stock-e-control"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-b-stats",
+              "stock-d-control",
+              "stock-e-random"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-b-stats",
+              "stock-d-random",
+              "stock-e-control"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-c-control",
+              "stock-d-random",
+              "stock-e-stats"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-c-control",
+              "stock-d-stats",
+              "stock-e-random"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-c-random",
+              "stock-d-control",
+              "stock-e-stats"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-c-random",
+              "stock-d-stats",
+              "stock-e-control"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-c-stats",
+              "stock-d-control",
+              "stock-e-random"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-c-stats",
+              "stock-d-random",
+              "stock-e-control"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-a-control",
+              "stock-b-random",
+              "stock-c-percentileClosest"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-a-control",
+              "stock-b-percentileClosest",
+              "stock-c-random"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-a-random",
+              "stock-b-control",
+              "stock-c-percentileClosest"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-a-random",
+              "stock-b-percentileClosest",
+              "stock-c-control"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-a-percentileClosest",
+              "stock-b-control",
+              "stock-c-random"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-a-percentileClosest",
+              "stock-b-random",
+              "stock-c-control"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-a-control",
+              "stock-b-random",
+              "stock-d-percentileClosest"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-a-control",
+              "stock-b-percentileClosest",
+              "stock-d-random"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-a-random",
+              "stock-b-control",
+              "stock-d-percentileClosest"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-a-random",
+              "stock-b-percentileClosest",
+              "stock-d-control"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-a-percentileClosest",
+              "stock-b-control",
+              "stock-d-random"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-a-percentileClosest",
+              "stock-b-random",
+              "stock-d-control"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-a-control",
+              "stock-b-random",
+              "stock-e-percentileClosest"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-a-control",
+              "stock-b-percentileClosest",
+              "stock-e-random"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-a-random",
+              "stock-b-control",
+              "stock-e-percentileClosest"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-a-random",
+              "stock-b-percentileClosest",
+              "stock-e-control"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-a-percentileClosest",
+              "stock-b-control",
+              "stock-e-random"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-a-percentileClosest",
+              "stock-b-random",
+              "stock-e-control"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-a-control",
+              "stock-c-random",
+              "stock-d-percentileClosest"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-a-control",
+              "stock-c-percentileClosest",
+              "stock-d-random"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-a-random",
+              "stock-c-control",
+              "stock-d-percentileClosest"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-a-random",
+              "stock-c-percentileClosest",
+              "stock-d-control"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-a-percentileClosest",
+              "stock-c-control",
+              "stock-d-random"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-a-percentileClosest",
+              "stock-c-random",
+              "stock-d-control"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-a-control",
+              "stock-c-random",
+              "stock-e-percentileClosest"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-a-control",
+              "stock-c-percentileClosest",
+              "stock-e-random"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-a-random",
+              "stock-c-control",
+              "stock-e-percentileClosest"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-a-random",
+              "stock-c-percentileClosest",
+              "stock-e-control"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-a-percentileClosest",
+              "stock-c-control",
+              "stock-e-random"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-a-percentileClosest",
+              "stock-c-random",
+              "stock-e-control"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-a-control",
+              "stock-d-random",
+              "stock-e-percentileClosest"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-a-control",
+              "stock-d-percentileClosest",
+              "stock-e-random"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-a-random",
+              "stock-d-control",
+              "stock-e-percentileClosest"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-a-random",
+              "stock-d-percentileClosest",
+              "stock-e-control"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-a-percentileClosest",
+              "stock-d-control",
+              "stock-e-random"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-a-percentileClosest",
+              "stock-d-random",
+              "stock-e-control"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-b-control",
+              "stock-c-random",
+              "stock-d-percentileClosest"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-b-control",
+              "stock-c-percentileClosest",
+              "stock-d-random"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-b-random",
+              "stock-c-control",
+              "stock-d-percentileClosest"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-b-random",
+              "stock-c-percentileClosest",
+              "stock-d-control"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-b-percentileClosest",
+              "stock-c-control",
+              "stock-d-random"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-b-percentileClosest",
+              "stock-c-random",
+              "stock-d-control"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-b-control",
+              "stock-c-random",
+              "stock-e-percentileClosest"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-b-control",
+              "stock-c-percentileClosest",
+              "stock-e-random"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-b-random",
+              "stock-c-control",
+              "stock-e-percentileClosest"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-b-random",
+              "stock-c-percentileClosest",
+              "stock-e-control"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-b-percentileClosest",
+              "stock-c-control",
+              "stock-e-random"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-b-percentileClosest",
+              "stock-c-random",
+              "stock-e-control"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-b-control",
+              "stock-d-random",
+              "stock-e-percentileClosest"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-b-control",
+              "stock-d-percentileClosest",
+              "stock-e-random"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-b-random",
+              "stock-d-control",
+              "stock-e-percentileClosest"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-b-random",
+              "stock-d-percentileClosest",
+              "stock-e-control"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-b-percentileClosest",
+              "stock-d-control",
+              "stock-e-random"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-b-percentileClosest",
+              "stock-d-random",
+              "stock-e-control"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-c-control",
+              "stock-d-random",
+              "stock-e-percentileClosest"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-c-control",
+              "stock-d-percentileClosest",
+              "stock-e-random"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-c-random",
+              "stock-d-control",
+              "stock-e-percentileClosest"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-c-random",
+              "stock-d-percentileClosest",
+              "stock-e-control"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-c-percentileClosest",
+              "stock-d-control",
+              "stock-e-random"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-c-percentileClosest",
+              "stock-d-random",
+              "stock-e-control"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-a-control",
+              "stock-b-random",
+              "stock-c-cluster"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-a-control",
+              "stock-b-cluster",
+              "stock-c-random"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-a-random",
+              "stock-b-control",
+              "stock-c-cluster"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-a-random",
+              "stock-b-cluster",
+              "stock-c-control"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-a-cluster",
+              "stock-b-control",
+              "stock-c-random"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-a-cluster",
+              "stock-b-random",
+              "stock-c-control"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-a-control",
+              "stock-b-random",
+              "stock-d-cluster"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-a-control",
+              "stock-b-cluster",
+              "stock-d-random"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-a-random",
+              "stock-b-control",
+              "stock-d-cluster"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-a-random",
+              "stock-b-cluster",
+              "stock-d-control"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-a-cluster",
+              "stock-b-control",
+              "stock-d-random"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-a-cluster",
+              "stock-b-random",
+              "stock-d-control"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-a-control",
+              "stock-b-random",
+              "stock-e-cluster"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-a-control",
+              "stock-b-cluster",
+              "stock-e-random"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-a-random",
+              "stock-b-control",
+              "stock-e-cluster"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-a-random",
+              "stock-b-cluster",
+              "stock-e-control"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-a-cluster",
+              "stock-b-control",
+              "stock-e-random"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-a-cluster",
+              "stock-b-random",
+              "stock-e-control"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-a-control",
+              "stock-c-random",
+              "stock-d-cluster"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-a-control",
+              "stock-c-cluster",
+              "stock-d-random"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-a-random",
+              "stock-c-control",
+              "stock-d-cluster"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-a-random",
+              "stock-c-cluster",
+              "stock-d-control"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-a-cluster",
+              "stock-c-control",
+              "stock-d-random"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-a-cluster",
+              "stock-c-random",
+              "stock-d-control"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-a-control",
+              "stock-c-random",
+              "stock-e-cluster"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-a-control",
+              "stock-c-cluster",
+              "stock-e-random"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-a-random",
+              "stock-c-control",
+              "stock-e-cluster"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-a-random",
+              "stock-c-cluster",
+              "stock-e-control"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-a-cluster",
+              "stock-c-control",
+              "stock-e-random"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-a-cluster",
+              "stock-c-random",
+              "stock-e-control"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-a-control",
+              "stock-d-random",
+              "stock-e-cluster"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-a-control",
+              "stock-d-cluster",
+              "stock-e-random"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-a-random",
+              "stock-d-control",
+              "stock-e-cluster"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-a-random",
+              "stock-d-cluster",
+              "stock-e-control"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-a-cluster",
+              "stock-d-control",
+              "stock-e-random"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-a-cluster",
+              "stock-d-random",
+              "stock-e-control"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-b-control",
+              "stock-c-random",
+              "stock-d-cluster"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-b-control",
+              "stock-c-cluster",
+              "stock-d-random"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-b-random",
+              "stock-c-control",
+              "stock-d-cluster"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-b-random",
+              "stock-c-cluster",
+              "stock-d-control"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-b-cluster",
+              "stock-c-control",
+              "stock-d-random"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-b-cluster",
+              "stock-c-random",
+              "stock-d-control"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-b-control",
+              "stock-c-random",
+              "stock-e-cluster"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-b-control",
+              "stock-c-cluster",
+              "stock-e-random"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-b-random",
+              "stock-c-control",
+              "stock-e-cluster"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-b-random",
+              "stock-c-cluster",
+              "stock-e-control"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-b-cluster",
+              "stock-c-control",
+              "stock-e-random"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-b-cluster",
+              "stock-c-random",
+              "stock-e-control"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-b-control",
+              "stock-d-random",
+              "stock-e-cluster"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-b-control",
+              "stock-d-cluster",
+              "stock-e-random"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-b-random",
+              "stock-d-control",
+              "stock-e-cluster"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-b-random",
+              "stock-d-cluster",
+              "stock-e-control"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-b-cluster",
+              "stock-d-control",
+              "stock-e-random"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-b-cluster",
+              "stock-d-random",
+              "stock-e-control"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-c-control",
+              "stock-d-random",
+              "stock-e-cluster"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-c-control",
+              "stock-d-cluster",
+              "stock-e-random"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-c-random",
+              "stock-d-control",
+              "stock-e-cluster"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-c-random",
+              "stock-d-cluster",
+              "stock-e-control"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-c-cluster",
+              "stock-d-control",
+              "stock-e-random"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-c-cluster",
+              "stock-d-random",
+              "stock-e-control"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-a-control",
+              "stock-b-stats",
+              "stock-c-percentileClosest"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-a-control",
+              "stock-b-percentileClosest",
+              "stock-c-stats"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-a-stats",
+              "stock-b-control",
+              "stock-c-percentileClosest"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-a-stats",
+              "stock-b-percentileClosest",
+              "stock-c-control"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-a-percentileClosest",
+              "stock-b-control",
+              "stock-c-stats"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-a-percentileClosest",
+              "stock-b-stats",
+              "stock-c-control"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-a-control",
+              "stock-b-stats",
+              "stock-d-percentileClosest"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-a-control",
+              "stock-b-percentileClosest",
+              "stock-d-stats"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-a-stats",
+              "stock-b-control",
+              "stock-d-percentileClosest"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-a-stats",
+              "stock-b-percentileClosest",
+              "stock-d-control"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-a-percentileClosest",
+              "stock-b-control",
+              "stock-d-stats"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-a-percentileClosest",
+              "stock-b-stats",
+              "stock-d-control"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-a-control",
+              "stock-b-stats",
+              "stock-e-percentileClosest"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-a-control",
+              "stock-b-percentileClosest",
+              "stock-e-stats"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-a-stats",
+              "stock-b-control",
+              "stock-e-percentileClosest"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-a-stats",
+              "stock-b-percentileClosest",
+              "stock-e-control"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-a-percentileClosest",
+              "stock-b-control",
+              "stock-e-stats"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-a-percentileClosest",
+              "stock-b-stats",
+              "stock-e-control"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-a-control",
+              "stock-c-stats",
+              "stock-d-percentileClosest"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-a-control",
+              "stock-c-percentileClosest",
+              "stock-d-stats"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-a-stats",
+              "stock-c-control",
+              "stock-d-percentileClosest"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-a-stats",
+              "stock-c-percentileClosest",
+              "stock-d-control"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-a-percentileClosest",
+              "stock-c-control",
+              "stock-d-stats"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-a-percentileClosest",
+              "stock-c-stats",
+              "stock-d-control"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-a-control",
+              "stock-c-stats",
+              "stock-e-percentileClosest"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-a-control",
+              "stock-c-percentileClosest",
+              "stock-e-stats"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-a-stats",
+              "stock-c-control",
+              "stock-e-percentileClosest"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-a-stats",
+              "stock-c-percentileClosest",
+              "stock-e-control"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-a-percentileClosest",
+              "stock-c-control",
+              "stock-e-stats"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-a-percentileClosest",
+              "stock-c-stats",
+              "stock-e-control"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-a-control",
+              "stock-d-stats",
+              "stock-e-percentileClosest"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-a-control",
+              "stock-d-percentileClosest",
+              "stock-e-stats"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-a-stats",
+              "stock-d-control",
+              "stock-e-percentileClosest"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-a-stats",
+              "stock-d-percentileClosest",
+              "stock-e-control"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-a-percentileClosest",
+              "stock-d-control",
+              "stock-e-stats"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-a-percentileClosest",
+              "stock-d-stats",
+              "stock-e-control"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-b-control",
+              "stock-c-stats",
+              "stock-d-percentileClosest"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-b-control",
+              "stock-c-percentileClosest",
+              "stock-d-stats"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-b-stats",
+              "stock-c-control",
+              "stock-d-percentileClosest"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-b-stats",
+              "stock-c-percentileClosest",
+              "stock-d-control"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-b-percentileClosest",
+              "stock-c-control",
+              "stock-d-stats"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-b-percentileClosest",
+              "stock-c-stats",
+              "stock-d-control"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-b-control",
+              "stock-c-stats",
+              "stock-e-percentileClosest"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-b-control",
+              "stock-c-percentileClosest",
+              "stock-e-stats"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-b-stats",
+              "stock-c-control",
+              "stock-e-percentileClosest"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-b-stats",
+              "stock-c-percentileClosest",
+              "stock-e-control"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-b-percentileClosest",
+              "stock-c-control",
+              "stock-e-stats"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-b-percentileClosest",
+              "stock-c-stats",
+              "stock-e-control"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-b-control",
+              "stock-d-stats",
+              "stock-e-percentileClosest"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-b-control",
+              "stock-d-percentileClosest",
+              "stock-e-stats"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-b-stats",
+              "stock-d-control",
+              "stock-e-percentileClosest"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-b-stats",
+              "stock-d-percentileClosest",
+              "stock-e-control"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-b-percentileClosest",
+              "stock-d-control",
+              "stock-e-stats"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-b-percentileClosest",
+              "stock-d-stats",
+              "stock-e-control"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-c-control",
+              "stock-d-stats",
+              "stock-e-percentileClosest"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-c-control",
+              "stock-d-percentileClosest",
+              "stock-e-stats"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-c-stats",
+              "stock-d-control",
+              "stock-e-percentileClosest"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-c-stats",
+              "stock-d-percentileClosest",
+              "stock-e-control"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-c-percentileClosest",
+              "stock-d-control",
+              "stock-e-stats"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-c-percentileClosest",
+              "stock-d-stats",
+              "stock-e-control"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-a-control",
+              "stock-b-stats",
+              "stock-c-cluster"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-a-control",
+              "stock-b-cluster",
+              "stock-c-stats"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-a-stats",
+              "stock-b-control",
+              "stock-c-cluster"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-a-stats",
+              "stock-b-cluster",
+              "stock-c-control"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-a-cluster",
+              "stock-b-control",
+              "stock-c-stats"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-a-cluster",
+              "stock-b-stats",
+              "stock-c-control"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-a-control",
+              "stock-b-stats",
+              "stock-d-cluster"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-a-control",
+              "stock-b-cluster",
+              "stock-d-stats"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-a-stats",
+              "stock-b-control",
+              "stock-d-cluster"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-a-stats",
+              "stock-b-cluster",
+              "stock-d-control"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-a-cluster",
+              "stock-b-control",
+              "stock-d-stats"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-a-cluster",
+              "stock-b-stats",
+              "stock-d-control"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-a-control",
+              "stock-b-stats",
+              "stock-e-cluster"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-a-control",
+              "stock-b-cluster",
+              "stock-e-stats"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-a-stats",
+              "stock-b-control",
+              "stock-e-cluster"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-a-stats",
+              "stock-b-cluster",
+              "stock-e-control"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-a-cluster",
+              "stock-b-control",
+              "stock-e-stats"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-a-cluster",
+              "stock-b-stats",
+              "stock-e-control"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-a-control",
+              "stock-c-stats",
+              "stock-d-cluster"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-a-control",
+              "stock-c-cluster",
+              "stock-d-stats"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-a-stats",
+              "stock-c-control",
+              "stock-d-cluster"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-a-stats",
+              "stock-c-cluster",
+              "stock-d-control"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-a-cluster",
+              "stock-c-control",
+              "stock-d-stats"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-a-cluster",
+              "stock-c-stats",
+              "stock-d-control"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-a-control",
+              "stock-c-stats",
+              "stock-e-cluster"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-a-control",
+              "stock-c-cluster",
+              "stock-e-stats"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-a-stats",
+              "stock-c-control",
+              "stock-e-cluster"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-a-stats",
+              "stock-c-cluster",
+              "stock-e-control"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-a-cluster",
+              "stock-c-control",
+              "stock-e-stats"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-a-cluster",
+              "stock-c-stats",
+              "stock-e-control"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-a-control",
+              "stock-d-stats",
+              "stock-e-cluster"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-a-control",
+              "stock-d-cluster",
+              "stock-e-stats"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-a-stats",
+              "stock-d-control",
+              "stock-e-cluster"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-a-stats",
+              "stock-d-cluster",
+              "stock-e-control"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-a-cluster",
+              "stock-d-control",
+              "stock-e-stats"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-a-cluster",
+              "stock-d-stats",
+              "stock-e-control"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-b-control",
+              "stock-c-stats",
+              "stock-d-cluster"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-b-control",
+              "stock-c-cluster",
+              "stock-d-stats"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-b-stats",
+              "stock-c-control",
+              "stock-d-cluster"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-b-stats",
+              "stock-c-cluster",
+              "stock-d-control"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-b-cluster",
+              "stock-c-control",
+              "stock-d-stats"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-b-cluster",
+              "stock-c-stats",
+              "stock-d-control"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-b-control",
+              "stock-c-stats",
+              "stock-e-cluster"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-b-control",
+              "stock-c-cluster",
+              "stock-e-stats"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-b-stats",
+              "stock-c-control",
+              "stock-e-cluster"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-b-stats",
+              "stock-c-cluster",
+              "stock-e-control"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-b-cluster",
+              "stock-c-control",
+              "stock-e-stats"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-b-cluster",
+              "stock-c-stats",
+              "stock-e-control"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-b-control",
+              "stock-d-stats",
+              "stock-e-cluster"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-b-control",
+              "stock-d-cluster",
+              "stock-e-stats"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-b-stats",
+              "stock-d-control",
+              "stock-e-cluster"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-b-stats",
+              "stock-d-cluster",
+              "stock-e-control"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-b-cluster",
+              "stock-d-control",
+              "stock-e-stats"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-b-cluster",
+              "stock-d-stats",
+              "stock-e-control"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-c-control",
+              "stock-d-stats",
+              "stock-e-cluster"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-c-control",
+              "stock-d-cluster",
+              "stock-e-stats"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-c-stats",
+              "stock-d-control",
+              "stock-e-cluster"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-c-stats",
+              "stock-d-cluster",
+              "stock-e-control"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-c-cluster",
+              "stock-d-control",
+              "stock-e-stats"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-c-cluster",
+              "stock-d-stats",
+              "stock-e-control"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-a-control",
+              "stock-b-percentileClosest",
+              "stock-c-cluster"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-a-control",
+              "stock-b-cluster",
+              "stock-c-percentileClosest"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-a-percentileClosest",
+              "stock-b-control",
+              "stock-c-cluster"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-a-percentileClosest",
+              "stock-b-cluster",
+              "stock-c-control"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-a-cluster",
+              "stock-b-control",
+              "stock-c-percentileClosest"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-a-cluster",
+              "stock-b-percentileClosest",
+              "stock-c-control"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-a-control",
+              "stock-b-percentileClosest",
+              "stock-d-cluster"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-a-control",
+              "stock-b-cluster",
+              "stock-d-percentileClosest"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-a-percentileClosest",
+              "stock-b-control",
+              "stock-d-cluster"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-a-percentileClosest",
+              "stock-b-cluster",
+              "stock-d-control"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-a-cluster",
+              "stock-b-control",
+              "stock-d-percentileClosest"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-a-cluster",
+              "stock-b-percentileClosest",
+              "stock-d-control"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-a-control",
+              "stock-b-percentileClosest",
+              "stock-e-cluster"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-a-control",
+              "stock-b-cluster",
+              "stock-e-percentileClosest"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-a-percentileClosest",
+              "stock-b-control",
+              "stock-e-cluster"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-a-percentileClosest",
+              "stock-b-cluster",
+              "stock-e-control"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-a-cluster",
+              "stock-b-control",
+              "stock-e-percentileClosest"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-a-cluster",
+              "stock-b-percentileClosest",
+              "stock-e-control"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-a-control",
+              "stock-c-percentileClosest",
+              "stock-d-cluster"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-a-control",
+              "stock-c-cluster",
+              "stock-d-percentileClosest"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-a-percentileClosest",
+              "stock-c-control",
+              "stock-d-cluster"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-a-percentileClosest",
+              "stock-c-cluster",
+              "stock-d-control"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-a-cluster",
+              "stock-c-control",
+              "stock-d-percentileClosest"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-a-cluster",
+              "stock-c-percentileClosest",
+              "stock-d-control"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-a-control",
+              "stock-c-percentileClosest",
+              "stock-e-cluster"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-a-control",
+              "stock-c-cluster",
+              "stock-e-percentileClosest"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-a-percentileClosest",
+              "stock-c-control",
+              "stock-e-cluster"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-a-percentileClosest",
+              "stock-c-cluster",
+              "stock-e-control"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-a-cluster",
+              "stock-c-control",
+              "stock-e-percentileClosest"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-a-cluster",
+              "stock-c-percentileClosest",
+              "stock-e-control"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-a-control",
+              "stock-d-percentileClosest",
+              "stock-e-cluster"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-a-control",
+              "stock-d-cluster",
+              "stock-e-percentileClosest"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-a-percentileClosest",
+              "stock-d-control",
+              "stock-e-cluster"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-a-percentileClosest",
+              "stock-d-cluster",
+              "stock-e-control"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-a-cluster",
+              "stock-d-control",
+              "stock-e-percentileClosest"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-a-cluster",
+              "stock-d-percentileClosest",
+              "stock-e-control"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-b-control",
+              "stock-c-percentileClosest",
+              "stock-d-cluster"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-b-control",
+              "stock-c-cluster",
+              "stock-d-percentileClosest"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-b-percentileClosest",
+              "stock-c-control",
+              "stock-d-cluster"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-b-percentileClosest",
+              "stock-c-cluster",
+              "stock-d-control"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-b-cluster",
+              "stock-c-control",
+              "stock-d-percentileClosest"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-b-cluster",
+              "stock-c-percentileClosest",
+              "stock-d-control"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-b-control",
+              "stock-c-percentileClosest",
+              "stock-e-cluster"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-b-control",
+              "stock-c-cluster",
+              "stock-e-percentileClosest"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-b-percentileClosest",
+              "stock-c-control",
+              "stock-e-cluster"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-b-percentileClosest",
+              "stock-c-cluster",
+              "stock-e-control"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-b-cluster",
+              "stock-c-control",
+              "stock-e-percentileClosest"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-b-cluster",
+              "stock-c-percentileClosest",
+              "stock-e-control"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-b-control",
+              "stock-d-percentileClosest",
+              "stock-e-cluster"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-b-control",
+              "stock-d-cluster",
+              "stock-e-percentileClosest"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-b-percentileClosest",
+              "stock-d-control",
+              "stock-e-cluster"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-b-percentileClosest",
+              "stock-d-cluster",
+              "stock-e-control"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-b-cluster",
+              "stock-d-control",
+              "stock-e-percentileClosest"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-b-cluster",
+              "stock-d-percentileClosest",
+              "stock-e-control"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-c-control",
+              "stock-d-percentileClosest",
+              "stock-e-cluster"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-c-control",
+              "stock-d-cluster",
+              "stock-e-percentileClosest"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-c-percentileClosest",
+              "stock-d-control",
+              "stock-e-cluster"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-c-percentileClosest",
+              "stock-d-cluster",
+              "stock-e-control"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-c-cluster",
+              "stock-d-control",
+              "stock-e-percentileClosest"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "stock-c-cluster",
+              "stock-d-percentileClosest",
+              "stock-e-control"
+            ]
+          }  
         ]
       },
       "post-study-quant"
