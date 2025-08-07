@@ -359,23 +359,2883 @@
         "components": [
           {
             "order": "random",
-            "components": ["covid-a-control", "covid-b-random", "covid-c-stats", "covid-d-percentileClosest", "covid-e-cluster"]
+            "components": [
+              "covid-a-control",
+              "covid-b-random",
+              "covid-c-stats"
+            ]
           },
           {
             "order": "random",
-            "components": ["covid-b-control", "covid-c-random", "covid-d-stats", "covid-e-percentileClosest", "covid-a-cluster"]
+            "components": [
+              "covid-a-control",
+              "covid-b-stats",
+              "covid-c-random"
+            ]
           },
           {
             "order": "random",
-            "components": ["covid-c-control", "covid-d-random", "covid-e-stats", "covid-a-percentileClosest", "covid-b-cluster"]
+            "components": [
+              "covid-a-random",
+              "covid-b-control",
+              "covid-c-stats"
+            ]
           },
           {
             "order": "random",
-            "components": ["covid-d-control", "covid-e-random", "covid-a-stats", "covid-b-percentileClosest", "covid-c-cluster"]
+            "components": [
+              "covid-a-random",
+              "covid-b-stats",
+              "covid-c-control"
+            ]
           },
           {
             "order": "random",
-            "components": ["covid-e-control", "covid-a-random", "covid-b-stats", "covid-c-percentileClosest", "covid-d-cluster"]
+            "components": [
+              "covid-a-stats",
+              "covid-b-control",
+              "covid-c-random"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-a-stats",
+              "covid-b-random",
+              "covid-c-control"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-a-control",
+              "covid-b-random",
+              "covid-d-stats"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-a-control",
+              "covid-b-stats",
+              "covid-d-random"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-a-random",
+              "covid-b-control",
+              "covid-d-stats"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-a-random",
+              "covid-b-stats",
+              "covid-d-control"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-a-stats",
+              "covid-b-control",
+              "covid-d-random"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-a-stats",
+              "covid-b-random",
+              "covid-d-control"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-a-control",
+              "covid-b-random",
+              "covid-e-stats"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-a-control",
+              "covid-b-stats",
+              "covid-e-random"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-a-random",
+              "covid-b-control",
+              "covid-e-stats"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-a-random",
+              "covid-b-stats",
+              "covid-e-control"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-a-stats",
+              "covid-b-control",
+              "covid-e-random"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-a-stats",
+              "covid-b-random",
+              "covid-e-control"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-a-control",
+              "covid-c-random",
+              "covid-d-stats"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-a-control",
+              "covid-c-stats",
+              "covid-d-random"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-a-random",
+              "covid-c-control",
+              "covid-d-stats"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-a-random",
+              "covid-c-stats",
+              "covid-d-control"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-a-stats",
+              "covid-c-control",
+              "covid-d-random"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-a-stats",
+              "covid-c-random",
+              "covid-d-control"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-a-control",
+              "covid-c-random",
+              "covid-e-stats"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-a-control",
+              "covid-c-stats",
+              "covid-e-random"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-a-random",
+              "covid-c-control",
+              "covid-e-stats"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-a-random",
+              "covid-c-stats",
+              "covid-e-control"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-a-stats",
+              "covid-c-control",
+              "covid-e-random"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-a-stats",
+              "covid-c-random",
+              "covid-e-control"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-a-control",
+              "covid-d-random",
+              "covid-e-stats"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-a-control",
+              "covid-d-stats",
+              "covid-e-random"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-a-random",
+              "covid-d-control",
+              "covid-e-stats"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-a-random",
+              "covid-d-stats",
+              "covid-e-control"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-a-stats",
+              "covid-d-control",
+              "covid-e-random"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-a-stats",
+              "covid-d-random",
+              "covid-e-control"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-b-control",
+              "covid-c-random",
+              "covid-d-stats"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-b-control",
+              "covid-c-stats",
+              "covid-d-random"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-b-random",
+              "covid-c-control",
+              "covid-d-stats"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-b-random",
+              "covid-c-stats",
+              "covid-d-control"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-b-stats",
+              "covid-c-control",
+              "covid-d-random"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-b-stats",
+              "covid-c-random",
+              "covid-d-control"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-b-control",
+              "covid-c-random",
+              "covid-e-stats"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-b-control",
+              "covid-c-stats",
+              "covid-e-random"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-b-random",
+              "covid-c-control",
+              "covid-e-stats"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-b-random",
+              "covid-c-stats",
+              "covid-e-control"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-b-stats",
+              "covid-c-control",
+              "covid-e-random"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-b-stats",
+              "covid-c-random",
+              "covid-e-control"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-b-control",
+              "covid-d-random",
+              "covid-e-stats"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-b-control",
+              "covid-d-stats",
+              "covid-e-random"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-b-random",
+              "covid-d-control",
+              "covid-e-stats"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-b-random",
+              "covid-d-stats",
+              "covid-e-control"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-b-stats",
+              "covid-d-control",
+              "covid-e-random"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-b-stats",
+              "covid-d-random",
+              "covid-e-control"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-c-control",
+              "covid-d-random",
+              "covid-e-stats"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-c-control",
+              "covid-d-stats",
+              "covid-e-random"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-c-random",
+              "covid-d-control",
+              "covid-e-stats"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-c-random",
+              "covid-d-stats",
+              "covid-e-control"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-c-stats",
+              "covid-d-control",
+              "covid-e-random"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-c-stats",
+              "covid-d-random",
+              "covid-e-control"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-a-control",
+              "covid-b-random",
+              "covid-c-percentileClosest"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-a-control",
+              "covid-b-percentileClosest",
+              "covid-c-random"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-a-random",
+              "covid-b-control",
+              "covid-c-percentileClosest"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-a-random",
+              "covid-b-percentileClosest",
+              "covid-c-control"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-a-percentileClosest",
+              "covid-b-control",
+              "covid-c-random"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-a-percentileClosest",
+              "covid-b-random",
+              "covid-c-control"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-a-control",
+              "covid-b-random",
+              "covid-d-percentileClosest"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-a-control",
+              "covid-b-percentileClosest",
+              "covid-d-random"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-a-random",
+              "covid-b-control",
+              "covid-d-percentileClosest"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-a-random",
+              "covid-b-percentileClosest",
+              "covid-d-control"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-a-percentileClosest",
+              "covid-b-control",
+              "covid-d-random"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-a-percentileClosest",
+              "covid-b-random",
+              "covid-d-control"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-a-control",
+              "covid-b-random",
+              "covid-e-percentileClosest"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-a-control",
+              "covid-b-percentileClosest",
+              "covid-e-random"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-a-random",
+              "covid-b-control",
+              "covid-e-percentileClosest"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-a-random",
+              "covid-b-percentileClosest",
+              "covid-e-control"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-a-percentileClosest",
+              "covid-b-control",
+              "covid-e-random"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-a-percentileClosest",
+              "covid-b-random",
+              "covid-e-control"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-a-control",
+              "covid-c-random",
+              "covid-d-percentileClosest"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-a-control",
+              "covid-c-percentileClosest",
+              "covid-d-random"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-a-random",
+              "covid-c-control",
+              "covid-d-percentileClosest"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-a-random",
+              "covid-c-percentileClosest",
+              "covid-d-control"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-a-percentileClosest",
+              "covid-c-control",
+              "covid-d-random"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-a-percentileClosest",
+              "covid-c-random",
+              "covid-d-control"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-a-control",
+              "covid-c-random",
+              "covid-e-percentileClosest"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-a-control",
+              "covid-c-percentileClosest",
+              "covid-e-random"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-a-random",
+              "covid-c-control",
+              "covid-e-percentileClosest"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-a-random",
+              "covid-c-percentileClosest",
+              "covid-e-control"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-a-percentileClosest",
+              "covid-c-control",
+              "covid-e-random"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-a-percentileClosest",
+              "covid-c-random",
+              "covid-e-control"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-a-control",
+              "covid-d-random",
+              "covid-e-percentileClosest"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-a-control",
+              "covid-d-percentileClosest",
+              "covid-e-random"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-a-random",
+              "covid-d-control",
+              "covid-e-percentileClosest"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-a-random",
+              "covid-d-percentileClosest",
+              "covid-e-control"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-a-percentileClosest",
+              "covid-d-control",
+              "covid-e-random"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-a-percentileClosest",
+              "covid-d-random",
+              "covid-e-control"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-b-control",
+              "covid-c-random",
+              "covid-d-percentileClosest"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-b-control",
+              "covid-c-percentileClosest",
+              "covid-d-random"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-b-random",
+              "covid-c-control",
+              "covid-d-percentileClosest"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-b-random",
+              "covid-c-percentileClosest",
+              "covid-d-control"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-b-percentileClosest",
+              "covid-c-control",
+              "covid-d-random"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-b-percentileClosest",
+              "covid-c-random",
+              "covid-d-control"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-b-control",
+              "covid-c-random",
+              "covid-e-percentileClosest"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-b-control",
+              "covid-c-percentileClosest",
+              "covid-e-random"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-b-random",
+              "covid-c-control",
+              "covid-e-percentileClosest"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-b-random",
+              "covid-c-percentileClosest",
+              "covid-e-control"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-b-percentileClosest",
+              "covid-c-control",
+              "covid-e-random"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-b-percentileClosest",
+              "covid-c-random",
+              "covid-e-control"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-b-control",
+              "covid-d-random",
+              "covid-e-percentileClosest"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-b-control",
+              "covid-d-percentileClosest",
+              "covid-e-random"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-b-random",
+              "covid-d-control",
+              "covid-e-percentileClosest"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-b-random",
+              "covid-d-percentileClosest",
+              "covid-e-control"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-b-percentileClosest",
+              "covid-d-control",
+              "covid-e-random"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-b-percentileClosest",
+              "covid-d-random",
+              "covid-e-control"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-c-control",
+              "covid-d-random",
+              "covid-e-percentileClosest"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-c-control",
+              "covid-d-percentileClosest",
+              "covid-e-random"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-c-random",
+              "covid-d-control",
+              "covid-e-percentileClosest"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-c-random",
+              "covid-d-percentileClosest",
+              "covid-e-control"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-c-percentileClosest",
+              "covid-d-control",
+              "covid-e-random"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-c-percentileClosest",
+              "covid-d-random",
+              "covid-e-control"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-a-control",
+              "covid-b-random",
+              "covid-c-cluster"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-a-control",
+              "covid-b-cluster",
+              "covid-c-random"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-a-random",
+              "covid-b-control",
+              "covid-c-cluster"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-a-random",
+              "covid-b-cluster",
+              "covid-c-control"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-a-cluster",
+              "covid-b-control",
+              "covid-c-random"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-a-cluster",
+              "covid-b-random",
+              "covid-c-control"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-a-control",
+              "covid-b-random",
+              "covid-d-cluster"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-a-control",
+              "covid-b-cluster",
+              "covid-d-random"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-a-random",
+              "covid-b-control",
+              "covid-d-cluster"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-a-random",
+              "covid-b-cluster",
+              "covid-d-control"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-a-cluster",
+              "covid-b-control",
+              "covid-d-random"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-a-cluster",
+              "covid-b-random",
+              "covid-d-control"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-a-control",
+              "covid-b-random",
+              "covid-e-cluster"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-a-control",
+              "covid-b-cluster",
+              "covid-e-random"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-a-random",
+              "covid-b-control",
+              "covid-e-cluster"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-a-random",
+              "covid-b-cluster",
+              "covid-e-control"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-a-cluster",
+              "covid-b-control",
+              "covid-e-random"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-a-cluster",
+              "covid-b-random",
+              "covid-e-control"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-a-control",
+              "covid-c-random",
+              "covid-d-cluster"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-a-control",
+              "covid-c-cluster",
+              "covid-d-random"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-a-random",
+              "covid-c-control",
+              "covid-d-cluster"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-a-random",
+              "covid-c-cluster",
+              "covid-d-control"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-a-cluster",
+              "covid-c-control",
+              "covid-d-random"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-a-cluster",
+              "covid-c-random",
+              "covid-d-control"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-a-control",
+              "covid-c-random",
+              "covid-e-cluster"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-a-control",
+              "covid-c-cluster",
+              "covid-e-random"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-a-random",
+              "covid-c-control",
+              "covid-e-cluster"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-a-random",
+              "covid-c-cluster",
+              "covid-e-control"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-a-cluster",
+              "covid-c-control",
+              "covid-e-random"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-a-cluster",
+              "covid-c-random",
+              "covid-e-control"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-a-control",
+              "covid-d-random",
+              "covid-e-cluster"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-a-control",
+              "covid-d-cluster",
+              "covid-e-random"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-a-random",
+              "covid-d-control",
+              "covid-e-cluster"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-a-random",
+              "covid-d-cluster",
+              "covid-e-control"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-a-cluster",
+              "covid-d-control",
+              "covid-e-random"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-a-cluster",
+              "covid-d-random",
+              "covid-e-control"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-b-control",
+              "covid-c-random",
+              "covid-d-cluster"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-b-control",
+              "covid-c-cluster",
+              "covid-d-random"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-b-random",
+              "covid-c-control",
+              "covid-d-cluster"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-b-random",
+              "covid-c-cluster",
+              "covid-d-control"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-b-cluster",
+              "covid-c-control",
+              "covid-d-random"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-b-cluster",
+              "covid-c-random",
+              "covid-d-control"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-b-control",
+              "covid-c-random",
+              "covid-e-cluster"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-b-control",
+              "covid-c-cluster",
+              "covid-e-random"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-b-random",
+              "covid-c-control",
+              "covid-e-cluster"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-b-random",
+              "covid-c-cluster",
+              "covid-e-control"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-b-cluster",
+              "covid-c-control",
+              "covid-e-random"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-b-cluster",
+              "covid-c-random",
+              "covid-e-control"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-b-control",
+              "covid-d-random",
+              "covid-e-cluster"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-b-control",
+              "covid-d-cluster",
+              "covid-e-random"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-b-random",
+              "covid-d-control",
+              "covid-e-cluster"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-b-random",
+              "covid-d-cluster",
+              "covid-e-control"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-b-cluster",
+              "covid-d-control",
+              "covid-e-random"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-b-cluster",
+              "covid-d-random",
+              "covid-e-control"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-c-control",
+              "covid-d-random",
+              "covid-e-cluster"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-c-control",
+              "covid-d-cluster",
+              "covid-e-random"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-c-random",
+              "covid-d-control",
+              "covid-e-cluster"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-c-random",
+              "covid-d-cluster",
+              "covid-e-control"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-c-cluster",
+              "covid-d-control",
+              "covid-e-random"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-c-cluster",
+              "covid-d-random",
+              "covid-e-control"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-a-control",
+              "covid-b-stats",
+              "covid-c-percentileClosest"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-a-control",
+              "covid-b-percentileClosest",
+              "covid-c-stats"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-a-stats",
+              "covid-b-control",
+              "covid-c-percentileClosest"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-a-stats",
+              "covid-b-percentileClosest",
+              "covid-c-control"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-a-percentileClosest",
+              "covid-b-control",
+              "covid-c-stats"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-a-percentileClosest",
+              "covid-b-stats",
+              "covid-c-control"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-a-control",
+              "covid-b-stats",
+              "covid-d-percentileClosest"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-a-control",
+              "covid-b-percentileClosest",
+              "covid-d-stats"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-a-stats",
+              "covid-b-control",
+              "covid-d-percentileClosest"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-a-stats",
+              "covid-b-percentileClosest",
+              "covid-d-control"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-a-percentileClosest",
+              "covid-b-control",
+              "covid-d-stats"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-a-percentileClosest",
+              "covid-b-stats",
+              "covid-d-control"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-a-control",
+              "covid-b-stats",
+              "covid-e-percentileClosest"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-a-control",
+              "covid-b-percentileClosest",
+              "covid-e-stats"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-a-stats",
+              "covid-b-control",
+              "covid-e-percentileClosest"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-a-stats",
+              "covid-b-percentileClosest",
+              "covid-e-control"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-a-percentileClosest",
+              "covid-b-control",
+              "covid-e-stats"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-a-percentileClosest",
+              "covid-b-stats",
+              "covid-e-control"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-a-control",
+              "covid-c-stats",
+              "covid-d-percentileClosest"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-a-control",
+              "covid-c-percentileClosest",
+              "covid-d-stats"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-a-stats",
+              "covid-c-control",
+              "covid-d-percentileClosest"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-a-stats",
+              "covid-c-percentileClosest",
+              "covid-d-control"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-a-percentileClosest",
+              "covid-c-control",
+              "covid-d-stats"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-a-percentileClosest",
+              "covid-c-stats",
+              "covid-d-control"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-a-control",
+              "covid-c-stats",
+              "covid-e-percentileClosest"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-a-control",
+              "covid-c-percentileClosest",
+              "covid-e-stats"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-a-stats",
+              "covid-c-control",
+              "covid-e-percentileClosest"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-a-stats",
+              "covid-c-percentileClosest",
+              "covid-e-control"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-a-percentileClosest",
+              "covid-c-control",
+              "covid-e-stats"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-a-percentileClosest",
+              "covid-c-stats",
+              "covid-e-control"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-a-control",
+              "covid-d-stats",
+              "covid-e-percentileClosest"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-a-control",
+              "covid-d-percentileClosest",
+              "covid-e-stats"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-a-stats",
+              "covid-d-control",
+              "covid-e-percentileClosest"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-a-stats",
+              "covid-d-percentileClosest",
+              "covid-e-control"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-a-percentileClosest",
+              "covid-d-control",
+              "covid-e-stats"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-a-percentileClosest",
+              "covid-d-stats",
+              "covid-e-control"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-b-control",
+              "covid-c-stats",
+              "covid-d-percentileClosest"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-b-control",
+              "covid-c-percentileClosest",
+              "covid-d-stats"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-b-stats",
+              "covid-c-control",
+              "covid-d-percentileClosest"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-b-stats",
+              "covid-c-percentileClosest",
+              "covid-d-control"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-b-percentileClosest",
+              "covid-c-control",
+              "covid-d-stats"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-b-percentileClosest",
+              "covid-c-stats",
+              "covid-d-control"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-b-control",
+              "covid-c-stats",
+              "covid-e-percentileClosest"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-b-control",
+              "covid-c-percentileClosest",
+              "covid-e-stats"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-b-stats",
+              "covid-c-control",
+              "covid-e-percentileClosest"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-b-stats",
+              "covid-c-percentileClosest",
+              "covid-e-control"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-b-percentileClosest",
+              "covid-c-control",
+              "covid-e-stats"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-b-percentileClosest",
+              "covid-c-stats",
+              "covid-e-control"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-b-control",
+              "covid-d-stats",
+              "covid-e-percentileClosest"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-b-control",
+              "covid-d-percentileClosest",
+              "covid-e-stats"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-b-stats",
+              "covid-d-control",
+              "covid-e-percentileClosest"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-b-stats",
+              "covid-d-percentileClosest",
+              "covid-e-control"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-b-percentileClosest",
+              "covid-d-control",
+              "covid-e-stats"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-b-percentileClosest",
+              "covid-d-stats",
+              "covid-e-control"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-c-control",
+              "covid-d-stats",
+              "covid-e-percentileClosest"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-c-control",
+              "covid-d-percentileClosest",
+              "covid-e-stats"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-c-stats",
+              "covid-d-control",
+              "covid-e-percentileClosest"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-c-stats",
+              "covid-d-percentileClosest",
+              "covid-e-control"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-c-percentileClosest",
+              "covid-d-control",
+              "covid-e-stats"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-c-percentileClosest",
+              "covid-d-stats",
+              "covid-e-control"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-a-control",
+              "covid-b-stats",
+              "covid-c-cluster"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-a-control",
+              "covid-b-cluster",
+              "covid-c-stats"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-a-stats",
+              "covid-b-control",
+              "covid-c-cluster"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-a-stats",
+              "covid-b-cluster",
+              "covid-c-control"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-a-cluster",
+              "covid-b-control",
+              "covid-c-stats"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-a-cluster",
+              "covid-b-stats",
+              "covid-c-control"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-a-control",
+              "covid-b-stats",
+              "covid-d-cluster"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-a-control",
+              "covid-b-cluster",
+              "covid-d-stats"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-a-stats",
+              "covid-b-control",
+              "covid-d-cluster"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-a-stats",
+              "covid-b-cluster",
+              "covid-d-control"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-a-cluster",
+              "covid-b-control",
+              "covid-d-stats"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-a-cluster",
+              "covid-b-stats",
+              "covid-d-control"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-a-control",
+              "covid-b-stats",
+              "covid-e-cluster"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-a-control",
+              "covid-b-cluster",
+              "covid-e-stats"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-a-stats",
+              "covid-b-control",
+              "covid-e-cluster"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-a-stats",
+              "covid-b-cluster",
+              "covid-e-control"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-a-cluster",
+              "covid-b-control",
+              "covid-e-stats"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-a-cluster",
+              "covid-b-stats",
+              "covid-e-control"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-a-control",
+              "covid-c-stats",
+              "covid-d-cluster"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-a-control",
+              "covid-c-cluster",
+              "covid-d-stats"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-a-stats",
+              "covid-c-control",
+              "covid-d-cluster"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-a-stats",
+              "covid-c-cluster",
+              "covid-d-control"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-a-cluster",
+              "covid-c-control",
+              "covid-d-stats"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-a-cluster",
+              "covid-c-stats",
+              "covid-d-control"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-a-control",
+              "covid-c-stats",
+              "covid-e-cluster"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-a-control",
+              "covid-c-cluster",
+              "covid-e-stats"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-a-stats",
+              "covid-c-control",
+              "covid-e-cluster"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-a-stats",
+              "covid-c-cluster",
+              "covid-e-control"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-a-cluster",
+              "covid-c-control",
+              "covid-e-stats"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-a-cluster",
+              "covid-c-stats",
+              "covid-e-control"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-a-control",
+              "covid-d-stats",
+              "covid-e-cluster"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-a-control",
+              "covid-d-cluster",
+              "covid-e-stats"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-a-stats",
+              "covid-d-control",
+              "covid-e-cluster"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-a-stats",
+              "covid-d-cluster",
+              "covid-e-control"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-a-cluster",
+              "covid-d-control",
+              "covid-e-stats"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-a-cluster",
+              "covid-d-stats",
+              "covid-e-control"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-b-control",
+              "covid-c-stats",
+              "covid-d-cluster"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-b-control",
+              "covid-c-cluster",
+              "covid-d-stats"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-b-stats",
+              "covid-c-control",
+              "covid-d-cluster"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-b-stats",
+              "covid-c-cluster",
+              "covid-d-control"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-b-cluster",
+              "covid-c-control",
+              "covid-d-stats"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-b-cluster",
+              "covid-c-stats",
+              "covid-d-control"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-b-control",
+              "covid-c-stats",
+              "covid-e-cluster"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-b-control",
+              "covid-c-cluster",
+              "covid-e-stats"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-b-stats",
+              "covid-c-control",
+              "covid-e-cluster"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-b-stats",
+              "covid-c-cluster",
+              "covid-e-control"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-b-cluster",
+              "covid-c-control",
+              "covid-e-stats"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-b-cluster",
+              "covid-c-stats",
+              "covid-e-control"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-b-control",
+              "covid-d-stats",
+              "covid-e-cluster"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-b-control",
+              "covid-d-cluster",
+              "covid-e-stats"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-b-stats",
+              "covid-d-control",
+              "covid-e-cluster"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-b-stats",
+              "covid-d-cluster",
+              "covid-e-control"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-b-cluster",
+              "covid-d-control",
+              "covid-e-stats"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-b-cluster",
+              "covid-d-stats",
+              "covid-e-control"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-c-control",
+              "covid-d-stats",
+              "covid-e-cluster"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-c-control",
+              "covid-d-cluster",
+              "covid-e-stats"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-c-stats",
+              "covid-d-control",
+              "covid-e-cluster"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-c-stats",
+              "covid-d-cluster",
+              "covid-e-control"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-c-cluster",
+              "covid-d-control",
+              "covid-e-stats"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-c-cluster",
+              "covid-d-stats",
+              "covid-e-control"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-a-control",
+              "covid-b-percentileClosest",
+              "covid-c-cluster"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-a-control",
+              "covid-b-cluster",
+              "covid-c-percentileClosest"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-a-percentileClosest",
+              "covid-b-control",
+              "covid-c-cluster"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-a-percentileClosest",
+              "covid-b-cluster",
+              "covid-c-control"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-a-cluster",
+              "covid-b-control",
+              "covid-c-percentileClosest"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-a-cluster",
+              "covid-b-percentileClosest",
+              "covid-c-control"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-a-control",
+              "covid-b-percentileClosest",
+              "covid-d-cluster"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-a-control",
+              "covid-b-cluster",
+              "covid-d-percentileClosest"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-a-percentileClosest",
+              "covid-b-control",
+              "covid-d-cluster"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-a-percentileClosest",
+              "covid-b-cluster",
+              "covid-d-control"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-a-cluster",
+              "covid-b-control",
+              "covid-d-percentileClosest"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-a-cluster",
+              "covid-b-percentileClosest",
+              "covid-d-control"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-a-control",
+              "covid-b-percentileClosest",
+              "covid-e-cluster"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-a-control",
+              "covid-b-cluster",
+              "covid-e-percentileClosest"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-a-percentileClosest",
+              "covid-b-control",
+              "covid-e-cluster"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-a-percentileClosest",
+              "covid-b-cluster",
+              "covid-e-control"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-a-cluster",
+              "covid-b-control",
+              "covid-e-percentileClosest"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-a-cluster",
+              "covid-b-percentileClosest",
+              "covid-e-control"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-a-control",
+              "covid-c-percentileClosest",
+              "covid-d-cluster"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-a-control",
+              "covid-c-cluster",
+              "covid-d-percentileClosest"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-a-percentileClosest",
+              "covid-c-control",
+              "covid-d-cluster"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-a-percentileClosest",
+              "covid-c-cluster",
+              "covid-d-control"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-a-cluster",
+              "covid-c-control",
+              "covid-d-percentileClosest"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-a-cluster",
+              "covid-c-percentileClosest",
+              "covid-d-control"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-a-control",
+              "covid-c-percentileClosest",
+              "covid-e-cluster"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-a-control",
+              "covid-c-cluster",
+              "covid-e-percentileClosest"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-a-percentileClosest",
+              "covid-c-control",
+              "covid-e-cluster"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-a-percentileClosest",
+              "covid-c-cluster",
+              "covid-e-control"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-a-cluster",
+              "covid-c-control",
+              "covid-e-percentileClosest"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-a-cluster",
+              "covid-c-percentileClosest",
+              "covid-e-control"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-a-control",
+              "covid-d-percentileClosest",
+              "covid-e-cluster"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-a-control",
+              "covid-d-cluster",
+              "covid-e-percentileClosest"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-a-percentileClosest",
+              "covid-d-control",
+              "covid-e-cluster"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-a-percentileClosest",
+              "covid-d-cluster",
+              "covid-e-control"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-a-cluster",
+              "covid-d-control",
+              "covid-e-percentileClosest"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-a-cluster",
+              "covid-d-percentileClosest",
+              "covid-e-control"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-b-control",
+              "covid-c-percentileClosest",
+              "covid-d-cluster"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-b-control",
+              "covid-c-cluster",
+              "covid-d-percentileClosest"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-b-percentileClosest",
+              "covid-c-control",
+              "covid-d-cluster"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-b-percentileClosest",
+              "covid-c-cluster",
+              "covid-d-control"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-b-cluster",
+              "covid-c-control",
+              "covid-d-percentileClosest"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-b-cluster",
+              "covid-c-percentileClosest",
+              "covid-d-control"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-b-control",
+              "covid-c-percentileClosest",
+              "covid-e-cluster"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-b-control",
+              "covid-c-cluster",
+              "covid-e-percentileClosest"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-b-percentileClosest",
+              "covid-c-control",
+              "covid-e-cluster"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-b-percentileClosest",
+              "covid-c-cluster",
+              "covid-e-control"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-b-cluster",
+              "covid-c-control",
+              "covid-e-percentileClosest"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-b-cluster",
+              "covid-c-percentileClosest",
+              "covid-e-control"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-b-control",
+              "covid-d-percentileClosest",
+              "covid-e-cluster"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-b-control",
+              "covid-d-cluster",
+              "covid-e-percentileClosest"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-b-percentileClosest",
+              "covid-d-control",
+              "covid-e-cluster"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-b-percentileClosest",
+              "covid-d-cluster",
+              "covid-e-control"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-b-cluster",
+              "covid-d-control",
+              "covid-e-percentileClosest"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-b-cluster",
+              "covid-d-percentileClosest",
+              "covid-e-control"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-c-control",
+              "covid-d-percentileClosest",
+              "covid-e-cluster"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-c-control",
+              "covid-d-cluster",
+              "covid-e-percentileClosest"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-c-percentileClosest",
+              "covid-d-control",
+              "covid-e-cluster"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-c-percentileClosest",
+              "covid-d-cluster",
+              "covid-e-control"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-c-cluster",
+              "covid-d-control",
+              "covid-e-percentileClosest"
+            ]
+          },
+          {
+            "order": "random",
+            "components": [
+              "covid-c-cluster",
+              "covid-d-percentileClosest",
+              "covid-e-control"
+            ]
           }
         ]
       },
