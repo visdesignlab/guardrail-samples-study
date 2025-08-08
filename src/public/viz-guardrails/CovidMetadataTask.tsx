@@ -10,7 +10,7 @@ import RankingWidget from './RankingWidget';
 const chartConfigs = [
   { label: 'A', guardrail: 'percentileClosest' },
   { label: 'B', guardrail: 'super_data' },
-  { label: 'C', guardrail: 'percentiles' },
+  { label: 'C', guardrail: 'metadata' },
   { label: 'D', guardrail: 'cluster' },
 ];
 
