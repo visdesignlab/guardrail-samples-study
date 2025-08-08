@@ -350,6 +350,10 @@ export function LineChart({
   const hardCodedSubregionReps = ['Finland', 'Pakistan', 'Japan', 'Bulgaria', 'Kazakhstan'];
   const clusterRepsDataPath = '/sandbox/data/cluster_representatives.csv';
   const subregionRepsDataPath = '/sandbox/data/subregion_representatives.csv';
+  // ---------------------------- Metadata (hardcoded countries) ---------------------------- //
+  const metadataCountries = useMemo(() => (
+    ['Sweden', 'Latvia', 'Denmark', 'Finland', 'Guernsey']
+  ), []);
 
   useEffect(() => {
     if (guardrail !== 'cluster') return;
@@ -488,6 +492,18 @@ export function LineChart({
         return [...selY, ...clusterY];
       }
 
+      if (guardrail === 'metadata') {
+        const selY = data
+          .filter((val) => selection?.includes(val[parameters.cat_var]))
+          .map((d) => +d[parameters.y_var])
+          .filter((val) => !Number.isNaN(val));
+        const metaY = data
+          .filter((val) => metadataCountries.includes(val[parameters.cat_var]))
+          .map((d) => +d[parameters.y_var])
+          .filter((val) => !Number.isNaN(val));
+        return [...selY, ...metaY];
+      }
+
       return data
         .filter((val) => selection?.includes(val[parameters.cat_var]))
         .map((d) => +d[parameters.y_var])
@@ -517,7 +533,7 @@ export function LineChart({
       yMin: computedYMin - buffer,
       yMax: computedYMax + buffer,
     };
-  }, [data, selection, randomCountries, medianIQRData, avgData, medianCountryData, parameters, guardrail, medianClosestData, medianIQRClosestData, percentileClosestData, filteredClusterReps]);
+  }, [data, selection, randomCountries, medianIQRData, avgData, medianCountryData, parameters, guardrail, medianClosestData, medianIQRClosestData, percentileClosestData, filteredClusterReps, metadataCountries]);
   const xScale = useMemo(() => {
     if (range) {
       return d3.scaleTime([margin.left, width + margin.left]).domain(range);
@@ -672,6 +688,37 @@ export function LineChart({
       };
     }).filter(Boolean);
   }, [filteredClusterReps, data, xScale, yScale, parameters, guardrail, dataname]);
+
+  // ---------------------------- Metadata (hardcoded) ----------------------------
+  const metadataLines = useMemo(() => {
+    if (guardrail !== 'metadata') return null;
+    const symbols = metadataCountries;
+
+    return symbols.map((symbol) => {
+      const values = data.filter((d) => d[parameters.cat_var] === symbol);
+      const lineGenerator = d3.line<[number, number]>()
+        .x((d) => xScale(d[0]))
+        .y((d) => yScale(d[1]))
+        .curve(d3.curveBasis);
+
+      const parsedData: [number, number][] = values
+        .map((d: any) => {
+          const dateObj = d3.timeParse('%Y-%m-%d')(d[parameters.x_var]);
+          const val = +d[parameters.y_var];
+          if (!dateObj || Number.isNaN(val)) return null;
+          return [dateObj.getTime(), val];
+        })
+        .filter((d): d is [number, number] => d !== null);
+
+      if (parsedData.length === 0) return null;
+
+      return {
+        name: symbol,
+        path: lineGenerator(parsedData) ?? '',
+        lastPoint: parsedData[parsedData.length - 1],
+      };
+    }).filter(Boolean);
+  }, [data, xScale, yScale, parameters, guardrail, metadataCountries]);
 
   // ---------------------------- All ----------------------------
   const allBackgroundLines = useMemo(() => {
@@ -999,6 +1046,24 @@ export function LineChart({
       );
     }
 
+    if (metadataLines && guardrail === 'metadata') {
+      labels = labels.concat(
+        metadataLines
+          .filter((line) => line !== null)
+          .map((line) => {
+            if (!line) return null;
+            const item = items.find((it) => it.name === line.name);
+            const subregion = item?.subregion ? ` (${item.subregion})` : '';
+            return {
+              label: `${line.name}${subregion}`,
+              y: yScale(line.lastPoint[1]),
+              color: darkGrayColor,
+            };
+          })
+          .filter((label): label is { label: string; y: number; color: string } => label !== null),
+      );
+    }
+
     labels = labels.filter((l) => typeof l.y === 'number' && !Number.isNaN(l.y)).sort((a, b) => b.y - a.y);
 
     let prevY: number | undefined;
@@ -1015,7 +1080,7 @@ export function LineChart({
     return labels;
   }, [
     selection, data, parameters, dataname, yScale, colorScale,
-    medianLineClosest, medianIQRClosestPaths, percentileClosestPaths, clusterLines, guardrail,
+    medianLineClosest, medianIQRClosestPaths, percentileClosestPaths, clusterLines, guardrail, metadataLines,
   ]);
 
   // ---------------------------- store -----------------------------
@@ -1371,6 +1436,17 @@ export function LineChart({
                 {line.name}
               </Text>
             </foreignObject> */}
+          </g>
+        ) : null))}
+        {metadataLines?.map((line) => (line ? (
+          <g key={`metadata-${line.name}`}>
+            <path
+              d={line.path}
+              fill="none"
+              stroke={darkGrayColor}
+              strokeWidth={1.0}
+              strokeDasharray="2,2"
+            />
           </g>
         ) : null))}
         {allBackgroundLines && (
