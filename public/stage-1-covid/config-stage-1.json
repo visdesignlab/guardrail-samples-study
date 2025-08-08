@@ -148,7 +148,7 @@
       "response": [
         {
           "id": "explanation",
-          "prompt": "Explain your reasoning for selecting this chart.",
+          "prompt": "Briefly explain your reasoning for how you ranked the charts.",
           "secondaryText": "",
           "location": "belowStimulus",
           "type": "longText",

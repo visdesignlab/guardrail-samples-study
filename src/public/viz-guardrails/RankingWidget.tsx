@@ -58,7 +58,7 @@ export default function RankingWidget({ onChange }: { onChange?: (order: string[
 
   return (
     <Box>
-      <Text fw={500} ta="center">Rank the charts from most to least useful (left = most useful)</Text>
+      <Text fw={500} ta="center">Please rank the charts from best to worst in terms of how appropriate and useful they are as comparisons for Norway. (Left = Best)</Text>
       <Group gap="xs" justify="center" wrap="nowrap">
         {current.map((id) => {
           const label = chartLabels.find((c) => c.id === id)?.label || id;
