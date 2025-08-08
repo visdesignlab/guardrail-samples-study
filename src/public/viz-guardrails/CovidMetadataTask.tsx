@@ -5,6 +5,7 @@ import {
 } from '@mantine/core';
 import * as d3 from 'd3';
 import { LineChart } from './LineChart';
+import RankingWidget from './RankingWidget';
 
 const chartConfigs = [
   { label: 'A', guardrail: 'percentileClosest' },
@@ -13,7 +14,7 @@ const chartConfigs = [
   { label: 'D', guardrail: 'cluster' },
 ];
 
-export function CovidMetadataTask({ parameters }: any) {
+export function CovidMetadataTask({ parameters, setAnswer }: any) {
   const [data, setData] = useState<any[] | null>(null);
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [dataname, setDataname] = useState<string>(parameters.dataset || 'clean_data');
@@ -22,6 +23,11 @@ export function CovidMetadataTask({ parameters }: any) {
   const [selection] = useState<string[] | null>(parameters.selection || ['Norway']);
   const [numRandomSamples] = useState<number>(parameters.numRandomSamples ?? 5);
   const [numQuantiles] = useState<number>(parameters.numQuantiles ?? 5);
+  const [_order, setOrder] = useState<string[]>(['A', 'B', 'C', 'D']);
+  useEffect(() => {
+    setAnswer?.({ status: true, answers: { 'chart-ranking': _order } });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   useEffect(() => {
     d3.csv(`./data/${dataname}.csv`).then((csvData) => {
@@ -90,6 +96,14 @@ export function CovidMetadataTask({ parameters }: any) {
           </Paper>
         ))}
       </Stack>
+      <Box style={{ paddingTop: '32px' }}>
+        <RankingWidget
+          onChange={(newOrder) => {
+            setOrder(newOrder);
+            setAnswer?.({ status: true, answers: { 'chart-ranking': newOrder } });
+          }}
+        />
+      </Box>
     </Box>
   );
 }
