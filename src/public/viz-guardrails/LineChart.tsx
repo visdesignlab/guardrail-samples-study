@@ -529,11 +529,18 @@ export function LineChart({
 
     const buffer = (computedYMax - computedYMin) * 0.1;
 
+    let yMinCandidate = computedYMin - buffer;
+    const yMaxCandidate = computedYMax + buffer;
+
+    if (dataname === 'clean_data') {
+      yMinCandidate = Math.max(0, yMinCandidate);
+    }
+
     return {
-      yMin: computedYMin - buffer,
-      yMax: computedYMax + buffer,
+      yMin: yMinCandidate,
+      yMax: yMaxCandidate,
     };
-  }, [data, selection, randomCountries, medianIQRData, avgData, medianCountryData, parameters, guardrail, medianClosestData, medianIQRClosestData, percentileClosestData, filteredClusterReps, metadataCountries]);
+  }, [data, selection, randomCountries, medianIQRData, avgData, medianCountryData, parameters, guardrail, medianClosestData, medianIQRClosestData, percentileClosestData, filteredClusterReps, metadataCountries, dataname]);
   const xScale = useMemo(() => {
     if (range) {
       return d3.scaleTime([margin.left, width + margin.left]).domain(range);
