@@ -101,28 +101,28 @@
       "baseComponent": "covid",
       "parameters": {
         "guardrail": "none",
-        "initial_selection": ["Bahrain"]
+        "initial_selection": ["Brazil"]
       }
     },
     "covid-a-random": {
       "baseComponent": "covid",
       "parameters": {
         "guardrail": "super_data",
-        "initial_selection": ["Bahrain"]
+        "initial_selection": ["Brazil"]
       }
     },
     "covid-a-stats": {
       "baseComponent": "covid",
       "parameters": {
         "guardrail": "percentiles",
-        "initial_selection": ["Bahrain"]
+        "initial_selection": ["Brazil"]
       }
     },
     "covid-a-percentileClosest": {
       "baseComponent": "covid",
       "parameters": {
         "guardrail": "percentileClosest",
-        "initial_selection": ["Bahrain"]
+        "initial_selection": ["Brazil"]
       }
     },
     "covid-metadata": {
@@ -160,147 +160,147 @@
       "baseComponent": "covid",
       "parameters": {
         "guardrail": "cluster",
-        "initial_selection": ["Bahrain"]
+        "initial_selection": ["Brazil"]
       }
     },
     "covid-b-control": {
       "baseComponent": "covid",
       "parameters": {
         "guardrail": "none",
-        "initial_selection": ["Czechia"]
+        "initial_selection": ["France"]
       }
     },
     "covid-b-random": {
       "baseComponent": "covid",
       "parameters": {
         "guardrail": "super_data",
-        "initial_selection": ["Czechia"]
+        "initial_selection": ["France"]
       }
     },
     "covid-b-stats": {
       "baseComponent": "covid",
       "parameters": {
         "guardrail": "percentiles",
-        "initial_selection": ["Czechia"]
+        "initial_selection": ["France"]
       }
     },
     "covid-b-percentileClosest": {
       "baseComponent": "covid",
       "parameters": {
         "guardrail": "percentileClosest",
-        "initial_selection": ["Czechia"]
+        "initial_selection": ["France"]
       }
     },
     "covid-b-cluster": {
       "baseComponent": "covid",
       "parameters": {
         "guardrail": "cluster",
-        "initial_selection": ["Czechia"]
+        "initial_selection": ["France"]
       }
     },
     "covid-c-control": {
       "baseComponent": "covid",
       "parameters": {
         "guardrail": "none",
-        "initial_selection": ["Georgia"]
+        "initial_selection": ["Kuwait"]
       }
     },
     "covid-c-random": {
       "baseComponent": "covid",
       "parameters": {
         "guardrail": "super_data",
-        "initial_selection": ["Georgia"]
+        "initial_selection": ["Kuwait"]
       }
     },
     "covid-c-stats": {
       "baseComponent": "covid",
       "parameters": {
         "guardrail": "percentiles",
-        "initial_selection": ["Georgia"]
+        "initial_selection": ["Kuwait"]
       }
     },
     "covid-c-percentileClosest": {
       "baseComponent": "covid",
       "parameters": {
         "guardrail": "percentileClosest",
-        "initial_selection": ["Georgia"]
+        "initial_selection": ["Kuwait"]
       }
     },
     "covid-c-cluster": {
       "baseComponent": "covid",
       "parameters": {
         "guardrail": "cluster",
-        "initial_selection": ["Georgia"]
+        "initial_selection": ["Kuwait"]
       }
     },
     "covid-d-control": {
       "baseComponent": "covid",
       "parameters": {
         "guardrail": "none",
-        "initial_selection": ["Slovenia"]
+        "initial_selection": ["United Kingdom"]
       }
     },
     "covid-d-random": {
       "baseComponent": "covid",
       "parameters": {
         "guardrail": "super_data",
-        "initial_selection": ["Slovenia"]
+        "initial_selection": ["United Kingdom"]
       }
     },
     "covid-d-stats": {
       "baseComponent": "covid",
       "parameters": {
         "guardrail": "percentiles",
-        "initial_selection": ["Slovenia"]
+        "initial_selection": ["United Kingdom"]
       }
     },
     "covid-d-percentileClosest": {
       "baseComponent": "covid",
       "parameters": {
         "guardrail": "percentileClosest",
-        "initial_selection": ["Slovenia"]
+        "initial_selection": ["United Kingdom"]
       }
     },
     "covid-d-cluster": {
       "baseComponent": "covid",
       "parameters": {
         "guardrail": "cluster",
-        "initial_selection": ["Slovenia"]
+        "initial_selection": ["United Kingdom"]
       }
     },
     "covid-e-control": {
       "baseComponent": "covid",
       "parameters": {
         "guardrail": "none",
-        "initial_selection": ["Cyprus"]
+        "initial_selection": ["Poland"]
       }
     },
     "covid-e-random": {
       "baseComponent": "covid",
       "parameters": {
         "guardrail": "super_data",
-        "initial_selection": ["Cyprus"]
+        "initial_selection": ["Poland"]
       }
     },
     "covid-e-stats": {
       "baseComponent": "covid",
       "parameters": {
         "guardrail": "percentiles",
-        "initial_selection": ["Cyprus"]
+        "initial_selection": ["Poland"]
       }
     },
     "covid-e-percentileClosest": {
       "baseComponent": "covid",
       "parameters": {
         "guardrail": "percentileClosest",
-        "initial_selection": ["Cyprus"]
+        "initial_selection": ["Poland"]
       }
     },
     "covid-e-cluster": {
       "baseComponent": "covid",
       "parameters": {
         "guardrail": "cluster",
-        "initial_selection": ["Cyprus"]
+        "initial_selection": ["Poland"]
       }
     },
     "introduction": {
