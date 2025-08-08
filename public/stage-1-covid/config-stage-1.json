@@ -147,19 +147,6 @@
       },
       "response": [
         {
-          "id": "best-chart",
-          "type": "radio",
-          "prompt": "Which visualization (A, B, C, or D) do you think depicts the best comparison for Norway's performance?",
-          "options": [
-            { "label": "A", "value": "A" },
-            { "label": "B", "value": "B" },
-            { "label": "C", "value": "C" },
-            { "label": "D", "value": "D" }
-          ],
-          "required": true,
-          "location": "belowStimulus"
-        },
-        {
           "id": "explanation",
           "prompt": "Explain your reasoning for selecting this chart.",
           "secondaryText": "",
