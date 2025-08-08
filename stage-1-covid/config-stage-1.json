@@ -125,6 +125,37 @@
         "initial_selection": ["Bahrain"]
       }
     },
+    "covid-metadata": {
+      "type": "react-component",
+      "path": "viz-guardrails/CovidMetadataTask.tsx",
+      "instruction": "Below are four different visualizations (A–D) of COVID-19 data for Norway. Please review each chart and select the one you think is the most useful comparison for Norway.",
+      "parameters": {
+        "dataset": "clean_data",
+        "start_date": "2020-03-01",
+        "end_date": "2021-08-28",
+        "x_var": "date",
+        "y_var": "value",
+        "cat_var": "name",
+        "group_var": "region",
+        "selection": ["Norway"],
+        "range": null,
+        "items": [],
+        "data": [],
+        "metadataFiltered": false,
+        "numRandomSamples": 5,
+        "numQuantiles": 5
+      },
+      "response": [
+        {
+          "id": "explanation",
+          "prompt": "Briefly explain your reasoning for how you ranked the charts.",
+          "secondaryText": "",
+          "location": "belowStimulus",
+          "type": "longText",
+          "placeholder": "Enter your reasoning here"
+        }
+      ]
+    },
     "covid-a-cluster": {
       "baseComponent": "covid",
       "parameters": {
@@ -3239,6 +3270,7 @@
           }
         ]
       },
+      "covid-metadata",
       "post-study-quant"
     ]
   }
