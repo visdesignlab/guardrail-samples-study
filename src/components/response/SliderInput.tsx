@@ -59,7 +59,7 @@ export function SliderInput({
         {...answer}
         classNames={{ track: tlxStyle ? classes.track : '', bar: classes.fixDisabled }}
         restrictToMarks={snap}
-        label={(value) => (snap ? null : `Better than ${value}% of stocks`)}
+        label={(value) => (snap ? null : `Better than ${value}%`)}
         styles={(theme) => ({
           mark: {
             ...(tlxStyle ? {
