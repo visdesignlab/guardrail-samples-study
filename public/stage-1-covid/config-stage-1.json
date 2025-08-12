@@ -148,7 +148,7 @@
       "response": [
         {
           "id": "explanation",
-          "prompt": "Briefly explain your reasoning for how you ranked the charts.",
+          "prompt": "What are your reasons for your ranking? Which aspects made you rank one chart as “best”?",
           "secondaryText": "",
           "location": "belowStimulus",
           "type": "longText",
