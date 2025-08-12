@@ -1,20 +1,34 @@
-import React, { useState } from 'react';
+import React, {
+  useEffect, useMemo, useState,
+} from 'react';
 import {
   Paper, Text, Box, Button, Stack,
 } from '@mantine/core';
 
-const chartLabels = [
-  { id: 'A', label: 'Chart A' },
-  { id: 'B', label: 'Chart B' },
-  { id: 'C', label: 'Chart C' },
-  { id: 'D', label: 'Chart D' },
-];
+interface RankingWidgetProps {
+  baseSequence: string[];
+  value: string[];
+  onChange?: (order: string[]) => void;
+}
 
-export default function RankingWidget({ onChange }: { onChange?: (order: string[]) => void }) {
-  const [order, setOrder] = useState(chartLabels.map((c) => c.id));
+export default function RankingWidget({ baseSequence, value, onChange }: RankingWidgetProps) {
+  const labelMap = useMemo(
+    () => Object.fromEntries(baseSequence.map((g, i) => [g, `Chart ${String.fromCharCode(65 + i)}`])),
+    [baseSequence],
+  );
+
+  const [order, setOrder] = useState<string[]>(value);
   const [dragged, setDragged] = useState<string | null>(null);
   const [preview, setPreview] = useState<string[] | null>(null);
   const [overId, setOverId] = useState<string | null>(null);
+
+  useEffect(() => {
+    if (!dragged && (value.length !== order.length || value.some((v, i) => v !== order[i]))) {
+      setOrder(value);
+      setPreview(null);
+      setOverId(null);
+    }
+  }, [value, dragged, order]);
 
   const current = preview ?? order;
 
@@ -53,19 +67,21 @@ export default function RankingWidget({ onChange }: { onChange?: (order: string[
     setDragged(null);
     setPreview(null);
     setOverId(null);
-    if (onChange) onChange(committed);
+    onChange?.(committed);
   };
 
   return (
     <Box>
-      <Text fw={500} ta="center">Please rank the charts from best to worst in terms of how appropriate and useful they are as comparisons for Norway. (Top = Best)</Text>
+      <Text fw={500} ta="center" mb="xs">
+        Please rank the charts from best to worst in terms of how appropriate and useful they are as comparisons for Norway. (Top = Best)
+      </Text>
       <Stack gap="xs" align="center">
-        {current.map((id, idx) => {
-          const label = chartLabels.find((c) => c.id === id)?.label || id;
+        {current.map((guardrailId, idx) => {
+          const label = labelMap[guardrailId] || guardrailId;
           const posLabel = idx === 0 ? 'Best' : idx === current.length - 1 ? 'Worst' : '•';
           return (
             <Box
-              key={id}
+              key={guardrailId}
               style={{
                 display: 'flex',
                 alignItems: 'stretch',
@@ -90,26 +106,26 @@ export default function RankingWidget({ onChange }: { onChange?: (order: string[
                 {posLabel}
               </Box>
               <Paper
-                shadow={dragged === id ? 'md' : 'xs'}
+                shadow={dragged === guardrailId ? 'md' : 'xs'}
                 p="md"
                 radius="md"
                 withBorder
                 style={{
                   flex: 1,
                   minHeight: 56,
-                  opacity: dragged === id ? 0.5 : 1,
+                  opacity: dragged === guardrailId ? 0.5 : 1,
                   cursor: 'grab',
-                  background: dragged === id ? '#f1f3f5' : overId === id ? '#edf2ff' : undefined,
-                  outline: overId === id ? '2px dashed #4c6ef5' : undefined,
+                  background: dragged === guardrailId ? '#f1f3f5' : overId === guardrailId ? '#edf2ff' : undefined,
+                  outline: overId === guardrailId ? '2px dashed #4c6ef5' : undefined,
                   transition: 'box-shadow 0.2s, opacity 0.2s, background 0.1s',
                 }}
                 draggable
                 aria-label={`${label} position ${idx + 1}${posLabel ? ` (${posLabel})` : ''}`}
-                onDragStart={() => handleDragStart(id)}
+                onDragStart={() => handleDragStart(guardrailId)}
                 onDragEnd={handleDragEnd}
-                onDragOver={(e) => handleDragOver(id, e)}
-                onDragEnter={(e) => handleDragOver(id, e as unknown as React.DragEvent)}
-                onDrop={() => handleDrop(id)}
+                onDragOver={(e) => handleDragOver(guardrailId, e)}
+                onDragEnter={(e) => handleDragOver(guardrailId, e as unknown as React.DragEvent)}
+                onDrop={() => handleDrop(guardrailId)}
               >
                 <Text ta="center" fw={700}>{label}</Text>
               </Paper>
@@ -122,9 +138,10 @@ export default function RankingWidget({ onChange }: { onChange?: (order: string[
           size="xs"
           variant="light"
           onClick={() => {
-            setOrder(chartLabels.map((c) => c.id));
+            setOrder(baseSequence);
             setPreview(null);
             setOverId(null);
+            onChange?.(baseSequence);
           }}
         >
           Reset order
