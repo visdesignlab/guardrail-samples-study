@@ -1496,7 +1496,10 @@ export function LineChart({
               fontFamily: '"Helvetica Neue", "Helvetica", "Arial", sans-serif',
             }}
           >
+            `
+            {'  '}
             {x.label}
+            `
           </span>
         </Tooltip>
       ))}
