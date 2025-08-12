@@ -60,35 +60,60 @@ export default function RankingWidget({ onChange }: { onChange?: (order: string[
     <Box>
       <Text fw={500} ta="center">Please rank the charts from best to worst in terms of how appropriate and useful they are as comparisons for Norway. (Top = Best)</Text>
       <Stack gap="xs" align="center">
-        {current.map((id) => {
+        {current.map((id, idx) => {
           const label = chartLabels.find((c) => c.id === id)?.label || id;
+          const posLabel = idx === 0 ? 'Best' : idx === current.length - 1 ? 'Worst' : '•';
           return (
-            <Paper
+            <Box
               key={id}
-              shadow={dragged === id ? 'md' : 'xs'}
-              p="md"
-              radius="md"
-              withBorder
               style={{
-                minWidth: 100,
-                minHeight: 60,
+                display: 'flex',
+                alignItems: 'stretch',
+                gap: 8,
                 width: '100%',
-                maxWidth: 400,
-                opacity: dragged === id ? 0.5 : 1,
-                cursor: 'grab',
-                background: dragged === id ? '#f1f3f5' : overId === id ? '#edf2ff' : undefined,
-                outline: overId === id ? '2px dashed #4c6ef5' : undefined,
-                transition: 'box-shadow 0.2s, opacity 0.2s, background 0.1s',
+                maxWidth: 480,
               }}
-              draggable
-              onDragStart={() => handleDragStart(id)}
-              onDragEnd={handleDragEnd}
-              onDragOver={(e) => handleDragOver(id, e)}
-              onDragEnter={(e) => handleDragOver(id, e as unknown as React.DragEvent)}
-              onDrop={() => handleDrop(id)}
             >
-              <Text ta="center" fw={700}>{label}</Text>
-            </Paper>
+              <Box
+                style={{
+                  width: 50,
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'flex-end',
+                  fontSize: 16,
+                  fontWeight: 600,
+                  color: posLabel ? '#495057' : '#adb5bd',
+                  userSelect: 'none',
+                  paddingRight: 4,
+                }}
+              >
+                {posLabel}
+              </Box>
+              <Paper
+                shadow={dragged === id ? 'md' : 'xs'}
+                p="md"
+                radius="md"
+                withBorder
+                style={{
+                  flex: 1,
+                  minHeight: 56,
+                  opacity: dragged === id ? 0.5 : 1,
+                  cursor: 'grab',
+                  background: dragged === id ? '#f1f3f5' : overId === id ? '#edf2ff' : undefined,
+                  outline: overId === id ? '2px dashed #4c6ef5' : undefined,
+                  transition: 'box-shadow 0.2s, opacity 0.2s, background 0.1s',
+                }}
+                draggable
+                aria-label={`${label} position ${idx + 1}${posLabel ? ` (${posLabel})` : ''}`}
+                onDragStart={() => handleDragStart(id)}
+                onDragEnd={handleDragEnd}
+                onDragOver={(e) => handleDragOver(id, e)}
+                onDragEnter={(e) => handleDragOver(id, e as unknown as React.DragEvent)}
+                onDrop={() => handleDrop(id)}
+              >
+                <Text ta="center" fw={700}>{label}</Text>
+              </Paper>
+            </Box>
           );
         })}
       </Stack>
