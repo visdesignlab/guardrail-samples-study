@@ -1040,11 +1040,8 @@ export function LineChart({
           .filter((line) => line !== null)
           .map((line) => {
             if (!line) return null;
-            const item = items.find((it) => it.name === line.name);
-            const sector = item?.sector ? ` (${item.sector})` : '';
-            const subregion = item?.subregion ? ` (${item.subregion})` : '';
             return {
-              label: `${line.name}${sector}${subregion}`,
+              label: line.name,
               y: yScale(line.lastPoint[1]),
               color: darkGrayColor,
             };
@@ -1496,10 +1493,7 @@ export function LineChart({
               fontFamily: '"Helvetica Neue", "Helvetica", "Arial", sans-serif',
             }}
           >
-            `
-            {'  '}
-            {x.label}
-            `
+            {`\u2002${x.label}`}
           </span>
         </Tooltip>
       ))}
