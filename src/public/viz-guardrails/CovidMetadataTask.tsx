@@ -1,5 +1,8 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import React, { useEffect, useState, useMemo } from 'react';
+import React, {
+  useEffect, useState, useMemo, useRef,
+} from 'react';
+import seedrandom from 'seedrandom';
 import {
   Box, Stack, Text, Paper, Loader,
 } from '@mantine/core';
@@ -7,12 +10,8 @@ import * as d3 from 'd3';
 import { LineChart } from './LineChart';
 import RankingWidget from './RankingWidget';
 
-const chartConfigs = [
-  { label: 'Chart A', guardrail: 'percentileClosest' },
-  { label: 'Chart B', guardrail: 'super_data' },
-  { label: 'Chart C', guardrail: 'metadata' },
-  { label: 'Chart D', guardrail: 'cluster' },
-];
+const baseGuardrails = ['percentileClosest', 'super_data', 'metadata', 'cluster'] as const;
+type GuardrailType = typeof baseGuardrails[number];
 
 export function CovidMetadataTask({ parameters, setAnswer }: any) {
   const [data, setData] = useState<any[] | null>(null);
@@ -23,11 +22,28 @@ export function CovidMetadataTask({ parameters, setAnswer }: any) {
   const [selection] = useState<string[] | null>(parameters.selection || ['Norway']);
   const [numRandomSamples] = useState<number>(parameters.numRandomSamples ?? 5);
   const [numQuantiles] = useState<number>(parameters.numQuantiles ?? 5);
-  const [_order, setOrder] = useState<string[]>(['A', 'B', 'C', 'D']);
-  useEffect(() => {
-    setAnswer?.({ status: true, answers: { 'chart-ranking': _order } });
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+  const [baseGuardrailOrder, setBaseGuardrailOrder] = useState<GuardrailType[]>([]);
+  const [rankingOrder, setRankingOrder] = useState<GuardrailType[]>([]);
+  const initialSeedRef = useRef<string | null>(null);
+  if (initialSeedRef.current === null) {
+    initialSeedRef.current = Date.now().toString();
+  }
+  const seededOrder = useMemo(() => {
+    const rng = seedrandom(initialSeedRef.current!);
+    const arr = [...baseGuardrails];
+    for (let i = arr.length - 1; i > 0; i -= 1) {
+      const j = Math.floor(rng() * (i + 1));
+      [arr[i], arr[j]] = [arr[j], arr[i]];
+    }
+    return arr;
   }, []);
+
+  useEffect(() => {
+    setBaseGuardrailOrder(seededOrder);
+    setRankingOrder(seededOrder);
+    setAnswer?.({ status: true, answers: { 'chart-ranking': seededOrder } });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [seededOrder]);
 
   useEffect(() => {
     d3.csv(`./data/${dataname}.csv`).then((csvData) => {
@@ -66,40 +82,45 @@ export function CovidMetadataTask({ parameters, setAnswer }: any) {
         Below are four charts comparing Norway’s COVID-19 cases to different sets of countries. Which chart do you think shows the most useful and appropriate comparison for Norway?
       </Text>
       <Stack>
-        {chartConfigs.map(({ label, guardrail }) => (
-          <Paper key={label} shadow="xs" radius="md" p="md" mb="md" withBorder>
-            <Text fw={700} ta="center" mb={4} fz="lg">{label}</Text>
-            <Text fw={500}>Total infections per million people</Text>
-            <LineChart
-              parameters={{
-                ...parameters,
-                guardrail,
-                selection,
-                dataset: dataname,
-                x_var: parameters.x_var || 'date',
-                y_var: parameters.y_var || 'value',
-                cat_var: parameters.cat_var || 'name',
-                group_var: parameters.group_var || 'region',
-                start_date: parameters.start_date || '2020-03-01',
-                end_date: parameters.end_date || '2021-08-28',
-              }}
-              data={filteredData}
-              dataname={dataname}
-              items={items}
-              selection={selection}
-              range={range}
-              guardrail={guardrail}
-              numRandomSamples={numRandomSamples}
-              numQuantiles={numQuantiles}
-              metadataFiltered={false}
-            />
-          </Paper>
-        ))}
+        {baseGuardrailOrder.map((guardrail, idx) => {
+          const label = `Chart ${String.fromCharCode(65 + idx)}`;
+          return (
+            <Paper key={guardrail} shadow="xs" radius="md" p="md" mb="md" withBorder>
+              <Text fw={700} ta="center" mb={4} fz="lg">{label}</Text>
+              <Text fw={500}>Total infections per million people</Text>
+              <LineChart
+                parameters={{
+                  ...parameters,
+                  guardrail,
+                  selection,
+                  dataset: dataname,
+                  x_var: parameters.x_var || 'date',
+                  y_var: parameters.y_var || 'value',
+                  cat_var: parameters.cat_var || 'name',
+                  group_var: parameters.group_var || 'region',
+                  start_date: parameters.start_date || '2020-03-01',
+                  end_date: parameters.end_date || '2021-08-28',
+                }}
+                data={filteredData}
+                dataname={dataname}
+                items={items}
+                selection={selection}
+                range={range}
+                guardrail={guardrail}
+                numRandomSamples={numRandomSamples}
+                numQuantiles={numQuantiles}
+                metadataFiltered={false}
+              />
+            </Paper>
+          );
+        })}
       </Stack>
       <Box style={{ paddingTop: '32px' }}>
         <RankingWidget
+          baseSequence={baseGuardrailOrder}
+          value={rankingOrder}
           onChange={(newOrder) => {
-            setOrder(newOrder);
+            setRankingOrder(newOrder as GuardrailType[]);
             setAnswer?.({ status: true, answers: { 'chart-ranking': newOrder } });
           }}
         />
