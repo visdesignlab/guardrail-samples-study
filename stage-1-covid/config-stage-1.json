@@ -21,7 +21,7 @@
   },
   "baseComponents": {
     "covid" : {
-            "instruction": "Imagine you work for your country’s public health department. Your colleague claimed that the highlighted country’s COVID-19 response was one of the most effective. The visualization below depicts the total infections to date. Please review the chart and answer the questions below.",
+            "instruction": "Imagine you work for your country’s public health department. Your colleague claimed that the highlighted country’s COVID-19 response was one of the most effective. The visualization below depicts the total infections per million. Please review the chart and answer the questions below.",
             "instructionLocation": "aboveStimulus",
             "type": "react-component",
             "path": "viz-guardrails/DataExplorer.tsx",
@@ -148,7 +148,7 @@
       "response": [
         {
           "id": "explanation",
-          "prompt": "Briefly explain your reasoning for how you ranked the charts.",
+          "prompt": "What are your reasons for your ranking? Which aspects made you rank one chart as “best”?",
           "secondaryText": "",
           "location": "belowStimulus",
           "type": "longText",

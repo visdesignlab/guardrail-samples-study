@@ -1,3 +1,5 @@
+<div class="introduction-block">
+
 _PI: Khandaker Abrar Nadib (abrar.nadib@utah.edu), University of Utah_
 
 _Title of Research Study: Evaluating Guardrails in Line Chart Visualizations_
@@ -62,3 +64,5 @@ You acknowledge that you have been informed about and consent to
 be a participant in the study described above. Make sure that your
 questions are answered to your satisfaction before accepting.
 You will receive a copy of this consent agreement.
+
+</div>

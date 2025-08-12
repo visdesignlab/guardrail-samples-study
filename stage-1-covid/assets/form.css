@@ -61,3 +61,18 @@ label {
   color: #333 !important;
   display: block !important;
 }
+
+.introduction-block {
+  width: 1000px;
+  max-width: 1000px;
+  margin: 0 auto 12px auto;
+  padding: 30px;
+  background: #ffffff;
+  border: 2px solid #e3e8ed;
+  border-radius: 14px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  box-sizing: border-box;
+}
+.introduction-block h1:first-child {
+  margin-top: 0;
+}
