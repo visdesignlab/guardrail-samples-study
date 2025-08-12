@@ -8,10 +8,10 @@ import { LineChart } from './LineChart';
 import RankingWidget from './RankingWidget';
 
 const chartConfigs = [
-  { label: 'A', guardrail: 'percentileClosest' },
-  { label: 'B', guardrail: 'super_data' },
-  { label: 'C', guardrail: 'metadata' },
-  { label: 'D', guardrail: 'cluster' },
+  { label: 'Chart A', guardrail: 'percentileClosest' },
+  { label: 'Chart B', guardrail: 'super_data' },
+  { label: 'Chart C', guardrail: 'metadata' },
+  { label: 'Chart D', guardrail: 'cluster' },
 ];
 
 export function CovidMetadataTask({ parameters, setAnswer }: any) {
