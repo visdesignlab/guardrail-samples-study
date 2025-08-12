@@ -360,7 +360,7 @@
           "id": "comfortable-numbers",
           "type": "likert",
           "location": "belowStimulus",
-          "prompt": "How comfortable do you feel interpreting numbers, percentages, and basic statistics?",
+          "prompt": "How comfortable are you at interpreting numbers, percentages, and basic statistics?",
           "required": true,
           "leftLabel": "Not at all comfortable",
           "rightLabel": "Extremely comfortable",
