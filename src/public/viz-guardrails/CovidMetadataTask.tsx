@@ -63,13 +63,13 @@ export function CovidMetadataTask({ parameters, setAnswer }: any) {
   return (
     <Box style={{ width: 850, alignContent: 'center' }}>
       <Text mb="md">
-        You will see four charts comparing Norway’s COVID-19 cases to different sets of countries. Which chart do you think shows the most useful and appropriate comparison for Norway’s?
+        You will see four charts comparing Norway’s COVID-19 cases to different sets of countries. Which chart do you think shows the most useful and appropriate comparison for Norway?
       </Text>
       <Stack>
         {chartConfigs.map(({ label, guardrail }) => (
           <Paper key={label} shadow="xs" radius="md" p="md" mb="md" withBorder>
             <Text fw={700} ta="center" mb={4}>{label}</Text>
-            <Text fw={500}>Total infections to date per million people</Text>
+            <Text fw={500}>Total infections per million people</Text>
             <LineChart
               parameters={{
                 ...parameters,
