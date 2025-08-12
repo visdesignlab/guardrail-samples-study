@@ -68,7 +68,7 @@ export function CovidMetadataTask({ parameters, setAnswer }: any) {
       <Stack>
         {chartConfigs.map(({ label, guardrail }) => (
           <Paper key={label} shadow="xs" radius="md" p="md" mb="md" withBorder>
-            <Text fw={700} ta="center" mb={4}>{label}</Text>
+            <Text fw={700} ta="center" mb={4} fz="lg">{label}</Text>
             <Text fw={500}>Total infections per million people</Text>
             <LineChart
               parameters={{
