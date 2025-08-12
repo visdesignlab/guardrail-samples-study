@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import {
-  Group, Paper, Text, Box, Button,
+  Paper, Text, Box, Button, Stack,
 } from '@mantine/core';
 
 const chartLabels = [
@@ -58,8 +58,8 @@ export default function RankingWidget({ onChange }: { onChange?: (order: string[
 
   return (
     <Box>
-      <Text fw={500} ta="center">Please rank the charts from best to worst in terms of how appropriate and useful they are as comparisons for Norway. (Left = Best)</Text>
-      <Group gap="xs" justify="center" wrap="nowrap">
+      <Text fw={500} ta="center">Please rank the charts from best to worst in terms of how appropriate and useful they are as comparisons for Norway. (Top = Best)</Text>
+      <Stack gap="xs" align="center">
         {current.map((id) => {
           const label = chartLabels.find((c) => c.id === id)?.label || id;
           return (
@@ -72,6 +72,8 @@ export default function RankingWidget({ onChange }: { onChange?: (order: string[
               style={{
                 minWidth: 100,
                 minHeight: 60,
+                width: '100%',
+                maxWidth: 400,
                 opacity: dragged === id ? 0.5 : 1,
                 cursor: 'grab',
                 background: dragged === id ? '#f1f3f5' : overId === id ? '#edf2ff' : undefined,
@@ -89,7 +91,7 @@ export default function RankingWidget({ onChange }: { onChange?: (order: string[
             </Paper>
           );
         })}
-      </Group>
+      </Stack>
       <Box mt="sm" ta="center">
         <Button
           size="xs"
