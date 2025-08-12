@@ -945,13 +945,7 @@ export function LineChart({
     if (selection) {
       labels = labels.concat(
         selection.map((country) => {
-          const item = items.find((it) => it.name === country);
-          let label = country;
-          if (dataname === 'clean_data') {
-            label = `${country}`;
-          } else if (guardrail === 'cluster' && item?.sector) {
-            label = `${country} (${item.sector})`;
-          }
+          const label = country;
           return {
             label,
             y: data.filter((val) => val[parameters.cat_var] === country).slice(-1).map((val) => yScale(val[parameters.y_var]))[0],
