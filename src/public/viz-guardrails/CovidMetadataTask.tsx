@@ -63,7 +63,7 @@ export function CovidMetadataTask({ parameters, setAnswer }: any) {
   return (
     <Box style={{ width: 850, alignContent: 'center' }}>
       <Text mb="md">
-        You will see four charts comparing Norway’s COVID-19 cases to different sets of countries. Which chart do you think shows the most useful and appropriate comparison for Norway?
+        Below are four charts comparing Norway’s COVID-19 cases to different sets of countries. Which chart do you think shows the most useful and appropriate comparison for Norway?
       </Text>
       <Stack>
         {chartConfigs.map(({ label, guardrail }) => (
