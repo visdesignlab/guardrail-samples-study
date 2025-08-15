@@ -15,7 +15,7 @@ This study looks at how people understand line charts when they are shown extra 
 
 #### Tasks
 
-Your participation will take approximately 15–20 minutes. You will be randomly assigned to one of two scenarios (financial or health-related). You will see 5 line charts, each showing either stock performance or COVID-19 case trends. For each visualization, you'll be asked a few questions about your interpretation and decision-making. We recommend maximizing your browser window, as some charts may require extra space to view clearly.
+Your participation will take approximately 15–20 minutes. You will be randomly assigned to one of two scenarios (financial or health-related). You will see 3 line charts, each showing either stock performance or COVID-19 case trends. For each visualization, you'll be asked a few questions about your interpretation and decision-making. We recommend maximizing your browser window, as some charts may require extra space to view clearly.
 
 #### Risks to study participants
 
