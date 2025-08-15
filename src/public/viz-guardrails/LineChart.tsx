@@ -1207,7 +1207,7 @@ export function LineChart({
                 key={`${x.country}_key`}
                 fill="none"
                 stroke={shouldBeColor(x.country) ? colorScale(x.country) : darkGrayColor}
-                strokeWidth={hover?.includes(x.country) ? 2 : 1.5}
+                strokeWidth={hover?.includes(x.country) ? 2.5 : 2}
                 d={x.path}
               />
             </g>
