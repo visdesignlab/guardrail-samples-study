@@ -56,7 +56,7 @@
                     "id": "accuracy",
                     "type": "slider",
                     "location": "belowStimulus",
-                    "prompt": "How well did this stock perform compared to all other stocks in the market? Drag the slider to answer (1 means 'worst' and 100 means 'best ')",
+                    "prompt": "How well did this stock perform compared to all other stocks in the market? Drag the slider to answer (1 = lowest, 100 = highest)",
                     "options": [
                         {
                             "value": 1,
