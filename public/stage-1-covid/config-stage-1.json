@@ -128,7 +128,8 @@
     "covid-metadata": {
       "type": "react-component",
       "path": "viz-guardrails/CovidMetadataTask.tsx",
-      "instruction": "Below are four different visualizations (A–D) of COVID-19 data for Norway. Please review each chart and select the one you think is the most useful comparison for Norway.",
+      "instruction": "Below are four charts (A–D) comparing Norway’s COVID-19 cases to different sets of countries. Which chart do you think shows the most useful and appropriate comparison for Norway?",
+      "instructionLocation": "aboveStimulus",
       "parameters": {
         "dataset": "clean_data",
         "start_date": "2020-03-01",
@@ -143,7 +144,8 @@
         "data": [],
         "metadataFiltered": false,
         "numRandomSamples": 5,
-        "numQuantiles": 5
+        "numQuantiles": 5,
+        "nextButtonLocation": "belowStimulus"
       },
       "response": [
         {
