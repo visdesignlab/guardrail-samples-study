@@ -144,8 +144,7 @@
         "data": [],
         "metadataFiltered": false,
         "numRandomSamples": 5,
-        "numQuantiles": 5,
-        "nextButtonLocation": "belowStimulus"
+        "numQuantiles": 5
       },
       "response": [
         {
