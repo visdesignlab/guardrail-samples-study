@@ -56,7 +56,7 @@
                     "id": "accuracy",
                     "type": "slider",
                     "location": "belowStimulus",
-                    "prompt": "How well did the country manage COVID-19 compared to all other countries? Drag the slider to answer (1 = lowest, 100 = highest)",
+                    "prompt": "How many total COVID-19 cases compared to all other countries? Drag the slider to answer (1 means 'lowest' and 100 means 'highest')",
                     "options": [
                         {
                             "value": 1,
