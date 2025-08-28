@@ -351,9 +351,21 @@ export function LineChart({
   const clusterRepsDataPath = '/sandbox/data/cluster_representatives.csv';
   const subregionRepsDataPath = '/sandbox/data/subregion_representatives.csv';
   // ---------------------------- Metadata (hardcoded countries) ---------------------------- //
-  const metadataCountries = useMemo(() => (
-    ['Sweden', 'Latvia', 'Denmark', 'Finland', 'Guernsey']
-  ), []);
+  // Map of related selected countries
+  const relatedBySelected: Record<string, string[]> = {
+    Greece: ['Cyprus', 'Italy', 'Portugal', 'Spain', 'Croatia'],
+    Germany: ['Austria', 'Netherlands', 'Belgium', 'Denmark', 'France'],
+    Belarus: ['Ukraine', 'Russia', 'Serbia', 'Lithuania', 'Moldova'],
+    Canada: ['United States', 'Australia', 'New Zealand', 'Sweden', 'Norway'],
+    Tunisia: ['Morocco', 'Algeria', 'Egypt', 'Libya', 'Jordan'],
+    Norway: ['Germany', 'Denmark', 'Sweden', 'Finland', 'Iceland'],
+  };
+
+  const metadataCountries = useMemo(() => {
+    if (!selection || selection.length === 0) return [];
+    const match = selection.find((s) => Object.prototype.hasOwnProperty.call(relatedBySelected, s));
+    return match ? relatedBySelected[match] : [];
+  }, [selection]);
 
   useEffect(() => {
     if (guardrail !== 'cluster') return;
