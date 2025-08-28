@@ -4,7 +4,7 @@ import React, {
 } from 'react';
 import seedrandom from 'seedrandom';
 import {
-  Box, Stack, Text, Paper, Loader,
+  Box, SimpleGrid, Text, Paper, Loader,
 } from '@mantine/core';
 import * as d3 from 'd3';
 import { LineChart } from './LineChart';
@@ -77,11 +77,11 @@ export function CovidMetadataTask({ parameters, setAnswer }: any) {
   }
 
   return (
-    <Box style={{ width: 850, alignContent: 'center' }}>
+    <Box style={{ width: '1700px', alignContent: 'center' }}>
       <Text mb="md">
         Below are four charts comparing Norway’s COVID-19 cases to different sets of countries. Which chart do you think shows the most useful and appropriate comparison for Norway?
       </Text>
-      <Stack>
+      <SimpleGrid cols={2} spacing="lg">
         {baseGuardrailOrder.map((guardrail, idx) => {
           const label = `Chart ${String.fromCharCode(65 + idx)}`;
           return (
@@ -114,7 +114,7 @@ export function CovidMetadataTask({ parameters, setAnswer }: any) {
             </Paper>
           );
         })}
-      </Stack>
+      </SimpleGrid>
       <Box style={{ paddingTop: '32px' }}>
         <RankingWidget
           baseSequence={baseGuardrailOrder}
