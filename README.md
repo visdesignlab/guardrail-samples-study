@@ -1,8 +1,8 @@
-# reVISit study – Interactive, Web-Based User Studies.  
+# Guardrail Samples Study – Interactive Visualization User Study
 
-Create your own interactive, web-based data visualization user studies by cloning/forking and editing configuration files and adding stimuli in the `public` folder. 
+This repository contains the configuration and materials for our interactive, web-based user study on **guardrails in data visualization**. The study investigates how different guardrail techniques (e.g., statistical summaries, representative samples, clusters) affect participants’ interpretation of stock market performance visualizations.  
 
-reVISit introduces reVISit.spec a DSL for specifying study setups (consent forms, training, trials, etc) for interactive web based studies. You describe your experimental setup in reVISit.spec, add your stimuli as images, forms, html pages, or React components, build and deploy – and you're ready to run your study. For tutorials and documentation, see the [reVISit website](https://revisit.dev). 
+The study is built with [reVISit](https://revisit.dev), a framework for creating and deploying interactive visualization studies via declarative configuration.  
 
 ## Build Instructions
 
