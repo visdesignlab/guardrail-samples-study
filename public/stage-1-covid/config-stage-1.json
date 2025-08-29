@@ -125,7 +125,7 @@
         "initial_selection": ["Greece"]
       }
     },
-    "covid-metadata": {
+    "covid-metadata-task": {
       "type": "react-component",
       "path": "viz-guardrails/CovidMetadataTask.tsx",
       "instruction": "Below are four different visualizations (A–D) of COVID-19 data for Norway. Please review each chart and select the one you think is the most useful comparison for Norway.",
@@ -3270,7 +3270,7 @@
           }
         ]
       },
-      "covid-metadata",
+      "covid-metadata-task",
       "post-study-quant"
     ]
   }
