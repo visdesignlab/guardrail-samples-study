@@ -351,14 +351,14 @@ export function LineChart({
   const clusterRepsDataPath = '/sandbox/data/cluster_representatives.csv';
   const subregionRepsDataPath = '/sandbox/data/subregion_representatives.csv';
   // ---------------------------- Metadata (hardcoded countries) ---------------------------- //
-  // Map of related selected countries
+  // Map of related selected countries (LLM)
   const relatedBySelected: Record<string, string[]> = {
-    Greece: ['Cyprus', 'Italy', 'Portugal', 'Spain', 'Croatia'],
-    Germany: ['Austria', 'Netherlands', 'Belgium', 'Denmark', 'France'],
-    Belarus: ['Ukraine', 'Russia', 'Serbia', 'Lithuania', 'Moldova'],
-    Canada: ['United States', 'Australia', 'New Zealand', 'Sweden', 'Norway'],
-    Tunisia: ['Morocco', 'Algeria', 'Egypt', 'Libya', 'Jordan'],
-    Norway: ['Germany', 'Denmark', 'Sweden', 'Finland', 'Iceland'],
+    Greece: ['Italy', 'Spain', 'Portugal', 'Cyprus', 'Croatia'],
+    Germany: ['France', 'Netherlands', 'Austria', 'Sweden', 'Denmark'],
+    Belarus: ['Russia', 'Ukraine', 'Kazakhstan', 'Moldova', 'Serbia'],
+    Canada: ['United States', 'United Kingdom', 'Australia', 'New Zealand', 'Germany'],
+    Tunisia: ['Morocco', 'Algeria', 'Egypt', 'Jordan', 'Lebanon'],
+    Norway: ['Sweden', 'Denmark', 'Finland', 'Iceland', 'Netherlands'],
   };
 
   const metadataCountries = useMemo(() => {
