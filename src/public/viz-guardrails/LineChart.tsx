@@ -361,11 +361,29 @@ export function LineChart({
     Norway: ['Sweden', 'Denmark', 'Finland', 'Iceland', 'Netherlands'],
   };
 
+  // Map of related selected stocks (LLM)
+  const relatedBySelectedStocks: Record<string, string[]> = {
+    VZ: ['T', 'TMUS', 'CHTR', 'CMCSA', 'AMT'],
+    COR: ['MCK', 'CAH', 'CVS', 'WBA', 'HSIC'],
+    CHD: ['PG', 'CL', 'KMB', 'CLX', 'EL'],
+    TEL: ['APH', 'GLW', 'ETN', 'HUBB', 'KEYS'],
+    JKHY: ['FI', 'FIS', 'GPN', 'BR', 'PAYX'],
+  };
+
   const metadataCountries = useMemo(() => {
     if (!selection || selection.length === 0) return [];
-    const match = selection.find((s) => Object.prototype.hasOwnProperty.call(relatedBySelected, s));
-    return match ? relatedBySelected[match] : [];
-  }, [selection]);
+    // For the clean_data dataset, use the existing relatedBySelected mapping
+    if (dataname === 'clean_data') {
+      const match = selection.find((s) => Object.prototype.hasOwnProperty.call(relatedBySelected, s));
+      return match ? relatedBySelected[match] : [];
+    }
+    // For the sp500 dataset, use the SP500 mapping
+    if (dataname === 'sp500_stocks') {
+      const match = selection.find((s) => Object.prototype.hasOwnProperty.call(relatedBySelectedStocks, s));
+      return match ? relatedBySelectedStocks[match] : [];
+    }
+    return [];
+  }, [selection, dataname]);
 
   useEffect(() => {
     if (guardrail !== 'cluster') return;
