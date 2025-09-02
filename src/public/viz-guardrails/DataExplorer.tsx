@@ -222,18 +222,20 @@ export function DataExplorer({ parameters, setAnswer }: StimulusParams<ChartPara
               <Stack>
                 <Group>
                   {guardrail === 'juxt_summ' ? <StripPlot parameters={parameters} data={filteredData} selection={selection} dataname={dataname} /> : null}
-                  <LineChart
-                    parameters={parameters}
-                    data={guardrailFilteredData ?? []}
-                    dataname={dataname}
-                    items={items}
-                    selection={selection}
-                    range={range}
-                    guardrail={guardrail}
-                    metadataFiltered={metadataFiltered}
-                    numRandomSamples={numRandomSamples}
-                    numQuantiles={numQuantiles}
-                  />
+                  <div style={{ width: '50vw' }}>
+                    <LineChart
+                      parameters={parameters}
+                      data={guardrailFilteredData ?? []}
+                      dataname={dataname}
+                      items={items}
+                      selection={selection}
+                      range={range}
+                      guardrail={guardrail}
+                      metadataFiltered={metadataFiltered}
+                      numRandomSamples={numRandomSamples}
+                      numQuantiles={numQuantiles}
+                    />
+                  </div>
                 </Group>
                 {parameters.allow_time_slider && dataname === 'clean_data' ? (
                   <div style={{ width: '500px' }}>

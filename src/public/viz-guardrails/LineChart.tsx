@@ -6,7 +6,12 @@
 /* eslint-disable camelcase */
 /* eslint-disable @typescript-eslint/no-explicit-any */
 
-import { useMemo, useState, useEffect } from 'react';
+import {
+  useMemo,
+  useState,
+  useEffect,
+  useRef,
+} from 'react';
 import * as d3 from 'd3';
 import { Center, Text, Tooltip } from '@mantine/core';
 import { XAxis } from './XAxis';
@@ -86,10 +91,28 @@ export function LineChart({
 
   // ---------------------------- Setup ----------------------------
 
-  /// ////////// Setting sizing
-  const width = (dataname === 'clean_data' ? 800 - margin.left - margin.right - 60 : 800 - margin.left - margin.right);
+  /// ////////// Setting sizing (responsive)
+  // Outer defaults (previous fixed values)
+  const defaultOuterWidth = 850;
+  const outerDefaultHeight = 400; // total outer height (including margins)
 
-  const height = 400 - margin.top - margin.bottom;
+  const containerRef = useRef<HTMLDivElement | null>(null);
+  const [outerWidth, setOuterWidth] = useState<number>(defaultOuterWidth);
+
+  useEffect(() => {
+    const el = containerRef.current;
+    if (!el) return undefined;
+    const update = () => setOuterWidth(el.clientWidth || defaultOuterWidth);
+    update();
+    const ro = new ResizeObserver(() => update());
+    ro.observe(el);
+    return () => ro.disconnect();
+  }, []);
+
+  // inner drawing width (account for margins)
+  const width = Math.max(200, outerWidth - margin.left - margin.right);
+  const height = outerDefaultHeight - margin.top - margin.bottom;
+  const _outerHeight = height + margin.top + margin.bottom;
 
   const darkGrayColor = '#555';
 
@@ -1146,15 +1169,15 @@ export function LineChart({
   });
 
   return selection?.length === 0 ? (
-    <Center style={{ width: '850px', height: '400px' }}>
+    <Center style={{ width: `${outerWidth}px`, height: `${outerDefaultHeight}px` }}>
       <Text fs="italic" c="dimmed">Select an item to view the chart.</Text>
     </Center>
   ) : (
-    <div style={{ position: 'relative', width: 850, height: 400 }}>
+    <div ref={containerRef} style={{ position: 'relative', width: '100%', height: outerDefaultHeight }}>
       <svg
         id="baseLineChart"
         style={{
-          height: '400px', width: '850px', fontFamily: '"Helvetica Neue", "Helvetica", "Arial", sans-serif', position: 'absolute', left: 0, top: 0, zIndex: 1,
+          height: `${outerDefaultHeight}px`, width: '100%', fontFamily: '"Helvetica Neue", "Helvetica", "Arial", sans-serif', position: 'absolute', left: 0, top: 0, zIndex: 1,
         }}
       >
         <g id="axes">
@@ -1189,7 +1212,7 @@ export function LineChart({
           />
         </g>
 
-        <svg key="control_lines" style={{ width: `${width}` }}>
+        <svg key="control_lines" style={{ width: `${width}px` }}>
           {superimposeDatapoints?.map((x) => (
             <g key={`${x.country}_g`}>
               <path
@@ -1205,7 +1228,7 @@ export function LineChart({
           ))}
         </svg>
 
-        <svg key="control_bands" style={{ width: `${width}` }}>
+        <svg key="control_bands" style={{ width: `${width}px` }}>
           {superimposeSummary ? (
             <g key="summary_g">
               <path
@@ -1221,7 +1244,7 @@ export function LineChart({
           ) : null}
         </svg>
 
-        <svg key="lines" style={{ width: `${width}` }}>
+        <svg key="lines" style={{ width: `${width}px` }}>
           {linePaths?.map((x) => (
             <g key={`${x.country}_g`}>
               <path
