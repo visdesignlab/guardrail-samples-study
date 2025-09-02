@@ -132,6 +132,13 @@
         "initial_selection": ["VZ"]
       }
     },
+    "stock-a-metadata": {
+      "baseComponent": "stock",
+      "parameters": {
+        "guardrail": "metadata",
+        "initial_selection": ["VZ"]
+      }
+    },
     "stock-b-control": {
       "baseComponent": "stock",
       "parameters": {
@@ -164,6 +171,13 @@
       "baseComponent": "stock",
       "parameters": {
         "guardrail": "cluster",
+        "initial_selection": ["COR"]
+      }
+    },
+    "stock-b-metadata": {
+      "baseComponent": "stock",
+      "parameters": {
+        "guardrail": "metadata",
         "initial_selection": ["COR"]
       }
     },
@@ -202,6 +216,13 @@
         "initial_selection": ["CHD"]
       }
     },
+    "stock-c-metadata": {
+      "baseComponent": "stock",
+      "parameters": {
+        "guardrail": "metadata",
+        "initial_selection": ["CHD"]
+      }
+    },
     "stock-d-control": {
       "baseComponent": "stock",
       "parameters": {
@@ -237,6 +258,13 @@
         "initial_selection": ["TEL"]
       }
     },
+    "stock-d-metadata": {
+      "baseComponent": "stock",
+      "parameters": {
+        "guardrail": "metadata",
+        "initial_selection": ["TEL"]
+      }
+    },
     "stock-e-control": {
       "baseComponent": "stock",
       "parameters": {
@@ -269,6 +297,13 @@
       "baseComponent": "stock",
       "parameters": {
         "guardrail": "cluster",
+        "initial_selection": ["JKHY"]
+      }
+    },
+    "stock-e-metadata": {
+      "baseComponent": "stock",
+      "parameters": {
+        "guardrail": "metadata",
         "initial_selection": ["JKHY"]
       }
     },
