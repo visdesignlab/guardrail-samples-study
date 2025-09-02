@@ -77,7 +77,7 @@ export function CovidMetadataTask({ parameters, setAnswer }: any) {
   }
 
   return (
-    <Box style={{ width: '1700px', alignContent: 'center' }}>
+    <Box style={{ width: '95vw', alignContent: 'center' }}>
       <Card shadow="sm" radius="md" p="md" mb="md" withBorder>
         <Text mb="0">
           Below are four charts comparing Norway’s COVID-19 cases to different sets of countries. Which chart do you think shows the most useful and appropriate comparison for Norway?
