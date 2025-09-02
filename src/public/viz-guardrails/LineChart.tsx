@@ -1050,7 +1050,7 @@ export function LineChart({
         if (line && line.lastPoint) {
           const percentile = percentiles[i];
           labels.push({
-            label: `${line.name} (${percentile}th Percentile)`,
+            label: `${line.name}\n${percentile}th Percentile`,
             y: yScale(line.lastPoint[parameters.y_var]),
             color: darkGrayColor,
           });
@@ -1092,15 +1092,16 @@ export function LineChart({
 
     labels = labels.filter((l) => typeof l.y === 'number' && !Number.isNaN(l.y)).sort((a, b) => b.y - a.y);
 
-    let prevY: number | undefined;
-    for (const label of labels) {
-      if (prevY !== undefined) {
-        const diff = prevY - label.y;
-        if (diff < min_dist) {
-          label.y = prevY - min_dist;
-        }
+    const labelHeights = labels.map((l) => (l.label.includes('\n') ? 18 : 10));
+    for (let i = 0; i < labels.length; i += 1) {
+      if (i === 0) continue;
+      const prev = labels[i - 1];
+      const cur = labels[i];
+      const required = Math.max(labelHeights[i - 1], labelHeights[i], min_dist);
+      const diff = prev.y - cur.y;
+      if (diff < required) {
+        cur.y = prev.y - required;
       }
-      prevY = label.y;
     }
 
     return labels;
@@ -1129,7 +1130,7 @@ export function LineChart({
 
   // ---------------------------- Render ----------------------------
   const labelHtmlPositions = allLabelPositions.map((x, i) => {
-    const baseName = x.label.split(' (')[0];
+    const baseName = x.label.split('\n')[0].split(' (')[0];
     const country = items.find((it) => it.name === baseName);
     const tooltip = country?.longName || undefined;
     const labelX = width + margin.left - 3;
@@ -1508,6 +1509,7 @@ export function LineChart({
               color: x.color,
               background: 'transparent',
               cursor: x.tooltip ? 'pointer' : 'default',
+              whiteSpace: 'pre-line',
               zIndex: 2,
               userSelect: 'none',
               padding: 0,
