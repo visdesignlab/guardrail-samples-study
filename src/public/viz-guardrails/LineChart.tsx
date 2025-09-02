@@ -975,11 +975,7 @@ export function LineChart({
     if (selection) {
       labels = labels.concat(
         selection.map((country) => {
-          let label = country;
-          if (guardrail === 'metadata' && dataname === 'clean_data') {
-            const item = items.find((it) => it.name === country);
-            if (item?.subregion) label = `${country} (${item.subregion})`;
-          }
+          const label = country;
           return {
             label,
             y: data.filter((val) => val[parameters.cat_var] === country).slice(-1).map((val) => yScale(val[parameters.y_var]))[0],
@@ -1084,13 +1080,8 @@ export function LineChart({
           .filter((line) => line !== null)
           .map((line) => {
             if (!line) return null;
-            let label = line.name;
-            if (dataname === 'clean_data') {
-              const item = items.find((it) => it.name === line.name);
-              if (item?.subregion) label = `${line.name} (${item.subregion})`;
-            }
             return {
-              label,
+              label: line.name,
               y: yScale(line.lastPoint[1]),
               color: darkGrayColor,
             };
