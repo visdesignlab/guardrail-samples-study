@@ -125,6 +125,20 @@
         "initial_selection": ["Greece"]
       }
     },
+    "covid-a-cluster": {
+      "baseComponent": "covid",
+      "parameters": {
+        "guardrail": "cluster",
+        "initial_selection": ["Greece"]
+      }
+    },
+    "covid-a-metadata": {
+      "baseComponent": "covid",
+      "parameters": {
+        "guardrail": "metadata",
+        "initial_selection": ["Greece"]
+      }
+    },
     "covid-metadata-task": {
       "type": "react-component",
       "path": "viz-guardrails/CovidMetadataTask.tsx",
@@ -155,13 +169,6 @@
           "placeholder": "Enter your reasoning here"
         }
       ]
-    },
-    "covid-a-cluster": {
-      "baseComponent": "covid",
-      "parameters": {
-        "guardrail": "cluster",
-        "initial_selection": ["Greece"]
-      }
     },
     "covid-b-control": {
       "baseComponent": "covid",
@@ -195,6 +202,13 @@
       "baseComponent": "covid",
       "parameters": {
         "guardrail": "cluster",
+        "initial_selection": ["Germany"]
+      }
+    },
+    "covid-b-metadata": {
+      "baseComponent": "covid",
+      "parameters": {
+        "guardrail": "metadata",
         "initial_selection": ["Germany"]
       }
     },
@@ -233,6 +247,13 @@
         "initial_selection": ["Belarus"]
       }
     },
+    "covid-c-metadata": {
+      "baseComponent": "covid",
+      "parameters": {
+        "guardrail": "metadata",
+        "initial_selection": ["Belarus"]
+      }
+    },
     "covid-d-control": {
       "baseComponent": "covid",
       "parameters": {
@@ -268,6 +289,13 @@
         "initial_selection": ["Canada"]
       }
     },
+    "covid-d-metadata": {
+      "baseComponent": "covid",
+      "parameters": {
+        "guardrail": "metadata",
+        "initial_selection": ["Canada"]
+      }
+    },
     "covid-e-control": {
       "baseComponent": "covid",
       "parameters": {
@@ -300,6 +328,13 @@
       "baseComponent": "covid",
       "parameters": {
         "guardrail": "cluster",
+        "initial_selection": ["Tunisia"]
+      }
+    },
+    "covid-e-metadata": {
+      "baseComponent": "covid",
+      "parameters": {
+        "guardrail": "metadata",
         "initial_selection": ["Tunisia"]
       }
     },
