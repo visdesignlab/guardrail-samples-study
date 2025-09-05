@@ -1,5 +1,5 @@
 import {
-  NumberInput, Select, SegmentedControl, Switch, Text,
+  NumberInput, Select, SegmentedControl, Text,
 } from '@mantine/core';
 
 export function Selector({
@@ -8,7 +8,6 @@ export function Selector({
   dataname,
   setDataname,
   setSelection,
-  setMetadataFiltered,
   numRandomSamples,
   setNumRandomSamples,
 }: {
@@ -17,7 +16,6 @@ export function Selector({
     dataname: string;
     setDataname: (value: string) => void;
     setSelection: (value: Array<string>) => void;
-    setMetadataFiltered: (value: boolean) => void;
     numRandomSamples: number;
     setNumRandomSamples: (value: number) => void;
 }) {
@@ -52,11 +50,6 @@ export function Selector({
           { value: 'metadata', label: 'Metadata/Expert sampling' },
           { value: 'all', label: 'All' },
         ]}
-      />
-      <Switch
-        label={dataname === 'clean_data' ? 'Filter by UN Region (metadata)' : 'Filter by Sector (metadata)'}
-        onChange={(event) => setMetadataFiltered(event.currentTarget.checked)}
-        style={{ marginTop: '10px' }}
       />
       {guardrail === 'super_data' && (
       <div style={{ marginTop: '10px' }}>

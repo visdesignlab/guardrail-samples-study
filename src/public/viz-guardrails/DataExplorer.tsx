@@ -170,7 +170,7 @@ export function DataExplorer({ parameters, setAnswer }: StimulusParams<ChartPara
     <Stack>
       {parameters.allow_guardrail_selector ? (
         <Paper shadow="sm" radius="md" p="md" style={{ width: '500px' }}>
-          <Selector guardrail={guardrail} setGuardrail={setGuardrail} dataname={dataname} setDataname={updateData} setSelection={setSelection} setMetadataFiltered={setMetadataFiltered} numRandomSamples={numRandomSamples} setNumRandomSamples={setNumRandomSamples} />
+          <Selector guardrail={guardrail} setGuardrail={setGuardrail} dataname={dataname} setDataname={updateData} setSelection={setSelection} numRandomSamples={numRandomSamples} setNumRandomSamples={setNumRandomSamples} />
         </Paper>
       ) : null}
       <Flex>
