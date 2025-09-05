@@ -99,52 +99,46 @@ export function MetadataRankingTask({ parameters, setAnswer }: any) {
             >
               <Box style={{ position: 'relative' }}>
                 <Box style={{ position: 'absolute', top: 0, left: 8 }}>
-                  <label
+                  <div
+                    role="button"
+                    tabIndex={0}
+                    aria-pressed={selectedGuardrail === guardrail}
+                    onClick={() => {
+                      if (selectedGuardrail === guardrail) {
+                        setSelectedGuardrail(null);
+                        setAnswer?.({ status: false, answers: {} });
+                      } else {
+                        setSelectedGuardrail(guardrail);
+                        setAnswer?.({ status: true, answers: { condition: guardrail } });
+                      }
+                    }}
+                    onKeyDown={(e) => {
+                      if (e.key === 'Enter' || e.key === ' ') {
+                        e.preventDefault();
+                        if (selectedGuardrail === guardrail) {
+                          setSelectedGuardrail(null);
+                          setAnswer?.({ status: false, answers: {} });
+                        } else {
+                          setSelectedGuardrail(guardrail);
+                          setAnswer?.({ status: true, answers: { condition: guardrail } });
+                        }
+                      }
+                    }}
                     style={{
-                      display: 'inline-flex',
-                      alignItems: 'center',
+                      display: 'inline-block',
+                      padding: '6px 10px',
+                      borderRadius: 9999,
+                      background: selectedGuardrail === guardrail ? '#1c7ed6' : '#e7f5ff',
+                      color: selectedGuardrail === guardrail ? '#fff' : '#1864ab',
+                      fontSize: 13,
+                      fontWeight: 700,
+                      boxShadow: selectedGuardrail === guardrail ? '0 2px 6px rgba(28,126,214,0.35)' : 'none',
                       cursor: 'pointer',
                       userSelect: 'none',
                     }}
                   >
-                    <input
-                      type="radio"
-                      name="favorite-guardrail"
-                      value={guardrail}
-                      checked={selectedGuardrail === guardrail}
-                      onChange={() => {
-                        setSelectedGuardrail(guardrail);
-                        setAnswer?.({ status: true, answers: { condition: guardrail } });
-                      }}
-                      style={{
-                        // visually hide native radio but keep it accessible
-                        position: 'absolute',
-                        opacity: 0,
-                        width: 1,
-                        height: 1,
-                        overflow: 'hidden',
-                        clip: 'rect(0 0 0 0)',
-                        whiteSpace: 'nowrap',
-                        border: 0,
-                      }}
-                    />
-                    <span
-                      role="button"
-                      aria-pressed={selectedGuardrail === guardrail}
-                      style={{
-                        display: 'inline-block',
-                        padding: '6px 10px',
-                        borderRadius: 9999,
-                        background: selectedGuardrail === guardrail ? '#1c7ed6' : '#e7f5ff',
-                        color: selectedGuardrail === guardrail ? '#fff' : '#1864ab',
-                        fontSize: 13,
-                        fontWeight: 700,
-                        boxShadow: selectedGuardrail === guardrail ? '0 2px 6px rgba(28,126,214,0.35)' : 'none',
-                      }}
-                    >
-                      {selectedGuardrail === guardrail ? 'Selected' : 'Select'}
-                    </span>
-                  </label>
+                    {selectedGuardrail === guardrail ? 'Selected' : 'Select'}
+                  </div>
                 </Box>
                 <Text fw={700} ta="center" mb={4} fz="lg">
                   {label}
