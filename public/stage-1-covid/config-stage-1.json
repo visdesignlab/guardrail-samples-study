@@ -162,7 +162,7 @@
       "response": [
         {
           "id": "explanation",
-          "prompt": "What are your reasons for your ranking? Which aspects made you rank one chart as “best”?",
+          "prompt": "Please briefly explain why you chose that chart. Which aspects influenced your choice?",
           "secondaryText": "",
           "location": "belowStimulus",
           "type": "longText",
