@@ -8,7 +8,6 @@ import {
 } from '@mantine/core';
 import * as d3 from 'd3';
 import { LineChart } from './LineChart';
-import RankingWidget from './RankingWidget';
 
 const baseGuardrails = ['percentileClosest', 'super_data', 'metadata', 'cluster'] as const;
 type GuardrailType = typeof baseGuardrails[number];
@@ -23,7 +22,7 @@ export function MetadataRankingTask({ parameters, setAnswer }: any) {
   const [numRandomSamples] = useState<number>(parameters.numRandomSamples ?? 5);
   const [numQuantiles] = useState<number>(parameters.numQuantiles ?? 5);
   const [baseGuardrailOrder, setBaseGuardrailOrder] = useState<GuardrailType[]>([]);
-  const [rankingOrder, setRankingOrder] = useState<GuardrailType[]>([]);
+  const [selectedGuardrail, setSelectedGuardrail] = useState<GuardrailType | null>(null);
   const initialSeedRef = useRef<string | null>(null);
   if (initialSeedRef.current === null) {
     initialSeedRef.current = Date.now().toString();
@@ -40,8 +39,8 @@ export function MetadataRankingTask({ parameters, setAnswer }: any) {
 
   useEffect(() => {
     setBaseGuardrailOrder(seededOrder);
-    setRankingOrder(seededOrder);
-    setAnswer?.({ status: true, answers: { 'chart-ranking': seededOrder } });
+    setSelectedGuardrail(null);
+    setAnswer?.({ status: false, answers: { condition: selectedGuardrail } });
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [seededOrder]);
 
@@ -81,54 +80,106 @@ export function MetadataRankingTask({ parameters, setAnswer }: any) {
       <Card shadow="sm" radius="md" p="md" mb="md" withBorder>
         <Text mb="0">
           {dataname === 'clean_data'
-            ? 'Below are four charts comparing Norway’s COVID-19 cases to different sets of countries. Which chart do you think shows the most useful and appropriate comparison for Norway?'
-            : 'Below are four charts comparing Verizon’s (VZ) stock performance to different sets of stocks. Which chart do you think shows the most useful and appropriate comparison for Verizon (VZ)?'}
+            ? 'Below are four charts comparing Norway’s COVID-19 cases to different sets of countries. Which chart do you think shows the most useful and appropriate comparison for Norway? Select the chart by clicking the "Select" button at the top-left of the chart.'
+            : 'Below are four charts comparing Verizon’s (VZ) stock performance to different sets of stocks. Which chart do you think shows the most useful and appropriate comparison for Verizon (VZ)? Select the chart by clicking the "Select" button at the top-left of the chart.'}
         </Text>
       </Card>
       <SimpleGrid cols={2} spacing="lg">
         {baseGuardrailOrder.map((guardrail, idx) => {
           const label = `Chart ${String.fromCharCode(65 + idx)}`;
           return (
-            <Paper key={guardrail} shadow="xs" radius="md" p="md" mb="md" withBorder>
-              <Text fw={700} ta="center" mb={4} fz="lg">{label}</Text>
-              <Text fw={500}>{dataname === 'clean_data' ? 'Total infections per million people' : 'Percent change in stock price'}</Text>
-              <LineChart
-                parameters={{
-                  ...parameters,
-                  guardrail,
-                  selection,
-                  dataset: dataname,
-                  x_var: parameters.x_var || 'date',
-                  y_var: parameters.y_var || 'value',
-                  cat_var: parameters.cat_var || 'name',
-                  group_var: parameters.group_var || 'region',
-                  start_date: parameters.start_date || (dataname === 'clean_data' ? '2020-03-01' : '2024-01-01'),
-                  end_date: parameters.end_date || (dataname === 'clean_data' ? '2021-08-28' : '2024-12-31'),
-                }}
-                data={filteredData}
-                dataname={dataname}
-                items={items}
-                selection={selection}
-                range={range}
-                guardrail={guardrail}
-                numRandomSamples={numRandomSamples}
-                numQuantiles={numQuantiles}
-                metadataFiltered={false}
-              />
+            <Paper
+              key={guardrail}
+              shadow="xs"
+              radius="md"
+              p="md"
+              mb="md"
+              withBorder
+              style={selectedGuardrail === guardrail ? { border: '3px solid #2b8aef' } : undefined}
+            >
+              <Box style={{ position: 'relative' }}>
+                <Box style={{ position: 'absolute', top: 0, left: 8 }}>
+                  <label
+                    style={{
+                      display: 'inline-flex',
+                      alignItems: 'center',
+                      cursor: 'pointer',
+                      userSelect: 'none',
+                    }}
+                  >
+                    <input
+                      type="radio"
+                      name="favorite-guardrail"
+                      value={guardrail}
+                      checked={selectedGuardrail === guardrail}
+                      onChange={() => {
+                        setSelectedGuardrail(guardrail);
+                        setAnswer?.({ status: true, answers: { condition: guardrail } });
+                      }}
+                      style={{
+                        // visually hide native radio but keep it accessible
+                        position: 'absolute',
+                        opacity: 0,
+                        width: 1,
+                        height: 1,
+                        overflow: 'hidden',
+                        clip: 'rect(0 0 0 0)',
+                        whiteSpace: 'nowrap',
+                        border: 0,
+                      }}
+                    />
+                    <span
+                      role="button"
+                      aria-pressed={selectedGuardrail === guardrail}
+                      style={{
+                        display: 'inline-block',
+                        padding: '6px 10px',
+                        borderRadius: 9999,
+                        background: selectedGuardrail === guardrail ? '#1c7ed6' : '#e7f5ff',
+                        color: selectedGuardrail === guardrail ? '#fff' : '#1864ab',
+                        fontSize: 13,
+                        fontWeight: 700,
+                        boxShadow: selectedGuardrail === guardrail ? '0 2px 6px rgba(28,126,214,0.35)' : 'none',
+                      }}
+                    >
+                      {selectedGuardrail === guardrail ? 'Selected' : 'Select'}
+                    </span>
+                  </label>
+                </Box>
+                <Text fw={700} ta="center" mb={4} fz="lg">
+                  {label}
+                </Text>
+                <Text fw={500}>
+                  {dataname === 'clean_data' ? 'Total infections per million people' : 'Percent change in stock price'}
+                </Text>
+                <LineChart
+                  parameters={{
+                    ...parameters,
+                    guardrail,
+                    selection,
+                    dataset: dataname,
+                    x_var: parameters.x_var || 'date',
+                    y_var: parameters.y_var || 'value',
+                    cat_var: parameters.cat_var || 'name',
+                    group_var: parameters.group_var || 'region',
+                    start_date: parameters.start_date || (dataname === 'clean_data' ? '2020-03-01' : '2024-01-01'),
+                    end_date: parameters.end_date || (dataname === 'clean_data' ? '2021-08-28' : '2024-12-31'),
+                  }}
+                  data={filteredData}
+                  dataname={dataname}
+                  items={items}
+                  selection={selection}
+                  range={range}
+                  guardrail={guardrail}
+                  numRandomSamples={numRandomSamples}
+                  numQuantiles={numQuantiles}
+                  metadataFiltered={false}
+                />
+              </Box>
             </Paper>
           );
         })}
       </SimpleGrid>
-      <Box style={{ paddingTop: '32px' }}>
-        <RankingWidget
-          baseSequence={baseGuardrailOrder}
-          value={rankingOrder}
-          onChange={(newOrder) => {
-            setRankingOrder(newOrder as GuardrailType[]);
-            setAnswer?.({ status: true, answers: { 'chart-ranking': newOrder } });
-          }}
-        />
-      </Box>
     </Box>
   );
 }
