@@ -13,7 +13,7 @@ import RankingWidget from './RankingWidget';
 const baseGuardrails = ['percentileClosest', 'super_data', 'metadata', 'cluster'] as const;
 type GuardrailType = typeof baseGuardrails[number];
 
-export function CovidMetadataTask({ parameters, setAnswer }: any) {
+export function MetadataRankingTask({ parameters, setAnswer }: any) {
   const [data, setData] = useState<any[] | null>(null);
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [dataname, setDataname] = useState<string>(parameters.dataset || 'clean_data');
@@ -59,9 +59,9 @@ export function CovidMetadataTask({ parameters, setAnswer }: any) {
     if (dataname === 'clean_data') {
       setRange([new Date('2020-03-01'), new Date('2021-08-28')]);
     } else {
-      setRange([new Date(parameters.start_date || '2020-03-01'), new Date(parameters.end_date || '2021-08-28')]);
+      setRange([new Date('2024-01-01'), new Date('2024-12-31')]);
     }
-  }, [dataname, parameters.cat_var, parameters.group_var, parameters.start_date, parameters.end_date]);
+  }, [dataname, parameters.cat_var, parameters.group_var]);
 
   const filteredData = useMemo(() => {
     if (data && range) {
@@ -80,7 +80,9 @@ export function CovidMetadataTask({ parameters, setAnswer }: any) {
     <Box style={{ width: '95vw', alignContent: 'center' }}>
       <Card shadow="sm" radius="md" p="md" mb="md" withBorder>
         <Text mb="0">
-          Below are four charts comparing Norway’s COVID-19 cases to different sets of countries. Which chart do you think shows the most useful and appropriate comparison for Norway?
+          {dataname === 'clean_data'
+            ? 'Below are four charts comparing Norway’s COVID-19 cases to different sets of countries. Which chart do you think shows the most useful and appropriate comparison for Norway?'
+            : 'Below are four charts comparing Verizon’s (VZ) stock performance to different sets of stocks. Which chart do you think shows the most useful and appropriate comparison for Verizon (VZ)?'}
         </Text>
       </Card>
       <SimpleGrid cols={2} spacing="lg">
@@ -89,7 +91,7 @@ export function CovidMetadataTask({ parameters, setAnswer }: any) {
           return (
             <Paper key={guardrail} shadow="xs" radius="md" p="md" mb="md" withBorder>
               <Text fw={700} ta="center" mb={4} fz="lg">{label}</Text>
-              <Text fw={500}>Total infections per million people</Text>
+              <Text fw={500}>{dataname === 'clean_data' ? 'Total infections per million people' : 'Percent change in stock price'}</Text>
               <LineChart
                 parameters={{
                   ...parameters,
@@ -100,8 +102,8 @@ export function CovidMetadataTask({ parameters, setAnswer }: any) {
                   y_var: parameters.y_var || 'value',
                   cat_var: parameters.cat_var || 'name',
                   group_var: parameters.group_var || 'region',
-                  start_date: parameters.start_date || '2020-03-01',
-                  end_date: parameters.end_date || '2021-08-28',
+                  start_date: parameters.start_date || (dataname === 'clean_data' ? '2020-03-01' : '2024-01-01'),
+                  end_date: parameters.end_date || (dataname === 'clean_data' ? '2021-08-28' : '2024-12-31'),
                 }}
                 data={filteredData}
                 dataname={dataname}
@@ -131,4 +133,4 @@ export function CovidMetadataTask({ parameters, setAnswer }: any) {
   );
 }
 
-export default CovidMetadataTask;
+export default MetadataRankingTask;
