@@ -392,21 +392,54 @@ export function LineChart({
     TEL: ['APH', 'GLW', 'ETN', 'HUBB', 'KEYS'],
     JKHY: ['FI', 'FIS', 'GPN', 'BR', 'PAYX'],
   };
+  // Contextual mappings loaded from CSVs (overrides hardcoded mappings when available)
+  const [contextMap, setContextMap] = useState<Record<string, string[]>>({});
+
+  useEffect(() => {
+    if (!dataname) {
+      setContextMap({});
+      return undefined;
+    }
+
+    let path: string | null = null;
+    if (dataname === 'clean_data') path = '/stage-1-covid/data/covid_contextual_comparisons.csv';
+    if (dataname === 'sp500_stocks') path = '/stage-1/data/stocks_contextual_comparison.csv';
+    if (!path) {
+      setContextMap({});
+      return undefined;
+    }
+
+    let cancelled = false;
+    d3.csv(path).then((rows: any[]) => {
+      if (cancelled) return;
+      const map: Record<string, string[]> = {};
+      rows.forEach((r) => {
+        const key = r.name;
+        const vals: string[] = [];
+        for (let i = 1; i <= 5; i += 1) {
+          const col = `c${i}`;
+          if (r[col] && r[col].trim && r[col].trim() !== '') vals.push(r[col]);
+        }
+        map[key] = vals;
+      });
+      setContextMap(map);
+    }).catch(() => setContextMap({}));
+    return () => { cancelled = true; };
+  }, [dataname]);
 
   const metadataCountries = useMemo(() => {
     if (!selection || selection.length === 0) return [];
-    // For the clean_data dataset, use the existing relatedBySelected mapping
+    const sel = selection[0];
     if (dataname === 'clean_data') {
-      const match = selection.find((s) => Object.prototype.hasOwnProperty.call(relatedBySelected, s));
-      return match ? relatedBySelected[match] : [];
+      if (contextMap[sel] && contextMap[sel].length > 0) return contextMap[sel];
+      return relatedBySelected[sel] ?? [];
     }
-    // For the sp500 dataset, use the SP500 mapping
     if (dataname === 'sp500_stocks') {
-      const match = selection.find((s) => Object.prototype.hasOwnProperty.call(relatedBySelectedStocks, s));
-      return match ? relatedBySelectedStocks[match] : [];
+      if (contextMap[sel] && contextMap[sel].length > 0) return contextMap[sel];
+      return relatedBySelectedStocks[sel] ?? [];
     }
     return [];
-  }, [selection, dataname]);
+  }, [selection, dataname, contextMap]);
 
   useEffect(() => {
     if (guardrail !== 'cluster') return;
