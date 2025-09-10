@@ -1195,7 +1195,7 @@ export function LineChart({
       const longName = country.longName || country.name || baseName;
       const trimmed = longName.length > 15 ? `${longName.slice(0, 15)}...` : longName;
       displayLabel = trimmed;
-      tooltip = longName;
+      tooltip = `${longName} (${country.name})`;
     }
     const labelX = width + margin.left - 3;
     return {
