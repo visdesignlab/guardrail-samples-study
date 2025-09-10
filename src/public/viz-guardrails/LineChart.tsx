@@ -1186,12 +1186,20 @@ export function LineChart({
 
   // ---------------------------- Render ----------------------------
   const labelHtmlPositions = allLabelPositions.map((x, i) => {
-    const baseName = x.label.split('\n')[0].split(' (')[0];
+    const rawLabel = x.label.split('\n')[0];
+    const baseName = rawLabel.split(' (')[0];
     const country = items.find((it) => it.name === baseName);
-    const tooltip = country?.longName || undefined;
+    let tooltip = country?.longName || undefined;
+    let displayLabel = x.label;
+    if (dataname === 'sp500_stocks' && country) {
+      const longName = country.longName || country.name || baseName;
+      const trimmed = longName.length > 15 ? `${longName.slice(0, 15)}...` : longName;
+      displayLabel = trimmed;
+      tooltip = longName;
+    }
     const labelX = width + margin.left - 3;
     return {
-      label: x.label,
+      label: displayLabel,
       y: x.y,
       color: x.color ?? darkGrayColor,
       tooltip,
