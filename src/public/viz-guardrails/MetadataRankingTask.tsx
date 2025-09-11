@@ -96,7 +96,7 @@ export function MetadataRankingTask({ parameters, setAnswer }: any) {
                 {' '}
                 and why?
                 <br />
-                Select your preferred chart by clicking the &apos;Select&apos; button at the top-left of the chart.
+                Select your preferred chart by clicking the &apos;Select&apos; button at the top-right of the chart.
               </>
             )
             : (
@@ -115,7 +115,7 @@ export function MetadataRankingTask({ parameters, setAnswer }: any) {
                 {' '}
                 and why?
                 <br />
-                Select your preferred chart by clicking the &apos;Select&apos; button at the top-left of the chart.
+                Select your preferred chart by clicking the &apos;Select&apos; button at the top-right of the chart.
               </>
             )}
         </Text>
