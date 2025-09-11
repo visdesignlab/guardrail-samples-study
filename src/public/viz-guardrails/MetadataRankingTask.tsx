@@ -93,7 +93,10 @@ export function MetadataRankingTask({ parameters, setAnswer }: any) {
                 <b>
                   Norway
                 </b>
-                ? Select the chart by clicking the &apos;Select&apos; button at the top-left of the chart.
+                {' '}
+                and why?
+                <br />
+                Select your preferred chart by clicking the &apos;Select&apos; button at the top-left of the chart.
               </>
             )
             : (
@@ -109,7 +112,10 @@ export function MetadataRankingTask({ parameters, setAnswer }: any) {
                 <b>
                   Verizon (VZ)
                 </b>
-                ? Select the chart by clicking the &apos;Select&apos; button at the top-left of the chart.
+                {' '}
+                and why?
+                <br />
+                Select your preferred chart by clicking the &apos;Select&apos; button at the top-left of the chart.
               </>
             )}
         </Text>
