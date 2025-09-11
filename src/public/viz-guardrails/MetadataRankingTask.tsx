@@ -128,7 +128,14 @@ export function MetadataRankingTask({ parameters, setAnswer }: any) {
               style={selectedGuardrail === guardrail ? { border: '3px solid #2b8aef' } : undefined}
             >
               <Box style={{ position: 'relative' }}>
-                <Box style={{ position: 'absolute', top: 0, left: 8 }}>
+                <Box
+                  style={{
+                    position: 'absolute',
+                    top: 0,
+                    right: 8,
+                    zIndex: 2,
+                  }}
+                >
                   <div
                     role="button"
                     tabIndex={0}
@@ -156,15 +163,18 @@ export function MetadataRankingTask({ parameters, setAnswer }: any) {
                     }}
                     style={{
                       display: 'inline-block',
-                      padding: '6px 10px',
+                      padding: '8px 18px',
                       borderRadius: 9999,
                       background: selectedGuardrail === guardrail ? '#1c7ed6' : '#e7f5ff',
                       color: selectedGuardrail === guardrail ? '#fff' : '#1864ab',
-                      fontSize: 13,
-                      fontWeight: 700,
-                      boxShadow: selectedGuardrail === guardrail ? '0 2px 6px rgba(28,126,214,0.35)' : 'none',
+                      fontSize: 16,
+                      fontWeight: 600,
+                      letterSpacing: 0.5,
+                      boxShadow: selectedGuardrail === guardrail ? '0 2px 12px rgba(28,126,214,0.25)' : 'none',
                       cursor: 'pointer',
                       userSelect: 'none',
+                      border: '2px solid #1c7ed6',
+                      transition: 'all 0.15s',
                     }}
                   >
                     {selectedGuardrail === guardrail ? 'Selected' : 'Select'}
