@@ -80,8 +80,38 @@ export function MetadataRankingTask({ parameters, setAnswer }: any) {
       <Card shadow="sm" radius="md" p="md" mb="md" withBorder>
         <Text mb="0">
           {dataname === 'clean_data'
-            ? 'Below are four charts comparing Norway’s COVID-19 cases to different sets of countries. Which chart do you think shows the most useful and appropriate comparison for Norway? Select the chart by clicking the "Select" button at the top-left of the chart.'
-            : 'Below are four charts comparing Verizon’s (VZ) stock performance to different sets of stocks. Which chart do you think shows the most useful and appropriate comparison for Verizon (VZ)? Select the chart by clicking the "Select" button at the top-left of the chart.'}
+            ? (
+              <>
+                Below are four charts comparing
+                {' '}
+                <b>
+                  Norway’s
+                </b>
+                {' '}
+                COVID-19 cases to different sets of countries. Which chart do you think shows the most useful and appropriate comparison for
+                {' '}
+                <b>
+                  Norway
+                </b>
+                ? Select the chart by clicking the &apos;Select&apos; button at the top-left of the chart.
+              </>
+            )
+            : (
+              <>
+                Below are four charts comparing
+                {' '}
+                <b>
+                  Verizon’s (VZ)
+                </b>
+                {' '}
+                stock performance to different sets of stocks. Which chart do you think shows the most useful and appropriate comparison for
+                {' '}
+                <b>
+                  Verizon (VZ)
+                </b>
+                ? Select the chart by clicking the &apos;Select&apos; button at the top-left of the chart.
+              </>
+            )}
         </Text>
       </Card>
       <SimpleGrid cols={2} spacing="lg">
