@@ -177,6 +177,20 @@ export function MetadataRankingTask({ parameters, setAnswer }: any) {
                       transition: 'all 0.15s',
                     }}
                   >
+                    <input
+                      type="radio"
+                      checked={selectedGuardrail === guardrail}
+                      readOnly
+                      style={{
+                        marginRight: 10,
+                        width: 18,
+                        height: 18,
+                        position: 'relative',
+                        top: '3px',
+                      }}
+                      tabIndex={-1}
+                      aria-hidden="true"
+                    />
                     {selectedGuardrail === guardrail ? 'Selected' : 'Select'}
                   </div>
                 </Box>
