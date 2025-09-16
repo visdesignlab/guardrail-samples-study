@@ -422,6 +422,19 @@
           "numItems": 7
         }
       ]
+    },
+    "attention-check": {
+      "type": "questionnaire",
+      "response": [
+        {
+          "id": "attention-bird",
+          "type": "shortText",
+          "location": "belowStimulus",
+          "prompt": "To show you are paying attention, please type the word 'bird' in the box below.",
+          "required": true,
+          "placeholder": "Type 'bird' here"
+        }
+      ]
     }
   },
   "sequence": {
@@ -5235,6 +5248,7 @@
           }
         ]
       },
+      "attention-check",
       "covid-metadata-task",
       "post-study-quant"
     ]
