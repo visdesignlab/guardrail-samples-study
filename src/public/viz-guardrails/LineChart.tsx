@@ -1195,7 +1195,7 @@ export function LineChart({
     let displayLabel = x.label;
     if (dataname === 'sp500_stocks' && country) {
       const longName = country.longName || country.name || baseName;
-      const trimmed = longName.length > 12 ? `${longName.slice(0, 12)}...` : longName;
+      const trimmed = longName.length > 17 ? `${longName.slice(0, 17)}...` : longName;
       displayLabel = tail ? `${trimmed}\n${tail}` : trimmed;
       tooltip = longName;
     }
@@ -1557,36 +1557,43 @@ export function LineChart({
         </>
         )}
       </svg>
-      {labelHtmlPositions.map((x) => (
-        <Tooltip
-          key={`label_html_${x.label}_${x.idx}`}
-          label={x.tooltip}
-          disabled={!x.tooltip}
-          position="right"
-          withArrow
-          withinPortal={false}
-        >
-          <span
-            style={{
-              position: 'absolute',
-              left: x.left + 2,
-              top: x.top - 8,
-              fontSize: 10,
-              color: x.color,
-              background: 'transparent',
-              cursor: x.tooltip ? 'pointer' : 'default',
-              whiteSpace: 'pre-line',
-              zIndex: 2,
-              userSelect: 'none',
-              padding: 0,
-              lineHeight: 1,
-              fontFamily: '"Helvetica Neue", "Helvetica", "Arial", sans-serif',
-            }}
+      {labelHtmlPositions.map((x) => {
+        const parts = x.label.split('\n');
+        const name = parts[0];
+        const tail = parts.slice(1).join('\n');
+        return (
+          <Tooltip
+            key={`label_html_${x.label}_${x.idx}`}
+            label={x.tooltip}
+            disabled={!x.tooltip}
+            position="right"
+            withArrow
+            withinPortal={false}
           >
-            {`\u2002${x.label}`}
-          </span>
-        </Tooltip>
-      ))}
+            <span
+              style={{
+                position: 'absolute',
+                left: x.left + 2,
+                top: x.top - 8,
+                fontSize: 10,
+                color: x.color,
+                background: 'transparent',
+                cursor: x.tooltip ? 'pointer' : 'default',
+                zIndex: 2,
+                userSelect: 'none',
+                padding: 0,
+                lineHeight: 1.1,
+                fontFamily: '"Helvetica Neue", "Helvetica", "Arial", sans-serif',
+              }}
+            >
+              <span style={{ whiteSpace: 'nowrap' }}>{`\u2002${name}`}</span>
+              {tail && (
+                <span style={{ display: 'block', whiteSpace: 'pre-line' }}>{tail}</span>
+              )}
+            </span>
+          </Tooltip>
+        );
+      })}
     </div>
   );
 }
