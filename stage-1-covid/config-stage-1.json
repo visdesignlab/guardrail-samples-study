@@ -94,7 +94,38 @@
                     "required": true
                 }
             ]
+    },
+    "covid-guardrail-selection-task": {
+      "type": "react-component",
+      "path": "viz-guardrails/GuardrailPreferenceTask.tsx",
+      "instruction": "Below are four different visualizations (A–D) of COVID-19 data for Norway. Please review each chart and select the one you think is the most useful comparison for Norway.",
+      "parameters": {
+        "dataset": "clean_data",
+        "start_date": "2020-03-01",
+        "end_date": "2021-08-28",
+        "x_var": "date",
+        "y_var": "value",
+        "cat_var": "name",
+        "group_var": "region",
+        "selection": ["Norway"],
+        "range": null,
+        "items": [],
+        "data": [],
+        "metadataFiltered": false,
+        "numRandomSamples": 5,
+        "numQuantiles": 5
+      },
+      "response": [
+        {
+          "id": "explanation",
+          "prompt": "Please briefly explain why you chose that chart. Which aspects influenced your choice?",
+          "secondaryText": "",
+          "location": "belowStimulus",
+          "type": "longText",
+          "placeholder": "Enter your reasoning here"
         }
+      ]
+    }
   },
   "components": {
     "covid-a-control": {
@@ -138,37 +169,6 @@
         "guardrail": "metadata",
         "initial_selection": ["Greece"]
       }
-    },
-    "covid-metadata-task": {
-      "type": "react-component",
-      "path": "viz-guardrails/MetadataRankingTask.tsx",
-      "instruction": "Below are four different visualizations (A–D) of COVID-19 data for Norway. Please review each chart and select the one you think is the most useful comparison for Norway.",
-      "parameters": {
-        "dataset": "clean_data",
-        "start_date": "2020-03-01",
-        "end_date": "2021-08-28",
-        "x_var": "date",
-        "y_var": "value",
-        "cat_var": "name",
-        "group_var": "region",
-        "selection": ["Norway"],
-        "range": null,
-        "items": [],
-        "data": [],
-        "metadataFiltered": false,
-        "numRandomSamples": 5,
-        "numQuantiles": 5
-      },
-      "response": [
-        {
-          "id": "explanation",
-          "prompt": "Please briefly explain why you chose that chart. Which aspects influenced your choice?",
-          "secondaryText": "",
-          "location": "belowStimulus",
-          "type": "longText",
-          "placeholder": "Enter your reasoning here"
-        }
-      ]
     },
     "covid-b-control": {
       "baseComponent": "covid",
@@ -336,6 +336,15 @@
       "parameters": {
         "guardrail": "metadata",
         "initial_selection": ["Tunisia"]
+      }
+    },
+    "covid-guardrail-selection-task-holistic": {
+      "baseComponent": "covid-guardrail-selection-task"
+    },
+    "covid-guardrail-selection-task-precise": {
+      "baseComponent": "covid-guardrail-selection-task",
+      "parameters": {
+        "precisePrompt": true
       }
     },
     "introduction": {
@@ -5249,7 +5258,14 @@
         ]
       },
       "attention-check",
-      "covid-metadata-task",
+      {
+        "order": "latinSquare",
+        "numSamples": 1,
+        "components": [
+          "covid-guardrail-selection-task-holistic",
+          "covid-guardrail-selection-task-precise"
+        ]
+      },
       "post-study-quant"
     ]
   }
