@@ -410,6 +410,29 @@
           "leftLabel": "Not at all confident",
           "rightLabel": "Extremely confident",
           "numItems": 7
+        },
+        {
+          "id": "political-ideology",
+          "type": "likert",
+          "location": "belowStimulus",
+          "prompt": "In terms of your political views, do you think of yourself as:",
+          "required": true,
+          "leftLabel": "Very Liberal",
+          "rightLabel": "Very Conservative",
+          "numItems": 7
+        }
+      ]
+    },
+    "attention-check": {
+      "type": "questionnaire",
+      "response": [
+        {
+          "id": "attention-bird",
+          "type": "shortText",
+          "location": "belowStimulus",
+          "prompt": "To show you are paying attention, please type the word 'bird' in the box below.",
+          "required": true,
+          "placeholder": "Type 'bird' here"
         }
       ]
     }
@@ -5225,6 +5248,7 @@
           }
         ]
       },
+      "attention-check",
       "stock-metadata-task",
       "post-study-quant"
     ]
