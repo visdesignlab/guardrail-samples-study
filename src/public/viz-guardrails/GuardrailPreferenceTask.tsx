@@ -12,7 +12,7 @@ import { LineChart } from './LineChart';
 const baseGuardrails = ['percentileClosest', 'super_data', 'metadata', 'cluster'] as const;
 type GuardrailType = typeof baseGuardrails[number];
 
-export function MetadataRankingTask({ parameters, setAnswer }: any) {
+export function GuardrailPreferenceTask({ parameters, setAnswer }: any) {
   const [data, setData] = useState<any[] | null>(null);
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [dataname, setDataname] = useState<string>(parameters.dataset || 'clean_data');
@@ -24,6 +24,8 @@ export function MetadataRankingTask({ parameters, setAnswer }: any) {
   const [baseGuardrailOrder, setBaseGuardrailOrder] = useState<GuardrailType[]>([]);
   const [selectedGuardrail, setSelectedGuardrail] = useState<GuardrailType | null>(null);
   const initialSeedRef = useRef<string | null>(null);
+  const precisePrompt = parameters.precisePrompt ?? false;
+
   if (initialSeedRef.current === null) {
     initialSeedRef.current = Date.now().toString();
   }
@@ -88,7 +90,12 @@ export function MetadataRankingTask({ parameters, setAnswer }: any) {
                   Norway’s
                 </b>
                 {' '}
-                COVID-19 cases to different sets of countries. Which chart do you think shows the most useful and appropriate comparison for
+                COVID-19 cases to different sets of countries.
+                { precisePrompt ? ' Your task is to objectively evaluate ' : null }
+                { precisePrompt ? <b>Norway&apos;s</b> : null }
+                { precisePrompt ? ' COVID-19 response.\n' : null }
+                {' '}
+                Which chart do you think shows the most useful and appropriate comparison for
                 {' '}
                 <b>
                   Norway
@@ -107,7 +114,14 @@ export function MetadataRankingTask({ parameters, setAnswer }: any) {
                   Verizon’s (VZ)
                 </b>
                 {' '}
-                stock performance to different sets of stocks. Which chart do you think shows the most useful and appropriate comparison for
+                <b>Verizon’s (VZ)</b>
+                {' '}
+                stock performance to different sets of stocks.
+                { precisePrompt ? ' Your task is to objectively evaluate ' : null }
+                { precisePrompt ? <b>Verizon&apos;s (VZ)</b> : null }
+                { precisePrompt ? ' stock performance.\n' : null }
+                {' '}
+                Which chart do you think shows the most useful and appropriate comparison for
                 {' '}
                 <b>
                   Verizon (VZ)
@@ -238,4 +252,4 @@ export function MetadataRankingTask({ parameters, setAnswer }: any) {
   );
 }
 
-export default MetadataRankingTask;
+export default GuardrailPreferenceTask;
