@@ -94,7 +94,38 @@
                     "required": true
                 }
             ]
+    },
+    "stock-guardrail-selection-task": {
+      "type": "react-component",
+      "path": "viz-guardrails/GuardrailPreferenceTask.tsx",
+      "instruction": "Below are four different visualizations (A–D) of stock data for Verizon (VZ). Please review each chart and select the one you think is the most useful comparison for Verizon.",
+      "parameters": {
+        "dataset": "sp500_stocks",
+        "start_date": "2024-01-01",
+        "end_date": "2024-12-31",
+        "x_var": "date",
+        "y_var": "value",
+        "cat_var": "name",
+        "group_var": "sector",
+        "selection": ["VZ"],
+        "range": null,
+        "items": [],
+        "data": [],
+        "metadataFiltered": false,
+        "numRandomSamples": 5,
+        "numQuantiles": 5
+      },
+      "response": [
+        {
+          "id": "explanation",
+          "prompt": "Please briefly explain why you chose that chart. Which aspects influenced your choice?",
+          "secondaryText": "",
+          "location": "belowStimulus",
+          "type": "longText",
+          "placeholder": "Enter your reasoning here"
         }
+      ]
+    }
   },
   "components": {
     "stock-a-control": {
@@ -138,37 +169,6 @@
         "guardrail": "metadata",
         "initial_selection": ["VZ"]
       }
-    },
-    "stock-metadata-task": {
-      "type": "react-component",
-      "path": "viz-guardrails/MetadataRankingTask.tsx",
-      "instruction": "Below are four different visualizations (A–D) of stock data for Verizon (VZ). Please review each chart and select the one you think is the most useful comparison for Verizon.",
-      "parameters": {
-        "dataset": "sp500_stocks",
-        "start_date": "2024-01-01",
-        "end_date": "2024-12-31",
-        "x_var": "date",
-        "y_var": "value",
-        "cat_var": "name",
-        "group_var": "sector",
-        "selection": ["VZ"],
-        "range": null,
-        "items": [],
-        "data": [],
-        "metadataFiltered": false,
-        "numRandomSamples": 5,
-        "numQuantiles": 5
-      },
-      "response": [
-        {
-          "id": "explanation",
-          "prompt": "Please briefly explain why you chose that chart. Which aspects influenced your choice?",
-          "secondaryText": "",
-          "location": "belowStimulus",
-          "type": "longText",
-          "placeholder": "Enter your reasoning here"
-        }
-      ]
     },
     "stock-b-control": {
       "baseComponent": "stock",
@@ -336,6 +336,15 @@
       "parameters": {
         "guardrail": "metadata",
         "initial_selection": ["JKHY"]
+      }
+    },
+    "stock-guardrail-selection-task-holistic": {
+      "baseComponent": "stock-guardrail-selection-task"
+    },
+    "stock-guardrail-selection-task-precise": {
+      "baseComponent": "stock-guardrail-selection-task",
+      "parameters": {
+        "precisePrompt": true
       }
     },
     "introduction": {
@@ -5249,7 +5258,14 @@
         ]
       },
       "attention-check",
-      "stock-metadata-task",
+      {
+        "order": "latinSquare",
+        "numSamples": 1,
+        "components": [
+          "stock-guardrail-selection-task-holistic",
+          "stock-guardrail-selection-task-precise"
+        ]
+      },
       "post-study-quant"
     ]
   }
