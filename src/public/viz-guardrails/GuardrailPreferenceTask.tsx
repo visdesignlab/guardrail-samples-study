@@ -42,7 +42,7 @@ export function GuardrailPreferenceTask({ parameters, setAnswer }: any) {
   useEffect(() => {
     setBaseGuardrailOrder(seededOrder);
     setSelectedGuardrail(null);
-    setAnswer?.({ status: false, answers: { condition: selectedGuardrail } });
+    setAnswer?.({ status: false, answers: { condition: selectedGuardrail, order: seededOrder } });
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [seededOrder]);
 
@@ -163,10 +163,10 @@ export function GuardrailPreferenceTask({ parameters, setAnswer }: any) {
                     onClick={() => {
                       if (selectedGuardrail === guardrail) {
                         setSelectedGuardrail(null);
-                        setAnswer?.({ status: false, answers: {} });
+                        setAnswer?.({ status: false, answers: { order: baseGuardrailOrder } });
                       } else {
                         setSelectedGuardrail(guardrail);
-                        setAnswer?.({ status: true, answers: { condition: guardrail } });
+                        setAnswer?.({ status: true, answers: { condition: guardrail, order: baseGuardrailOrder } });
                       }
                     }}
                     onKeyDown={(e) => {
@@ -174,10 +174,10 @@ export function GuardrailPreferenceTask({ parameters, setAnswer }: any) {
                         e.preventDefault();
                         if (selectedGuardrail === guardrail) {
                           setSelectedGuardrail(null);
-                          setAnswer?.({ status: false, answers: {} });
+                          setAnswer?.({ status: false, answers: { order: baseGuardrailOrder } });
                         } else {
                           setSelectedGuardrail(guardrail);
-                          setAnswer?.({ status: true, answers: { condition: guardrail } });
+                          setAnswer?.({ status: true, answers: { condition: guardrail, order: baseGuardrailOrder } });
                         }
                       }
                     }}
