@@ -114,8 +114,6 @@ export function GuardrailPreferenceTask({ parameters, setAnswer }: any) {
                   Verizon’s (VZ)
                 </b>
                 {' '}
-                <b>Verizon’s (VZ)</b>
-                {' '}
                 stock performance to different sets of stocks.
                 { precisePrompt ? ' Your task is to objectively evaluate ' : null }
                 { precisePrompt ? <b>Verizon&apos;s (VZ)</b> : null }
