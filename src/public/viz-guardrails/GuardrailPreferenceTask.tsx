@@ -81,55 +81,60 @@ export function GuardrailPreferenceTask({ parameters, setAnswer }: any) {
     <Box style={{ width: '95vw', alignContent: 'center' }}>
       <Card shadow="sm" radius="md" p="md" mb="md" withBorder>
         <Text mb="0">
-          {dataname === 'clean_data'
-            ? (
+          {(() => {
+            const isCovid = dataname === 'clean_data';
+            const isPrecise = precisePrompt === true;
+            if (isCovid && isPrecise) {
+              return (
+                <>
+                  <span>Below are four charts comparing </span>
+                  <b>Norway’s</b>
+                  <span> COVID-19 cases.</span>
+                  <br />
+                  <strong>Your task is to estimate where Norway falls with regard to case numbers relative to other countries in absolute terms.</strong>
+                  <br />
+                  <span>Which chart do you think supports this task best, and why? Select your preferred chart by clicking the &apos;Select&apos; button at the top-right of the chart.</span>
+                </>
+              );
+            }
+            if (isCovid && !isPrecise) {
+              return (
+                <>
+                  <span>Below are four charts comparing </span>
+                  <b>Norway’s</b>
+                  <span> COVID-19 cases.</span>
+                  <br />
+                  <strong>Your task is to fairly compare Norway’s COVID response overall relative to other countries.</strong>
+                  <br />
+                  <span>Which chart do you think supports this task best, and why? Select your preferred chart by clicking the &apos;Select&apos; button at the top-right of the chart.</span>
+                </>
+              );
+            }
+            if (!isCovid && isPrecise) {
+              return (
+                <>
+                  <span>Below are four charts comparing </span>
+                  <b>Verizon’s (VZ)</b>
+                  <span> stock performance.</span>
+                  <br />
+                  <strong>Your task is to objectively evaluate Verizon&apos;s (VZ) stock performance from the perspective of someone who invested in the stock.</strong>
+                  <br />
+                  <span>Which chart do you think supports this task best, and why? Select your preferred chart by clicking the &apos;Select&apos; button at the top-right of the chart.</span>
+                </>
+              );
+            }
+            return (
               <>
-                Below are four charts comparing
-                {' '}
-                <b>
-                  Norway’s
-                </b>
-                {' '}
-                COVID-19 cases to different sets of countries.
-                { precisePrompt ? ' Your task is to objectively evaluate ' : null }
-                { precisePrompt ? <b>Norway&apos;s</b> : null }
-                { precisePrompt ? ' COVID-19 response.\n' : null }
-                {' '}
-                Which chart do you think shows the most useful and appropriate comparison for
-                {' '}
-                <b>
-                  Norway
-                </b>
-                {' '}
-                and why?
+                <span>Below are four charts comparing </span>
+                <b>Verizon’s (VZ)</b>
+                <span> stock performance.</span>
                 <br />
-                Select your preferred chart by clicking the &apos;Select&apos; button at the top-right of the chart.
-              </>
-            )
-            : (
-              <>
-                Below are four charts comparing
-                {' '}
-                <b>
-                  Verizon’s (VZ)
-                </b>
-                {' '}
-                stock performance to different sets of stocks.
-                { precisePrompt ? ' Your task is to objectively evaluate ' : null }
-                { precisePrompt ? <b>Verizon&apos;s (VZ)</b> : null }
-                { precisePrompt ? ' stock performance.\n' : null }
-                {' '}
-                Which chart do you think shows the most useful and appropriate comparison for
-                {' '}
-                <b>
-                  Verizon (VZ)
-                </b>
-                {' '}
-                and why?
+                <strong>Your task is to evaluate the performance of Verizon’s (VZ) management relative to other companies.</strong>
                 <br />
-                Select your preferred chart by clicking the &apos;Select&apos; button at the top-right of the chart.
+                <span>Which chart do you think supports this task best, and why? Select your preferred chart by clicking the &apos;Select&apos; button at the top-right of the chart.</span>
               </>
-            )}
+            );
+          })()}
         </Text>
       </Card>
       <SimpleGrid cols={2} spacing="lg">
