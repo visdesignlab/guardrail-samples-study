@@ -1106,7 +1106,7 @@ export function LineChart({
         if (line && line.lastPoint) {
           const percentile = percentiles[i];
           labels.push({
-            label: `${line.name}\n${percentile}th Percentile`,
+            label: `${line.name}\nHigher than ${percentile}%`,
             y: yScale(line.lastPoint[parameters.y_var]),
             color: darkGrayColor,
           });
