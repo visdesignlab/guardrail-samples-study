@@ -87,11 +87,11 @@ export function GuardrailPreferenceTask({ parameters, setAnswer }: any) {
             if (isCovid && isPrecise) {
               return (
                 <>
-                  <span>Below are four charts comparing </span>
+                  <span>Below are four charts displaying </span>
                   <b>Norway’s</b>
                   <span> COVID-19 cases.</span>
                   <br />
-                  <strong>Your task is to estimate where Norway falls with regard to case numbers relative to other countries in absolute terms.</strong>
+                  <strong>Your task is to estimate where Norway falls with regard to case numbers relative to other countries.</strong>
                   <br />
                   <span>Which chart do you think supports this task best, and why? Select your preferred chart by clicking the &apos;Select&apos; button at the top-right of the chart.</span>
                 </>
@@ -100,11 +100,11 @@ export function GuardrailPreferenceTask({ parameters, setAnswer }: any) {
             if (isCovid && !isPrecise) {
               return (
                 <>
-                  <span>Below are four charts comparing </span>
+                  <span>Below are four charts displaying </span>
                   <b>Norway’s</b>
-                  <span> COVID-19 cases.</span>
+                  <span> COVID-19 response.</span>
                   <br />
-                  <strong>Your task is to fairly compare Norway’s COVID response overall relative to other countries.</strong>
+                  <strong>Your task is to fairly compare Norway’s overall COVID response relative to other countries.</strong>
                   <br />
                   <span>Which chart do you think supports this task best, and why? Select your preferred chart by clicking the &apos;Select&apos; button at the top-right of the chart.</span>
                 </>
@@ -113,11 +113,11 @@ export function GuardrailPreferenceTask({ parameters, setAnswer }: any) {
             if (!isCovid && isPrecise) {
               return (
                 <>
-                  <span>Below are four charts comparing </span>
+                  <span>Below are four charts displaying </span>
                   <b>Verizon’s (VZ)</b>
                   <span> stock performance.</span>
                   <br />
-                  <strong>Your task is to objectively evaluate Verizon&apos;s (VZ) stock performance from the perspective of someone who invested in the stock.</strong>
+                  <strong>Your task is to objectively evaluate Verizon&apos;s (VZ) stock performance from the perspective of an investor.</strong>
                   <br />
                   <span>Which chart do you think supports this task best, and why? Select your preferred chart by clicking the &apos;Select&apos; button at the top-right of the chart.</span>
                 </>
@@ -125,7 +125,7 @@ export function GuardrailPreferenceTask({ parameters, setAnswer }: any) {
             }
             return (
               <>
-                <span>Below are four charts comparing </span>
+                <span>Below are four charts displaying </span>
                 <b>Verizon’s (VZ)</b>
                 <span> stock performance.</span>
                 <br />
