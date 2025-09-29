@@ -1092,7 +1092,7 @@ export function LineChart({
       for (let i = 0; i < percentiles.length; i += 1) {
         if (lastPoint && lastPoint.quantiles && lastPoint.quantiles[i] != null) {
           labels.push({
-            label: `${percentiles[i]}th Percentile`,
+            label: `Higher than ${percentiles[i]}%`,
             y: yScale(lastPoint.quantiles[i]),
             color: darkGrayColor,
           });
