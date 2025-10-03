@@ -32,7 +32,7 @@ export function XAxis({
   }, [ticks, xScale]);
 
   const format = useCallback((str: string | Date) => {
-    const myFormat = isDate ? d3.utcFormat('%b%e, %Y') : d3.format('.2s');
+    const myFormat = isDate ? d3.utcFormat('%b %e, %Y') : d3.format('.2s');
 
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     return myFormat(str as any);
