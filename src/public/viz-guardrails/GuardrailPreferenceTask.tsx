@@ -60,7 +60,7 @@ export function GuardrailPreferenceTask({ parameters, setAnswer }: any) {
     if (dataname === 'clean_data') {
       setRange([new Date('2020-03-01'), new Date('2021-08-28')]);
     } else {
-      setRange([new Date('2024-01-01'), new Date('2024-12-31')]);
+      setRange([new Date('2024-01-01'), new Date('2024-12-24')]);
     }
   }, [dataname, parameters.cat_var, parameters.group_var]);
 

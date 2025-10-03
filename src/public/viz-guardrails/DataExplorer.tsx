@@ -68,7 +68,7 @@ export function DataExplorer({ parameters, setAnswer }: StimulusParams<ChartPara
     if (dataname === 'clean_data') {
       setRange([new Date('2020-03-01'), new Date('2021-08-28')]);
     } else {
-      setRange([new Date(parameters.start_date), new Date(parameters.end_date)]);
+      setRange([new Date('2024-01-01'), new Date('2024-12-24')]);
     }
   }, [dataname, parameters]);
 
