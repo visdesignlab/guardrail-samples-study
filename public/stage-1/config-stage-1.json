@@ -1,7 +1,7 @@
 {
   "$schema": "https://raw.githubusercontent.com/revisit-studies/study/dev/src/parser/StudyConfigSchema.json",
   "studyMetadata": {
-    "title": "Evaluating Line Charts",
+    "title": "Evaluating Line Charts with Stock Data",
     "version": "pilot",
     "authors": ["VDL"],
     "date": "2024-01-11",
