@@ -15,7 +15,7 @@
     "autoDownloadStudy": false,
     "withSidebar": false,
     "urlParticipantIdParam": "PROLIFIC_PID",
-    "studyEndMsg": "**Thank you for completing the study. You may click this link and return to Prolific**: [Add your link](Add your link)",
+    "studyEndMsg": "**Thank you for completing the study. You may click this link and return to Prolific**: [https://app.prolific.com/submissions/complete?cc=C18Y4XD3](https://app.prolific.com/submissions/complete?cc=C18Y4XD3)",
     "enumerateQuestions": true,
     "stylesheetPath": "stage-1/assets/form.css"
   },
