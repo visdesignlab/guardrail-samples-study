@@ -104,7 +104,7 @@ export function GuardrailPreferenceTask({ parameters, setAnswer }: any) {
                   <b>Norway’s</b>
                   <span> COVID-19 response.</span>
                   <br />
-                  <strong>Your task is to judge Norway’s overall COVID-19 response relative to other countries from the perspective of a traveler planning a vacation.</strong>
+                  <strong>Your task is to judge the quality of Norway’s COVID-19 response measures.</strong>
                   <br />
                   <span>Which chart do you think supports this task best, and why? Select your preferred chart by clicking the &apos;Select&apos; button at the top-right of the chart.</span>
                 </>
