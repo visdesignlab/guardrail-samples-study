@@ -1588,7 +1588,7 @@ export function LineChart({
             >
               <span style={{ whiteSpace: 'nowrap' }}>{`\u2002${name}`}</span>
               {tail && (
-                <span style={{ display: 'block', whiteSpace: 'pre-line' }}>{tail}</span>
+                <span style={{ display: 'block', whiteSpace: 'pre-line' }}>{`\u2002${tail}`}</span>
               )}
             </span>
           </Tooltip>
