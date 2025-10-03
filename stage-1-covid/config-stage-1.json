@@ -1,11 +1,11 @@
 {
   "$schema": "https://raw.githubusercontent.com/revisit-studies/study/dev/src/parser/StudyConfigSchema.json",
   "studyMetadata": {
-    "title": "Stage 1 (COVID-19)",
+    "title": "Evaluating Line Charts",
     "version": "pilot",
     "authors": ["VDL"],
     "date": "2024-01-11",
-    "description": "A study challenging participants to review linecharts.",
+    "description": "A study challenging participants to review linecharts with a focus on COVID-19 data.",
     "organizations": ["University of Utah"]
   },
   "uiConfig": {

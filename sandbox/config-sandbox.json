@@ -5,7 +5,7 @@
         "version": "pilot",
         "authors": ["VDL"],
         "date": "2024-01-11",
-        "description": "A sandbox interface to explore guardrails.",
+        "description": "A sandbox interface to explore various sampling methods for guardrails.",
         "organizations": ["University of Utah"]
     },
     "uiConfig": {
