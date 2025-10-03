@@ -28,7 +28,7 @@
             "parameters": {
                 "dataset": "sp500_stocks",
                 "start_date": "2024-01-01",
-                "end_date": "2024-12-31",
+                "end_date": "2024-12-24",
                 "allow_time_slider": false,
                 "allow_guardrail_selector": false,
                 "allow_selection": false,
@@ -102,7 +102,7 @@
       "parameters": {
         "dataset": "sp500_stocks",
         "start_date": "2024-01-01",
-        "end_date": "2024-12-31",
+        "end_date": "2024-12-24",
         "x_var": "date",
         "y_var": "value",
         "cat_var": "name",
