@@ -91,7 +91,7 @@ export function GuardrailPreferenceTask({ parameters, setAnswer }: any) {
                   <b>Norway’s</b>
                   <span> COVID-19 cases.</span>
                   <br />
-                  <strong>Your task is to estimate where Norway falls with regard to case numbers relative to other countries.</strong>
+                  <strong>Your task is to evaluate the severity of the COVID-19 outbreak in Norway. In other words, how bad was Norway hit by the pandemic?</strong>
                   <br />
                   <span>Which chart do you think supports this task best, and why? Select your preferred chart by clicking the &apos;Select&apos; button at the top-right of the chart.</span>
                 </>
@@ -104,7 +104,7 @@ export function GuardrailPreferenceTask({ parameters, setAnswer }: any) {
                   <b>Norway’s</b>
                   <span> COVID-19 response.</span>
                   <br />
-                  <strong>Your task is to judge the quality of Norway’s COVID-19 response measures.</strong>
+                  <strong>Your task is to evaluate the effectiveness of Norway’s COVID-19 response measures. In other words, how well did Norway respond to the pandemic?</strong>
                   <br />
                   <span>Which chart do you think supports this task best, and why? Select your preferred chart by clicking the &apos;Select&apos; button at the top-right of the chart.</span>
                 </>
@@ -117,7 +117,7 @@ export function GuardrailPreferenceTask({ parameters, setAnswer }: any) {
                   <b>Verizon’s (VZ)</b>
                   <span> stock performance.</span>
                   <br />
-                  <strong>Your task is to objectively evaluate Verizon&apos;s (VZ) stock performance from the perspective of an investor.</strong>
+                  <strong>Your task is to evaluate the performance of Verizon’s (VZ) stock from an investor’s perspective. In other words, how good of an investment is the VZ stock?</strong>
                   <br />
                   <span>Which chart do you think supports this task best, and why? Select your preferred chart by clicking the &apos;Select&apos; button at the top-right of the chart.</span>
                 </>
@@ -129,7 +129,7 @@ export function GuardrailPreferenceTask({ parameters, setAnswer }: any) {
                 <b>Verizon’s (VZ)</b>
                 <span> stock performance.</span>
                 <br />
-                <strong>Your task is to evaluate the performance of Verizon’s (VZ) management relative to other companies.</strong>
+                <strong>Your task is to evaluate the quality of Verizon’s (VZ) leadership performance. In other words, how well did the Verizon management do their job?</strong>
                 <br />
                 <span>Which chart do you think supports this task best, and why? Select your preferred chart by clicking the &apos;Select&apos; button at the top-right of the chart.</span>
               </>
