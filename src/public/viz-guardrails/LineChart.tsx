@@ -1255,7 +1255,7 @@ export function LineChart({
           />
         </g>
 
-        <svg key="control_lines" style={{ width: `${width}px` }}>
+        <g key="control_lines">
           {superimposeDatapoints?.map((x) => (
             <g key={`${x.country}_g`}>
               <path
@@ -1269,9 +1269,9 @@ export function LineChart({
               />
             </g>
           ))}
-        </svg>
+        </g>
 
-        <svg key="control_bands" style={{ width: `${width}px` }}>
+        <g key="control_bands">
           {superimposeSummary ? (
             <g key="summary_g">
               <path
@@ -1285,9 +1285,9 @@ export function LineChart({
               />
             </g>
           ) : null}
-        </svg>
+        </g>
 
-        <svg key="lines" style={{ width: `${width}px` }}>
+        <g key="lines">
           {linePaths?.map((x) => (
             <g key={`${x.country}_g`}>
               <path
@@ -1300,7 +1300,7 @@ export function LineChart({
               />
             </g>
           ))}
-        </svg>
+        </g>
         {medianLinePath && (
         <>
           <path
