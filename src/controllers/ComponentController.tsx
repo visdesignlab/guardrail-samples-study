@@ -229,7 +229,7 @@ export function ComponentController() {
       <Center style={{ height: '80vh', flexDirection: 'column', textAlign: 'center' }}>
         <IconPlugConnectedX size={48} stroke={1.5} color="orange" />
         <Title mt="md" order={4}>Database Disconnected</Title>
-        <Text mt="md">Please check your network connection or disable your adblocker for this site, then refresh the page.</Text>
+        <Text mt="md">Please check your network connection or disable your adblocker for this site, then refresh the page. If the issue persists, please contact the study researchers via Prolific.</Text>
       </Center>
     );
   }
