@@ -132,42 +132,42 @@
       "baseComponent": "stock",
       "parameters": {
         "guardrail": "none",
-        "initial_selection": ["VZ"]
+        "initial_selection": ["TEL"]
       }
     },
     "stock-a-random": {
       "baseComponent": "stock",
       "parameters": {
         "guardrail": "super_data",
-        "initial_selection": ["VZ"]
+        "initial_selection": ["TEL"]
       }
     },
     "stock-a-stats": {
       "baseComponent": "stock",
       "parameters": {
         "guardrail": "percentiles",
-        "initial_selection": ["VZ"]
+        "initial_selection": ["TEL"]
       }
     },
     "stock-a-percentileClosest": {
       "baseComponent": "stock",
       "parameters": {
         "guardrail": "percentileClosest",
-        "initial_selection": ["VZ"]
+        "initial_selection": ["TEL"]
       }
     },
     "stock-a-cluster": {
       "baseComponent": "stock",
       "parameters": {
         "guardrail": "cluster",
-        "initial_selection": ["VZ"]
+        "initial_selection": ["TEL"]
       }
     },
     "stock-a-metadata": {
       "baseComponent": "stock",
       "parameters": {
         "guardrail": "metadata",
-        "initial_selection": ["VZ"]
+        "initial_selection": ["TEL"]
       }
     },
     "stock-b-control": {
