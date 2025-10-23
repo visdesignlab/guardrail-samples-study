@@ -43,13 +43,13 @@
             "nextButtonLocation": "belowStimulus",
             "response": [
                 {
-                  "id": "investment-likelihood",
+                  "id": "trust",
                   "type": "likert",
                   "location": "belowStimulus",
-                  "prompt": "Imagine the advisor gave you a free welcome bonus of $100 to invest. Based on the visualization shown above, how likely are you to choose the highlighted stock for your investment?",
+                  "prompt": "How trustworthy is this chart?",
                   "numItems": 7,
-                  "rightLabel": "Extremely likely",
-                  "leftLabel": "Not at all likely",
+                  "rightLabel": "Completely trustworthy",
+                  "leftLabel": "Not at all trustworthy",
                   "required": true
                 },
                 {
@@ -132,42 +132,42 @@
       "baseComponent": "stock",
       "parameters": {
         "guardrail": "none",
-        "initial_selection": ["VZ"]
+        "initial_selection": ["TEL"]
       }
     },
     "stock-a-random": {
       "baseComponent": "stock",
       "parameters": {
         "guardrail": "super_data",
-        "initial_selection": ["VZ"]
+        "initial_selection": ["TEL"]
       }
     },
     "stock-a-stats": {
       "baseComponent": "stock",
       "parameters": {
         "guardrail": "percentiles",
-        "initial_selection": ["VZ"]
+        "initial_selection": ["TEL"]
       }
     },
     "stock-a-percentileClosest": {
       "baseComponent": "stock",
       "parameters": {
         "guardrail": "percentileClosest",
-        "initial_selection": ["VZ"]
+        "initial_selection": ["TEL"]
       }
     },
     "stock-a-cluster": {
       "baseComponent": "stock",
       "parameters": {
         "guardrail": "cluster",
-        "initial_selection": ["VZ"]
+        "initial_selection": ["TEL"]
       }
     },
     "stock-a-metadata": {
       "baseComponent": "stock",
       "parameters": {
         "guardrail": "metadata",
-        "initial_selection": ["VZ"]
+        "initial_selection": ["TEL"]
       }
     },
     "stock-b-control": {
