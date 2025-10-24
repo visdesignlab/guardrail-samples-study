@@ -40,7 +40,7 @@ The data collected in this study is only being used for the present study and no
 
 #### Cost/Payment
 
-You will be compensated $2.1 for participating via Prolific.
+You will be compensated $2.10 for participating via Prolific.
 
 #### Contact
 
