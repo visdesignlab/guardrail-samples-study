@@ -1,6 +1,6 @@
 {
   "$schema": "https://raw.githubusercontent.com/revisit-studies/study/v2.2.0/src/parser/GlobalConfigSchema.json",
-  "configsList": ["sandbox", "stage-1", "stage-1-covid"],
+  "configsList": ["sandbox", "stage-1", "stage-1-covid", "covid-survey", "stocks-survey"],
   "configs": {
     "sandbox": {
       "path": "sandbox/config-sandbox.json"
@@ -10,6 +10,12 @@
     },
     "stage-1-covid": {
       "path": "stage-1-covid/config-stage-1.json"
+    },
+    "covid-survey": {
+      "path": "covid-survey/config.json"
+    },
+    "stocks-survey": {
+      "path": "stocks-survey/config.json"
     }
   }
 }
