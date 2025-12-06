@@ -40,16 +40,16 @@ export function Selector({
         onChange={(x) => x && setGuardrail(x)}
         data={[
           { value: 'none', label: 'None' },
-          { value: 'super_data', label: 'Random' },
+          { value: 'super_data', label: 'Random Exemplars' },
           { value: 'super_summ', label: 'Average of All lines' },
-          { value: 'median', label: 'Median of All Lines At Each Timestamp' },
-          { value: 'medianClosest', label: 'Actual Stock Closest to Median' },
-          { value: 'medianIQR', label: 'Median of All Lines +-1.5IQR At Each Timestamp' },
-          { value: 'medianIQRClosest', label: 'Actual Median +-1.5IQR Closest' },
-          { value: 'percentiles', label: 'Percentiles of All Lines At Each Timestamp' },
-          { value: 'percentileClosest', label: 'Actual Percentiles Closest' },
-          { value: 'cluster', label: 'Cluster Rep' },
-          { value: 'metadata', label: 'Metadata/Expert sampling' },
+          { value: 'median', label: 'Median of Each Timestamp' },
+          { value: 'medianClosest', label: 'Actual Item Closest to Median' },
+          { value: 'medianIQR', label: 'Median of +-1.5IQR At Each Timestamp' },
+          { value: 'medianIQRClosest', label: 'Actual Item Closest to Median +-1.5IQR' },
+          { value: 'percentiles', label: 'Percentile Markers' },
+          { value: 'percentileClosest', label: 'Percentiles-based Exemplars' },
+          { value: 'cluster', label: 'Cluster Representatives' },
+          { value: 'metadata', label: 'Exemplars with Semantic Sampling' },
           { value: 'all', label: 'All' },
         ]}
       />
