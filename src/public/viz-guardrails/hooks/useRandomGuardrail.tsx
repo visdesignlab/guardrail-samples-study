@@ -21,11 +21,11 @@ export function useRandomGuardrail({
       );
       const shuffled = d3.shuffle(unselected).slice(0, numRandomSamples);
       setRandomCountries(shuffled);
-    } else {
-      setRandomCountries([]);
+      return;
     }
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+
+    setRandomCountries([]);
+  }, [guardrail, selection, allCountries, numRandomSamples]);
 
   return randomCountries;
 }
